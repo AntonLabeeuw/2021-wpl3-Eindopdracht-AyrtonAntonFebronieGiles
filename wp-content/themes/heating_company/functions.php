@@ -182,7 +182,7 @@
 			'Teamleden',
 			'h_custom_box_teamlid_html',
 			'teamleden'
-		)
+		);
     }
 
     function h_custom_box_verwarmingsketel_html($post){
@@ -227,15 +227,15 @@
     }
 
 	function h_custom_box_teamlid_html($post){
-		// $value_functie = get_post_meta($post->ID, '_functie', true);
+		$value_functie = get_post_meta($post->ID, '_functie', true);
 		
-		echo "<h1>Extra info over de verwarmingsketel</h1>";
+		echo "<h1>Extra info over het teamlid</h1>";
 		echo "<div class='cc-form-row'>";
 		echo "<div class='c-form-row__label'>";
 		echo "Functie";
 		echo "</div>";
 		echo "<div class='c-form-row__control'>";
-		echo "<input type='text' id='functie' name='functie'>";// value='" . $value_functie . "'
+		echo "<input type='text' id='functie' name='functie' value='" . $value_functie . "'>";
 		echo "</div>";
 		echo "</div>";
 	}
@@ -276,6 +276,16 @@
                 );
             }
         }
+
+		if ($naam_post_type == 'teamleden'){
+			if (array_key_exists('functie', $_POST)){
+                update_post_meta(
+                    $post_id,
+                    '_functie',
+                    $_POST['functie']
+                );
+            }
+		}
     }
 
     function p_admin_css_js(){

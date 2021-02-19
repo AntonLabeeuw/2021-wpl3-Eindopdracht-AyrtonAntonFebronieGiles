@@ -169,6 +169,58 @@
 		register_post_type( 'teamleden', $args );
     }
 
+	function h_register_reviews(){
+        $labels = array(
+			'name'                  => 'review',
+			'singular_name'         => 'review',
+			'menu_name'             => 'reviews',
+			'name_admin_bar'        => 'reviews',
+			'archives'              => 'review archives',
+			'attributes'            => 'review attributes',
+			'parent_item_colon'     => 'Parent item:',
+			'all_items'             => 'Alle reviews',
+			'add_new_item'          => 'Add new review',
+			'add_new'               => 'Add review',
+			'new_item'              => 'New review',
+			'edit_item'             => 'Edit review',
+			'update_item'           => 'Update review',
+			'view_item'             => 'View review',
+			'view_items'            => 'View reviews',
+			'search_items'          => 'Search review',
+			'not_found'             => 'Not found',
+			'not_found_in_trash'    => 'Not found in trash',
+			'featured_image'        => 'Featured image',
+			'set_featured_image'    => 'Set featured image',
+			'remove_featured_image' => 'Remove featured image',
+			'use_featured_image'    => 'Use as featured image',
+			'insert_into_item'      => 'Insert into item',
+			'uploaded_to_this_item' => 'Uploaded to this item',
+			'items_list'            => 'Items list',
+			'items_list_navigation' => 'Items list navigation',
+			'filter_items_list'     => 'Filter items list',
+		);
+		$args = array(
+			'label'                 => 'reviews',
+			'description'           => 'Reviews van de klanten',
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail'),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'				=> 'dashicons-star-filled',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'reviews', $args );
+    }
+
     function h_add_custom_box(){
         add_meta_box(
             'h_verwarmingsketel_box_id',
@@ -308,6 +360,7 @@
     add_action( 'init', 'h_register_verwarmingsketels', 0 );
 	add_action( 'init', 'h_register_merken', 0 );
 	add_action( 'init', 'h_register_teamleden', 0 );
+	add_action( 'init', 'h_register_reviews', 0 );
 	add_action( 'add_meta_boxes', 'h_add_custom_box' );
     add_action( 'save_post', 'h_save_postdata' );
     add_action( 'admin_enqueue_scripts', 'p_admin_css_js' );

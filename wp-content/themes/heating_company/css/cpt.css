@@ -1,0 +1,12 @@
+.c-form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+.c-form-row__label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+.c-form-row__control {
+    margin-bottom: 1rem;
+}

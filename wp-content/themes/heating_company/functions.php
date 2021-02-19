@@ -251,7 +251,7 @@
         $value_prijsverbruik = get_post_meta($post->ID, '_prijsverbruik', true);
 
         echo "<h1>Extra info over de verwarmingsketel</h1>";
-		echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row'>";
 		echo "<div class='c-form-row__label'>";
 		echo "Energiebron";
 		echo "</div>";
@@ -259,7 +259,7 @@
 		echo "<input type='text' id='energiebron' name='energiebron' value='" . $value_energiebron . "'>";// value='" . $value_energiebron . "'
 		echo "</div>";
 		echo "</div>";
-		echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row'>";
 		echo "<div class='c-form-row__label'>";
 		echo "Minimum prijs";
 		echo "</div>";
@@ -267,7 +267,7 @@
         echo "<input type='number' id='minprijs' name='minprijs' value='" . $value_minprijs . "'>";// value='" . $value_minprijs . "'
 		echo "</div>";
 		echo "</div>";
-        echo "<div class='cc-form-row'>";
+        echo "<div class='c-form-row'>";
 		echo "<div class='c-form-row__label'>";
 		echo "Maximum prijs";
 		echo "</div>";
@@ -275,7 +275,7 @@
         echo "<input type='number' id='maxprijs' name='maxprijs' value='" . $value_maxprijs . "'>";// value='" . $value_maxprijs . "'
 		echo "</div>";
 		echo "</div>";
-        echo "<div class='cc-form-row'>";
+        echo "<div class='c-form-row'>";
 		echo "<div class='c-form-row__label'>";
 		echo "Prijs verbruik";
 		echo "</div>";
@@ -300,15 +300,17 @@
 	}
 
 	function h_custom_box_review_html($post){
-		// $value_rating = get_post_meta($post->ID, '_rating', true);
+		$value_rating = get_post_meta($post->ID, '_rating', true);
+		$value_zichtbaarheid = get_post_meta($post->ID, '_zichtbaarheid', true);
+		$value_uitgelicht = get_post_meta($post->ID, '_uitgelicht', true);
 
 		echo "<h1>Extra info de review</h1>";
 		echo "<div class='c-form-row'>";
 		echo "<div class='c-form-row__label'>";
-		echo "Minimum prijs";
+		echo "Rating";
 		echo "</div>";
 		echo "<div class='c-form-row__control'>";
-        echo "<input type='number' id='rating' name='rating' max='5'>";// value='" . $value_rating . "'
+        echo "<input type='number' id='rating' name='rating' max='5' value='" . $value_rating . "'>";
 		echo "</div>";
 		echo "</div>";
 		echo "<div class='c-form-row'>";
@@ -316,7 +318,7 @@
 		echo "Wil je deze review zichtbaar op de site?";
 		echo "</div>";
 		echo "<div class='c-form-row__control'>";
-		echo "<input type='checkbox' id='zichtbaarheid' name='zichtbaarheid' value='1'>";// ". haakjeOpen$value_tuin == 1 ? "checked":""haakjeSluit ."
+		echo "<input type='checkbox' id='zichtbaarheid' name='zichtbaarheid' value='1' " . ($value_zichtbaarheid == 1 ? "checked":"") . ">";
 		echo "</div>";
 		echo "</div>";
 		echo "<div class='c-form-row'>";
@@ -324,7 +326,7 @@
 		echo "Wil je deze review instellen als uitgelichte review?";
 		echo "</div>";
 		echo "<div class='c-form-row__control'>";
-		echo "<input type='checkbox' id='uitgelicht' name='uitgelicht' value='1'>";// ". haakjeOpen$value_tuin == 1 ? "checked":""haakjeSluit ."
+		echo "<input type='checkbox' id='uitgelicht' name='uitgelicht' value='1' ". ($value_uitgelicht == 1 ? "checked":"") .">";
 		echo "</div>";
 		echo "</div>";
 	}
@@ -374,6 +376,44 @@
                     $_POST['functie']
                 );
             }
+		}
+
+		if ($naam_post_type == 'reviews'){
+			if (array_key_exists('rating', $_POST)){
+				update_post_meta(
+					$post_id,
+					'_rating',
+					$_POST['rating']
+				);
+			}
+
+			if (array_key_exists('zichtbaarheid', $_POST)){
+				update_post_meta(
+					$post_id,
+					'_zichtbaarheid',
+					$_POST['zichtbaarheid']
+				);
+			}else{
+				update_post_meta(
+					$post_id,
+					'_zichtbaarheid',
+					0
+				);
+			}
+
+			if (array_key_exists('uitgelicht', $_POST)){
+				update_post_meta(
+					$post_id,
+					'_uitgelicht',
+					$_POST['uitgelicht']
+				);
+			}else{
+				update_post_meta(
+					$post_id,
+					'_uitgelicht',
+					0
+				);
+			}
 		}
     }
 

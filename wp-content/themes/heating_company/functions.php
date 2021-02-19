@@ -235,6 +235,13 @@
 			'h_custom_box_teamlid_html',
 			'teamleden'
 		);
+
+		add_meta_box(
+			'h_review_box_id',
+			'Reviews',
+			'h_custom_box_review_html',
+			'reviews'
+		);
     }
 
     function h_custom_box_verwarmingsketel_html($post){

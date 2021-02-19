@@ -69,9 +69,50 @@
         add_meta_box(
             'h_verwarmingsketel_box_id',
             'Info verwarmingsketel',
-            'h_register_verwarmingsketels',
+            'h_custom_box_verwarmingsketel_html',
             'verwarmingsketels'
         );
+    }
+
+    function h_custom_box_verwarmingsketel_html($post){
+        // $value_energiebron = get_post_meta($post->ID, '_energiebron', true);
+		// $value_min-prijs = get_post_meta($post->ID, '_min-prijs', true);
+        // $value_max-prijs = get_post_meta($post->ID, '_max-prijs', true);
+        // $value_prijs-verbruik = get_post_meta($post->ID, '_prijs-verbruik', true);
+
+        echo "<h1>Extra info over de verwarmingsketel</h1>";
+		echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Energiebron";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<input type='text' id='energiebron' name='energiebron'>";// value='" . $value_energiebron . "'
+		echo "</div>";
+		echo "</div>";
+		echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Minimum prijs";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+        echo "<input type='number' id='min-prijs' name='min-prijs'>";// value='" . $value_min-prijs . "'
+		echo "</div>";
+		echo "</div>";
+        echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Maximum prijs";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+        echo "<input type='number' id='max-prijs' name='max-prijs'>";// value='" . $value_max-prijs . "'
+		echo "</div>";
+		echo "</div>";
+        echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Prijs verbruik";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<input type='text' id='prijs-verbruik' name='prijs-verbruik'>";// value='" . $value_prijs-verbruik . "'
+		echo "</div>";
+		echo "</div>";
     }
 
 

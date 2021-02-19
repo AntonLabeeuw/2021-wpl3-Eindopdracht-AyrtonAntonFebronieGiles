@@ -153,6 +153,11 @@
         }
     }
 
+    function p_admin_css_js(){
+		$pathTheme = get_template_directory_uri();
+		wp_enqueue_style('admin-cpt-css',$pathTheme . '/css/cpt.css');
+	}
+
 
 
 
@@ -164,7 +169,9 @@
 
     // add_action( 'wp_enqueue_scripts', 'cg_add_theme_scripts' );
     // add_action( 'init', 'register_my_menus' );
+    add_theme_support( 'post-thumbnails' );
     add_action( 'init', 'h_register_verwarmingsketels', 0 );
 	add_action('add_meta_boxes', 'h_add_custom_box');
     add_action('save_post', 'h_save_postdata');
+    add_action('admin_enqueue_scripts', 'p_admin_css_js');
 ?>

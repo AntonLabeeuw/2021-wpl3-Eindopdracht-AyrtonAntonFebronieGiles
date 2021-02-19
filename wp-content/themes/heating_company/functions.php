@@ -117,6 +117,58 @@
 		register_post_type( 'merken', $args );
     }
 
+	function h_register_teamleden(){
+        $labels = array(
+			'name'                  => 'teamlid',
+			'singular_name'         => 'teamlid',
+			'menu_name'             => 'teamleden',
+			'name_admin_bar'        => 'teamleden',
+			'archives'              => 'teamlid archives',
+			'attributes'            => 'teamlid attributes',
+			'parent_item_colon'     => 'Parent item:',
+			'all_items'             => 'Alle teamleden',
+			'add_new_item'          => 'Add new teamlid',
+			'add_new'               => 'Add teamlid',
+			'new_item'              => 'New teamlid',
+			'edit_item'             => 'Edit teamlid',
+			'update_item'           => 'Update teamlid',
+			'view_item'             => 'View teamlid',
+			'view_items'            => 'View teamleden',
+			'search_items'          => 'Search teamlid',
+			'not_found'             => 'Not found',
+			'not_found_in_trash'    => 'Not found in trash',
+			'featured_image'        => 'Featured image',
+			'set_featured_image'    => 'Set featured image',
+			'remove_featured_image' => 'Remove featured image',
+			'use_featured_image'    => 'Use as featured image',
+			'insert_into_item'      => 'Insert into item',
+			'uploaded_to_this_item' => 'Uploaded to this item',
+			'items_list'            => 'Items list',
+			'items_list_navigation' => 'Items list navigation',
+			'filter_items_list'     => 'Filter items list',
+		);
+		$args = array(
+			'label'                 => 'teamleden',
+			'description'           => 'Mensen die in het bedrijf werken',
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail'),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'				=> 'dashicons-groups',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'teamleden', $args );
+    }
+
     function h_add_custom_box(){
         add_meta_box(
             'h_verwarmingsketel_box_id',
@@ -124,6 +176,13 @@
             'h_custom_box_verwarmingsketel_html',
             'verwarmingsketels'
         );
+
+		add_meta_box(
+			'h_teamlid_box_id',
+			'Teamleden',
+			'h_custom_box_teamlid_html',
+			'teamleden'
+		);
     }
 
     function h_custom_box_verwarmingsketel_html($post){
@@ -167,6 +226,20 @@
 		echo "</div>";
     }
 
+	function h_custom_box_teamlid_html($post){
+		$value_functie = get_post_meta($post->ID, '_functie', true);
+		
+		echo "<h1>Extra info over het teamlid</h1>";
+		echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Functie";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<input type='text' id='functie' name='functie' value='" . $value_functie . "'>";
+		echo "</div>";
+		echo "</div>";
+	}
+
     function h_save_postdata($post_id){
         $naam_post_type = get_post_type($post_id);
 
@@ -203,6 +276,16 @@
                 );
             }
         }
+
+		if ($naam_post_type == 'teamleden'){
+			if (array_key_exists('functie', $_POST)){
+                update_post_meta(
+                    $post_id,
+                    '_functie',
+                    $_POST['functie']
+                );
+            }
+		}
     }
 
     function p_admin_css_js(){
@@ -224,7 +307,8 @@
     add_theme_support( 'post-thumbnails' );
     add_action( 'init', 'h_register_verwarmingsketels', 0 );
 	add_action( 'init', 'h_register_merken', 0 );
-	add_action('add_meta_boxes', 'h_add_custom_box');
-    add_action('save_post', 'h_save_postdata');
-    add_action('admin_enqueue_scripts', 'p_admin_css_js');
+	add_action( 'init', 'h_register_teamleden', 0 );
+	add_action( 'add_meta_boxes', 'h_add_custom_box' );
+    add_action( 'save_post', 'h_save_postdata' );
+    add_action( 'admin_enqueue_scripts', 'p_admin_css_js' );
 ?>

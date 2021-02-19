@@ -221,6 +221,58 @@
 		register_post_type( 'reviews', $args );
     }
 
+	function h_register_realisaties(){
+        $labels = array(
+			'name'                  => 'realisatie',
+			'singular_name'         => 'realisatie',
+			'menu_name'             => 'realisaties',
+			'name_admin_bar'        => 'realisaties',
+			'archives'              => 'realisatie archives',
+			'attributes'            => 'realisatie attributes',
+			'parent_item_colon'     => 'Parent item:',
+			'all_items'             => 'Alle realisaties',
+			'add_new_item'          => 'Add new realisatie',
+			'add_new'               => 'Add realisatie',
+			'new_item'              => 'New realisatie',
+			'edit_item'             => 'Edit realisatie',
+			'update_item'           => 'Update realisatie',
+			'view_item'             => 'View realisatie',
+			'view_items'            => 'View realisaties',
+			'search_items'          => 'Search realisatie',
+			'not_found'             => 'Not found',
+			'not_found_in_trash'    => 'Not found in trash',
+			'featured_image'        => 'Featured image',
+			'set_featured_image'    => 'Set featured image',
+			'remove_featured_image' => 'Remove featured image',
+			'use_featured_image'    => 'Use as featured image',
+			'insert_into_item'      => 'Insert into item',
+			'uploaded_to_this_item' => 'Uploaded to this item',
+			'items_list'            => 'Items list',
+			'items_list_navigation' => 'Items list navigation',
+			'filter_items_list'     => 'Filter items list',
+		);
+		$args = array(
+			'label'                 => 'realisaties',
+			'description'           => 'realisaties van de klanten',
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail'),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'				=> 'dashicons-admin-tools',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'realisaties', $args );
+    }
+
     function h_add_custom_box(){
         add_meta_box(
             'h_verwarmingsketel_box_id',
@@ -438,6 +490,7 @@
 	add_action( 'init', 'h_register_merken', 0 );
 	add_action( 'init', 'h_register_teamleden', 0 );
 	add_action( 'init', 'h_register_reviews', 0 );
+	add_action( 'init', 'h_register_realisaties' );
 	add_action( 'add_meta_boxes', 'h_add_custom_box' );
     add_action( 'save_post', 'h_save_postdata' );
     add_action( 'admin_enqueue_scripts', 'p_admin_css_js' );

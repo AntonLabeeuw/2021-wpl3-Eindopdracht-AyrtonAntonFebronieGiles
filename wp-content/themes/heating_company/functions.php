@@ -289,12 +289,42 @@
 		$value_functie = get_post_meta($post->ID, '_functie', true);
 		
 		echo "<h1>Extra info over het teamlid</h1>";
-		echo "<div class='cc-form-row'>";
+		echo "<div class='c-form-row'>";
 		echo "<div class='c-form-row__label'>";
 		echo "Functie";
 		echo "</div>";
 		echo "<div class='c-form-row__control'>";
 		echo "<input type='text' id='functie' name='functie' value='" . $value_functie . "'>";
+		echo "</div>";
+		echo "</div>";
+	}
+
+	function h_custom_box_review_html($post){
+		// $value_rating = get_post_meta($post->ID, '_rating', true);
+
+		echo "<h1>Extra info de review</h1>";
+		echo "<div class='c-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Minimum prijs";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+        echo "<input type='number' id='rating' name='rating' max='5'>";// value='" . $value_rating . "'
+		echo "</div>";
+		echo "</div>";
+		echo "<div class='c-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Wil je deze review zichtbaar op de site?";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<input type='checkbox' id='zichtbaarheid' name='zichtbaarheid' value='1'>";// ". haakjeOpen$value_tuin == 1 ? "checked":""haakjeSluit ."
+		echo "</div>";
+		echo "</div>";
+		echo "<div class='c-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Wil je deze review instellen als uitgelichte review?";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<input type='checkbox' id='uitgelicht' name='uitgelicht' value='1'>";// ". haakjeOpen$value_tuin == 1 ? "checked":""haakjeSluit ."
 		echo "</div>";
 		echo "</div>";
 	}

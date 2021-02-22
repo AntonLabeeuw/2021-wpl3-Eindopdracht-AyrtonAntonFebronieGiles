@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigatie</title>
+
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- eigen css -->
+    <link rel="stylesheet" href="css/screen.css">
+
+    <!-- javascript -->
+    
+    <script type="text/javascript" src="js/navbar.js"></script>
+</head>
+<body>
+    <header>
+        <div class="c-topnav container">
+            <img src="icons/logo-groot.svg" class="c-topnav__logo" alt="The Heating Company logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Over ons</a></li>
+                    <li><a href="#">Attesten</a></li>
+                </ul>
+            </nav>
+            <div class="c-topnav__knoppen">
+                <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte" href="">Offerte</a>
+                <a class="o-button o-button--noodnummer c-topnav__knop" href=""><span>Noodnummer</span></a>
+            </div>
+            
+        </div>
+        <div class="navbar-background">
+            <nav>
+                <div class="nav-wrapper z-depth-0">
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger col s6"><i
+                            class="material-icons">menu</i></a>
+                    <!-- Dropdown Structure -->
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li><a class="nav__item" href="#!">Woning</a></li>
+                        <li><a class="nav__item" href="#!">Residenties</a></li>
+                    </ul>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a class="nav__item" href="sass.html">Home</a></li>
+                        <li><a class="dropdown-trigger nav__item nav__active" href="#!"
+                                data-target="dropdown1">Verwarmingsketel
+                                plaatsen<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="nav__item" href="collapsible.html">Verwarmingsoplossingen</a></li>
+                        <li><a class="nav__item" href="mobile.html">Onderhoud</a></li>
+                        <li><a class="nav__item active" href="mobile.html">Realisaties</a></li>
+                        <li><a class="nav__item" href="mobile.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a class="sidenav__item" href="#">Home</a></li>
+                <li><a class="dropdown-trigger sidenav__item" href="#!" data-target="dropdown2">Verwarmingsketel
+                        plaatsen<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="sidenav__item" href="#">Verwarmingsoplossingen</a></li>
+                <li><a class="sidenav__item" href="#">Onderhoud</a></li>
+                <li><a class="sidenav__item" href="#">Realisaties</a></li>
+                <li><a class="sidenav__item" href="#">Contact</a></li>
+            </ul>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown2" class="dropdown-content">
+                <li><a class="nav__item" href="#!">Woning</a></li>
+                <li><a class="nav__item" href="#!">Residenties</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>

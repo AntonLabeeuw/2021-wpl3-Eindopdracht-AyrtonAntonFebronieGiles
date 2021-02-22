@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>design system</title>
+    <!-- Compiled and minified CSS
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/e3d5c31b7b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Import AOS effect-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/effect.js"></script>
+    <!-- bewerkte mimified -->
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <!-- eigen CSS -->
+    <link rel="stylesheet" href="css/screen.css" />
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <!--Import AOS effect-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/effect.js"></script>
+  </head>
+  <body>
+    <!-- registeer form -->
+    <main>
+      <div class="container">
+        <h1>Registreer</h1>
+      </div>
+      <section class="c-profielform">
+        <div class="container">
+          <form class="o-form">
+            <div class="row">
+              <div
+                class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <input
+                  type="text"
+                  name="naam"
+                  id="naam"
+                  class="form-control c-form__input validate"
+                  placeholder="Naam"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="naam"> Naam </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig naam"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <input
+                  type="text"
+                  name="voornaam"
+                  id="voornaam"
+                  class="form-control c-form__input validate"
+                  placeholder="Voornaam"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="voornaam"> Voornaam </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig voornaam"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control c-form__input validate"
+                  placeholder="E-mail"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="email"> E-mail </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig e-mailadres"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl4 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <input
+                  type="text"
+                  name="straat"
+                  id="straat"
+                  class="form-control c-form__input validate"
+                  placeholder="straat"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="straat"> Straat </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig straat naam"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl1 offset-s0 offset-m0 offset-l3 form-group c-form__group"
+              >
+                <input
+                  type="number"
+                  name="nummer"
+                  id="nummer"
+                  class="form-control c-form__input validate"
+                  data-length="4"
+                  placeholder="Nr"
+                  minlength="1"
+                  maxlength="4"
+                  min="1"
+                  max="1000"
+                  required
+                />
+                <label class="c-form__label" for="nummer"> Nr </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig nummer"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl1 offset-s0 offset-m0 offset-l3 form-group c-form__group"
+              >
+                <input
+                  type="text"
+                  name="bus"
+                  id="bus"
+                  class="form-control c-form__input validate"
+                  placeholder="bus"
+                  minlength="2"
+                  maxlength="2"
+                  required
+                />
+                <label class="c-form__label" for="bus"> Bus </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig bus"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl2 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <input
+                  type="number"
+                  name="postcode"
+                  id="postcode"
+                  class="form-control c-form__input validate"
+                  placeholder="Postcode"
+                  data-length="4"
+                  minlength="4"
+                  maxlength="4"
+                  min="1000"
+                  max="9999"
+                  required
+                />
+                <label class="c-form__label" for="Postcode"> Postcode </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig postcode"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl4 offset-s0 offset-m0 offset-l3 form-group c-form__group"
+              >
+                <input
+                  type="text"
+                  name="gemeente"
+                  id="gemeente"
+                  class="form-control c-form__input"
+                  placeholder="Gemeente"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="gemeente"> Gemeente </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldige gemeente"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <input
+                  type="text"
+                  name="gebruikersnaam"
+                  id="gebruikersnaam"
+                  class="form-control c-form__input validate"
+                  placeholder="Gebruikersnaam"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="gebruikersnaam">
+                  Gebruikersnaam
+                </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig gebruikersnaam"
+                ></span>
+              </div>
+
+              <div
+                class="col s12 m12 l6 xl3 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control c-form__input validate"
+                  placeholder="password"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="naam"> Wachtwoord </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig password"
+                ></span>
+              </div>
+              <div
+                class="col s12 m12 l6 xl3 offset-s0 offset-m0 offset-l3 offset-xl0 form-group c-form__group"
+              >
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  class="form-control c-form__input validate"
+                  placeholder="password"
+                  minlength="2"
+                  required
+                />
+                <label class="c-form__label" for="naam"> Wachtwoord </label>
+                <span
+                  class="helper-text"
+                  data-error="Dit is geen geldig password"
+                ></span>
+              </div>
+              <div
+                class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+              >
+                <label>
+                  <input type="checkbox" class="filled-in" />
+                  <span class="c-form-span"
+                    >Ik ga akkoord met het
+                    <a class="c-privacy-link" href="policy.html"
+                      >privacy statement</a
+                    >
+                  </span>
+                </label>
+              </div>
+              <div
+              class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl6 form-group c-form__group"
+              >
+              <a type="submit" class="o-button col-2 offset-5">Registeer</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- mijn footer -->
+    <footer class="c-footer"></footer>
+  </body>
+</html>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>design system</title>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/e3d5c31b7b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Import AOS effect-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/effect.js"></script>
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <!-- eigen CSS -->
+    <link rel="stylesheet" href="css/screen.css" />
+
+    <!-- javascript onze -->
+    <script type="text/javascript" src="js/navbar.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="c-topnav container">
+        <img
+          src="icons/logo-groot.svg"
+          class="c-topnav__logo col s12 m12"
+          alt="The Heating Company logo"
+        />
+        <nav>
+          <ul>
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Attesten</a></li>
+          </ul>
+        </nav>
+        <div class="c-topnav__knoppen">
+          <a
+            class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte"
+            href=""
+            >Offerte</a
+          >
+          <a
+            class="o-button o-button--noodnummer c-topnav__knop"
+            href="tel:+32 56 56 56 16"
+            ><span>Noodnummer</span></a
+          >
+        </div>
+      </div>
+      <div class="navbar-background">
+        <nav class="container z-depth-0">
+          <div class="nav-wrapper z-depth-0">
+            <a
+              href="#"
+              data-target="mobile-demo"
+              class="sidenav-trigger show-on-large col s6"
+              ><i class="material-icons">menu</i></a
+            >
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+              <li><a class="nav__item" href="#!">Woning</a></li>
+              <li><a class="nav__item" href="#!">Residenties</a></li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a
+                  class="dropdown-trigger nav__item nav__active"
+                  href="#!"
+                  data-target="dropdown1"
+                  >Verwarmingsketel plaatsen<i class="material-icons right"
+                    >arrow_drop_down</i
+                  ></a
+                >
+              </li>
+              <li>
+                <a class="nav__item" href="collapsible.html"
+                  >Verwarmingsoplossingen</a
+                >
+              </li>
+              <li><a class="nav__item" href="mobile.html">Onderhoud</a></li>
+              <li><a class="nav__item" href="mobile.html">Realisaties</a></li>
+              <li><a class="nav__item" href="mobile.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <ul class="sidenav" id="mobile-demo">
+          <li>
+            <a
+              class="dropdown-trigger sidenav__item"
+              href="#!"
+              data-target="dropdown2"
+              >Verwarmingsketel plaatsen<i class="material-icons right"
+                >arrow_drop_down</i
+              ></a
+            >
+          </li>
+          <li>
+            <a class="sidenav__item active" href="#">Verwarmingsoplossingen</a>
+          </li>
+          <li><a class="sidenav__item" href="#">Onderhoud</a></li>
+          <li><a class="sidenav__item" href="#">Realisaties</a></li>
+          <li><a class="sidenav__item" href="#">Contact</a></li>
+        </ul>
+        <!-- Dropdown Structure -->
+        <ul id="dropdown2" class="dropdown-content">
+          <li><a class="nav__item" href="#!">Woning</a></li>
+          <li><a class="nav__item" href="#!">Residenties</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- registeer form -->
+    <main>
+            <div class="container">
+              <h1>Registreer</h1>
+            </div>
+            <section class="c-profielform">
+              <div class="container">
+                <form class="o-form">
+                  <div class="row">
+                    <div
+                      class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <input
+                        type="text"
+                        name="naam"
+                        id="naam"
+                        class="form-control c-form__input validate"
+                        placeholder="Naam"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="naam"> Naam </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig naam"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <input
+                        type="text"
+                        name="voornaam"
+                        id="voornaam"
+                        class="form-control c-form__input validate"
+                        placeholder="Voornaam"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="voornaam"> Voornaam </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig voornaam"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-control c-form__input validate"
+                        placeholder="E-mail"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="email"> E-mail </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig e-mailadres"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl4 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <input
+                        type="text"
+                        name="straat"
+                        id="straat"
+                        class="form-control c-form__input validate"
+                        placeholder="straat"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="straat"> Straat </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig straat naam"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl1 offset-s0 offset-m0 offset-l3 form-group c-form__group"
+                    >
+                      <input
+                        type="number"
+                        name="nummer"
+                        id="nummer"
+                        class="form-control c-form__input validate"
+                        data-length="4"
+                        placeholder="Nr"
+                        minlength="1"
+                        maxlength="4"
+                        min="1"
+                        max="1000"
+                        required
+                      />
+                      <label class="c-form__label" for="nummer"> Nr </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig nummer"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl1 offset-s0 offset-m0 offset-l3 form-group c-form__group"
+                    >
+                      <input
+                        type="text"
+                        name="bus"
+                        id="bus"
+                        class="form-control c-form__input validate"
+                        placeholder="bus"
+                        minlength="2"
+                        maxlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="bus"> Bus </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig bus"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl2 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <input
+                        type="number"
+                        name="postcode"
+                        id="postcode"
+                        class="form-control c-form__input validate"
+                        placeholder="Postcode"
+                        data-length="4"
+                        minlength="4"
+                        maxlength="4"
+                        min="1000"
+                        max="9999"
+                        required
+                      />
+                      <label class="c-form__label" for="Postcode"> Postcode </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig postcode"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl4 offset-s0 offset-m0 offset-l3 form-group c-form__group"
+                    >
+                      <input
+                        type="text"
+                        name="gemeente"
+                        id="gemeente"
+                        class="form-control c-form__input"
+                        placeholder="Gemeente"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="gemeente"> Gemeente </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldige gemeente"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <input
+                        type="text"
+                        name="gebruikersnaam"
+                        id="gebruikersnaam"
+                        class="form-control c-form__input validate"
+                        placeholder="Gebruikersnaam"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="gebruikersnaam">
+                        Gebruikersnaam
+                      </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig gebruikersnaam"
+                      ></span>
+                    </div>
+      
+                    <div
+                      class="col s12 m12 l6 xl3 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        class="form-control c-form__input validate"
+                        placeholder="password"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="naam"> Wachtwoord </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig password"
+                      ></span>
+                    </div>
+                    <div
+                      class="col s12 m12 l6 xl3 offset-s0 offset-m0 offset-l3 offset-xl0 form-group c-form__group"
+                    >
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        class="form-control c-form__input validate"
+                        placeholder="password"
+                        minlength="2"
+                        required
+                      />
+                      <label class="c-form__label" for="naam"> Wachtwoord </label>
+                      <span
+                        class="helper-text"
+                        data-error="Dit is geen geldig password"
+                      ></span>
+                    </div>
+                    <div
+                      class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
+                    >
+                      <label>
+                        <input type="checkbox" class="filled-in" />
+                        <span class="c-form-span"
+                          >Ik ga akkoord met het
+                          <a class="c-privacy-link" href="policy.html"
+                            >privacy statement</a
+                          >
+                        </span>
+                      </label>
+                    </div>
+                    <div
+                    class="col s6 m3 l3 xl3 offset-s2 offset-m4 offset-l4 offset-xl5 form-group c-form__group"
+                    >
+                    <input class="o-button o-button-submit"  type="submit" value="Registreer"></input>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+    </main>
+
+    <!-- dit is de footer -->
+    <footer class="c-footer">
+      <div class="c-footer__row container">
+        <div class="c-footer__logo">
+          <img
+            src="icons/footer-logo.svg"
+            class="c-footer__logo-klein"
+            alt="The Heating Company logo"
+            title="The Heating Company logo"
+          />
+          <img
+            src="icons/logo-groot.svg"
+            class="c-footer__logo-groot"
+            alt="The Heating Company logo"
+            title="The Heating Company logo"
+          />
+        </div>
+        <div class="c-footer__copyright">
+          <p>© 2021 The Heating Company</p>
+        </div>
+
+        <div class="c-footer__icons">
+          <!-- map -->
+          <a
+            href="https://www.google.com/maps/place/Howest,+Campus+Kortrijk+Weide+-+Gebouw+A/@50.8240996,3.2479844,17z/data=!4m8!1m2!2m1!1skortrijk+campus+weide!3m4!1s0x47c33ae91da1e207:0xf60becfabc37b39c!8m2!3d50.8240996!4d3.2501731"
+            target="_blank"
+          >
+            <svg
+              id="mark_met_hover"
+              data-name="mark met hover"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20.924"
+              height="30"
+              viewBox="0 0 20.924 30"
+            >
+              <path
+                id="icon-map-1"
+                data-name="Path 59"
+                class="c-locationicon"
+                d="M86.462,0a10.549,10.549,0,0,0-8.892,16.084l8.183,13.5a.826.826,0,0,0,.593.4.865.865,0,0,0,.889-.422l8.207-13.624A10.551,10.551,0,0,0,86.462,0Zm0,15.82a5.274,5.274,0,1,1,5.231-5.273A5.245,5.245,0,0,1,86.462,15.82Z"
+                transform="translate(-76)"
+                fill="#f29100"
+              />
+
+              <path
+                id="icon-map-2"
+                data-name="Path 60"
+                class="c-locationicon"
+                d="M256,0V5.273a5.274,5.274,0,0,1,0,10.547V30a.862.862,0,0,0,.773-.432l8.207-13.624A10.551,10.551,0,0,0,256,0Z"
+                transform="translate(-245.538)"
+                fill="#e84e1b"
+              /></svg>
+            </a>
+          <!-- phone -->
+          <a href="tel:+32 56 56 56 16"
+            ><svg
+              class="c-footer__icons--tel c-footer__icon"
+              id="phone_met_hover"
+              data-name="phone met hover"
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+            >
+              <g id="icon-phone-1" data-name=" Circle Grid">
+                <circle
+                  id="icon-phone-8"
+                  data-name="Ellipse 1"
+                  cx="15"
+                  cy="15"
+                  r="15"
+                  fill="#023c48"
+                />
+              </g>
+              <g id="icon-phone-2" transform="translate(4.818 5.667)">
+                <path
+                  id="icon-phone-3"
+                  data-name="Path 26"
+                  d="M28.931,36.078c1.972,1.972,3.9,2.772,4.6,2.076l.957-.957a1.686,1.686,0,0,1,2.384,0l2.146,2.146a1.686,1.686,0,0,1,0,2.384L37.347,43.4c-1.58,1.58-6.252-.529-10.73-5.007a23.141,23.141,0,0,1-4.655-6.332c-.949-1.984-1.142-3.609-.352-4.4l1.672-1.672a1.686,1.686,0,0,1,2.384,0l2.146,2.146a1.686,1.686,0,0,1,0,2.384l-.957.957C26.159,32.174,26.959,34.107,28.931,36.078Z"
+                  transform="translate(-21.118 -25.397)"
+                  fill="#f29100"
+                />
+                <g
+                  id="icon-phone-4"
+                  data-name="Group 7"
+                  transform="translate(9.721)"
+                >
+                  <path
+                    id="icon-phone-5"
+                    data-name="Path 27"
+                    d="M71.8,33.828a7.72,7.72,0,0,0-7.711-7.711V25.054a8.784,8.784,0,0,1,8.775,8.775Z"
+                    transform="translate(-64.093 -25.054)"
+                    fill="#ffd290"
+                  />
+                  <path
+                    id="icon-phone-6"
+                    data-name="Path 28"
+                    d="M69.145,42.923a5.058,5.058,0,0,0-5.052-5.052V36.808a6.123,6.123,0,0,1,6.116,6.115Z"
+                    transform="translate(-64.093 -34.149)"
+                    fill="#ffd290"
+                  />
+                  <path
+                    id="icon-phone-7"
+                    data-name="Path 29"
+                    d="M66.487,52.019a2.4,2.4,0,0,0-2.393-2.393V48.563a3.461,3.461,0,0,1,3.457,3.456Z"
+                    transform="translate(-64.094 -43.245)"
+                    fill="#ffd290"
+                  />
+                </g>
+              </g>
+            </svg>
+          </a>
+          <!-- mail -->
+          <a href="mailto:info@theheatingcompany.be?subject=Contacteer mij&"
+            ><svg
+              class="c-footer__icons--mail c-footer__icon"
+              id="email_met_hover"
+              data-name="email met hover"
+              xmlns="http://www.w3.org/2000/svg"
+              width="34.952"
+              height="33.432"
+              viewBox="0 0 34.952 33.432"
+            >
+              <path
+                id="icon-mail-1"
+                data-name="Path 20"
+                d="M43.535,12.233l-12.78,9.239-2.1,1.52a3.146,3.146,0,0,1-3.738,0l-2.1-1.52-12.8-9.224a3.778,3.778,0,0,1,3.085-1.58H40.465A3.8,3.8,0,0,1,43.535,12.233Z"
+                transform="translate(-9.313 -10.668)"
+                fill="#ffd290"
+              />
+              <g
+                id="icon-mail-2"
+                data-name="Group 5"
+                transform="translate(0 1.565)"
+              >
+                <path
+                  id="icon-mail-3"
+                  data-name="Path 21"
+                  d="M.714,32.855l12.8,9.224-12.4,12.4A3.8,3.8,0,0,1,0,51.79V35.074A3.754,3.754,0,0,1,.714,32.855Z"
+                  transform="translate(0 -32.84)"
+                  fill="#f29100"
+                />
+                <path
+                  id="icon-mail-4"
+                  data-name="Path 22"
+                  d="M314.523,34.876V51.592a3.8,3.8,0,0,1-1.109,2.69l-12.4-12.4,12.78-9.239A3.777,3.777,0,0,1,314.523,34.876Z"
+                  transform="translate(-279.572 -32.642)"
+                  fill="#f29100"
+                />
+              </g>
+              <path
+                id="Path_23"
+                data-name="Path 23"
+                d="M141.677,255.97c-1.009,0-1.52-.76-1.52-2.279a3.845,3.845,0,1,0-.925,2.457,2.709,2.709,0,0,0,2.445,1.342c3.039,0,3.039-2.86,3.039-3.8a8.358,8.358,0,1,0-2.547,6.007.762.762,0,1,0-1.064-1.093h0a6.838,6.838,0,1,1,2.091-4.914C143.2,255.394,142.813,255.97,141.677,255.97Zm-5.319,0a2.279,2.279,0,1,1,2.279-2.279A2.279,2.279,0,0,1,136.358,255.97Z"
+                transform="translate(-118.882 -228.616)"
+                fill="#023c48"
+              />
+              <path
+                id="icon-mail-5"
+                data-name="Path 24"
+                d="M35.907,162.348l-2.1,1.52a3.146,3.146,0,0,1-3.738,0l-2.1-1.52-12.4,12.4a3.8,3.8,0,0,0,2.69,1.109H22.1a9.867,9.867,0,0,1,19.678,0h3.839a3.8,3.8,0,0,0,2.69-1.109Z"
+                transform="translate(-14.464 -151.543)"
+                fill="#e84e1b"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- onder de footer -->
+
+      <div class="container c-footer-bottom">
+        <a href="">Policy</a>
+        <a href="">Vacatures</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -209,7 +209,31 @@
       </div>
       <!-- reviews -->
 
-      <!--Deze doe ik later-->
+      <section class="c-uitgelichte-reviews container">
+        <?php
+
+          $arg = array(
+              'post_type' => array ('reviews'),
+              'meta_key'     => '_uitgelicht',
+              'meta_value'   => '1',
+              'meta_compare' => '==',
+              'nopaging' => false,
+              'posts_per_page' => '20',
+              'order' => 'ASC',
+              'orderby' => 'date'
+          );
+
+          $query = new WP_Query($arg);
+
+          if ($query->have_posts()):
+            while ($query->have_posts()):$query->the_post();
+            get_template_part('template-parts/post/content', 'review');
+            endwhile;
+          endif;
+          wp_reset_query();
+
+        ?>
+      </section>
 
       <!-- list -->
       <div class="container">

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>design system</title>
+    <!-- Compiled and minified CSS
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/e3d5c31b7b.js" crossorigin="anonymous"></script>
+    <!--Import AOS effect-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/effect.js"></script>
+    <!-- bewerkte mimified -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- eigen CSS -->
+    <link rel="stylesheet" href="css/screen.css" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <!--Import AOS effect-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/effect.js"></script>
+</head>
+  <body>
+      <header>
+        <p>dit is de header</p>
+      </header>
+      <main>
+            <section class="c-contactform">
+                <div class="container">
+                    <h1>Contacteer ons</h1>
+                    <p>We helpen graag met al je wensen en vragen. Vul hieronder je bericht in en je krijgt antwoord binnen de 24 uur.</p>
+
+                    <form class="col-6 offset-3 o-form">
+                      <div class="row">
+                      <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                        <input
+                          type="text"
+                          name="naam"
+                          id="naam"
+                          class="form-control c-form__input validate"
+                          placeholder="Naam"
+                          minlength="2"
+                          required
+                        />
+                        <label class="c-form__label" for="naam"> Naam </label>
+                        <span class="helper-text" data-error="Dit is geen geldig naam"></span>
+                      </div>
+
+                      <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                        <input
+                          type="text"
+                          name="voornaam"
+                          id="voornaam"
+                          class="form-control c-form__input validate"
+                          placeholder="Voornaam"
+                          minlength="2"
+                          required
+                        />
+                        <label class="c-form__label" for="voornaam"> Voornaam </label>
+                        <span class="helper-text" data-error="Dit is geen geldig voornaam"></span>
+                      </div>
+
+                      <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                        <input
+                          type="email"
+                          name="email"
+                          id="email"
+                          class="form-control c-form__input validate"
+                          placeholder="E-mail"
+                          minlength="2"
+                          required
+                        />
+                        <label class="c-form__label" for="email"> E-mail </label>
+                        <span class="helper-text" data-error="Dit is geen geldig e-mailadres"></span>
+                      </div>
+
+                      <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                        <input
+                          type="tel"
+                          name="tel"
+                          id="tel"
+                          pattern="((^[+\s0-9]{2,6}[\s\./0-9]*$))"
+                          class="form-control c-form__input validate"
+                          placeholder="Telefoonnummer"
+                          minlength="10"
+                          maxlength=11
+                          min="0000000001"
+                          max="99999999999"
+                          required
+                        />
+                        <label class="c-form__label" for="tel"> Telefoonnummer </label>
+                        <span class="helper-text" data-error="Dit is geen geldig telefoonnummer"></span>
+                      </div>
+
+                      <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                        <textarea                   
+                        type="text"
+                        name="opmerkingen"
+                        id="opmerkingen"
+                        class="materialize-textarea"
+                        placeholder="Opmerkingen?"
+                        minlength="2"
+                        required>
+                        </textarea>
+                        <label class="c-form__label" for="opmerkingen"> Hoe kunnen wij u helpen </label>
+                      </div>
+
+                      <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                        <label>
+                          <input type="checkbox" class="filled-in" />
+                          <span class="c-form-span">Ik ga akkoord met het <a class="c-privacy-link" href="policy.html">privacy statement</a> </span>
+                        </label>
+                      </div>
+
+                      </div>
+                        <a type="submit" class="o-button">Submit</a> 
+                    </form>
+                </div>
+            </section>
+            <section class="c-contactgegevens">
+                <div class="container">
+                    <h2>The Heating Company</h2>
+                    <p>Industriestraat 15</br>8500 Kortrijk</br>België</p>
+                    <p>Tel. +32 56 56 16</br><a href="mailto:info@theheatingcompany.be">info@theheatingcompany.be</a></p>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.5254682850923!2d3.106184815641067!3d51.098764479570015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c34dab7d28055b%3A0x2b312375b141287e!2sIndustriestraat%2015%2C%208211%20Zedelgem!5e0!3m2!1snl!2sbe!4v1613140814831!5m2!1snl!2sbe" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </section>
+        
+      </main>
+      <footer class="c-footer">
+        <div class="c-footer__row container">
+            <div class="c-footer__logo">
+              <img src="icons/footer-logo.svg" class="c-footer__logo-klein" alt="The Heating Company logo"
+                title="The Heating Company logo" />
+              <img src="icons/logo-groot.svg" class="c-footer__logo-groot" alt="The Heating Company logo"
+                title="The Heating Company logo" />
+            </div>
+            <div class="c-footer__copyright">
+              <p>© 2021 The Heating Company</p>
+            </div>
+            <div class="c-footer__icons">
+              <img src="icons/footer-mark.svg" class="c-footer__icon" alt="Adres" title="Adres">
+              <img src="icons/footer-phone.svg" class="c-footer__icon" alt="contacteer ons via telefoon"
+                title="contacteer ons via telefoon">
+              <img src="icons/footer-mail.svg" class="c-footer__icon" alt="contacteer ons via mail"
+                title="contacteer ons via mail">
+            </div>
+          </div>
+      </footer>
+  </body>
+</html>

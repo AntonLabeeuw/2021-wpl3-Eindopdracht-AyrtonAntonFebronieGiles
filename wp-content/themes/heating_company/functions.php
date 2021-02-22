@@ -1,8 +1,8 @@
 <?php
 
-    // function cg_add_theme_scripts() {
-    //     wp_enqueue_style( 'screen', get_template_directory_uri() . '/css/screen.css');
-    // }
+    function cg_add_theme_scripts() {
+        wp_enqueue_style( 'screen', get_template_directory_uri() . '/css/screen.css');
+    }
 
     // function register_my_menus() {
     //     register_nav_menus(
@@ -203,7 +203,7 @@
 			'label'                 => 'reviews',
 			'description'           => 'Reviews van de klanten',
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'editor', 'thumbnail'),
+			'supports'              => array( 'title', 'editor'),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
@@ -362,7 +362,7 @@
 		echo "Rating";
 		echo "</div>";
 		echo "<div class='c-form-row__control'>";
-        echo "<input type='number' id='rating' name='rating' max='5' value='" . $value_rating . "'>";
+        echo "<input type='number' id='rating' name='rating' min='0' max='5' value='" . $value_rating . "'>";
 		echo "</div>";
 		echo "</div>";
 		echo "<div class='c-form-row'>";
@@ -483,7 +483,7 @@
 
 
 
-    // add_action( 'wp_enqueue_scripts', 'cg_add_theme_scripts' );
+    add_action( 'wp_enqueue_scripts', 'cg_add_theme_scripts' );
     // add_action( 'init', 'register_my_menus' );
     add_theme_support( 'post-thumbnails' );
     add_action( 'init', 'h_register_verwarmingsketels', 0 );

@@ -1,17 +1,21 @@
 <?php
 
     function cg_add_theme_scripts() {
-        wp_enqueue_style( 'screen', get_template_directory_uri() . '/css/screen.css');
+		$pathTheme = get_template_directory_uri();
+		wp_enqueue_style("materialize",$pathTheme . '/css/materialize.min.css');
+		wp_enqueue_style('screen',$pathTheme . '/css/screen.css', ['materialize']);
+		wp_enqueue_script( "eigenjs", get_template_directory_uri(). "/js/navbar.js" );
     }
 
-    // function register_my_menus() {
-    //     register_nav_menus(
-    //         array(
-	// 			'main-menu' =>  __( 'main-menu' ) ,
-	// 			'footer-menu' => __('footer-menu'),
-    //         )
-    //     );
-    // }
+    function register_my_menus() {
+        register_nav_menus(
+            array(
+				'main-menu' =>  __( 'main-menu' ) ,
+				'footer-menu' => __('footer-menu'),
+            )
+        );
+    }
+	
 
     function h_register_verwarmingsketels(){
         $labels = array(

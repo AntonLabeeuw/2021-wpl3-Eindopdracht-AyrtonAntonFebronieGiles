@@ -105,7 +105,7 @@
                 foreach($menu_items as $item){
                     if ($item->menu_item_parent == 0){
                       //niv 1
-                      echo '<a  class="nav__item" href="' . $item->url . '">' . $item->title . '</a>';
+                      echo '<a  class="" href="' . $item->url . '">' . $item->title . '</a>';
                       
                     }
                 }

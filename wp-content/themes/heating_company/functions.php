@@ -519,7 +519,7 @@
 
 
     add_action( 'wp_enqueue_scripts', 'cg_add_theme_scripts' );
-    // add_action( 'init', 'register_my_menus' );
+    add_action( 'init', 'register_my_menus' );
     add_theme_support( 'post-thumbnails' );
     add_action( 'init', 'h_register_verwarmingsketels', 0 );
 	add_action( 'init', 'h_register_merken', 0 );

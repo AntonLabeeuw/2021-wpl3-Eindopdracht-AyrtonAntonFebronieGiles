@@ -81,6 +81,9 @@
 
             $arg = array(
                 'post_type' => array ('reviews'),
+                'meta_key'     => '_zichtbaarheid',
+                'meta_value'   => '1',
+                'meta_compare' => '==',
                 'nopaging' => false,
                 'posts_per_page' => '20',
                 'order' => 'ASC',

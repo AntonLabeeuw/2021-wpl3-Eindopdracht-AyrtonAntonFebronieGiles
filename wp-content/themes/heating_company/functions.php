@@ -282,6 +282,13 @@
         );
 
 		add_meta_box(
+            'h_merk_box_id',
+            'Info merk',
+            'h_custom_box_merk_html',
+            'merken'
+        );
+
+		add_meta_box(
 			'h_teamlid_box_id',
 			'Teamleden',
 			'h_custom_box_teamlid_html',
@@ -336,6 +343,20 @@
 		echo "</div>";
 		echo "</div>";
     }
+
+	function h_custom_box_merk_html($post){
+        $value_site = get_post_meta($post->ID, '_site', true);
+
+		echo "<h1>Extra info over het merk</h1>";
+		echo "<div class='c-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Site";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<input type='text' id='site' name='site' value='" . $value_site . "'>";
+		echo "</div>";
+		echo "</div>";
+	}
 
 	function h_custom_box_teamlid_html($post){
 		$value_functie = get_post_meta($post->ID, '_functie', true);
@@ -419,6 +440,16 @@
                 );
             }
         }
+
+		if ($naam_post_type == 'merken'){
+			if (array_key_exists('site', $_POST)){
+                update_post_meta(
+                    $post_id,
+                    '_site',
+                    $_POST['site']
+                );
+            }
+		}
 
 		if ($naam_post_type == 'teamleden'){
 			if (array_key_exists('functie', $_POST)){

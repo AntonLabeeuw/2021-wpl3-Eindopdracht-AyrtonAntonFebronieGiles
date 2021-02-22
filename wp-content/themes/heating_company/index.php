@@ -37,7 +37,7 @@
                         'post_type' => array ('verwarmingsketels'),
                         'nopaging' => false,
                         'posts_per_page' => '6',
-                        'order' => 'DESC',
+                        'order' => 'ASC',
                         'orderby' => 'date'
                     );
 
@@ -56,7 +56,27 @@
                 <h2>Kwaliteitsketels van topmerken</h2>
                 <p>Kies samen met onze expert het merk dat best bij jouw situatie past.</p>
                 <div class="c-logo__cards row">
-                    <article class="col s12 m12 l6 xl4">
+                <?php
+
+                    $arg = array(
+                        'post_type' => array ('merken'),
+                        'nopaging' => false,
+                        'posts_per_page' => '6',
+                        'order' => 'ASC',
+                        'orderby' => 'date'
+                    );
+
+                    $query = new WP_Query($arg);
+
+                    if ($query->have_posts()):
+                        while ($query->have_posts()):$query->the_post();
+                        get_template_part('template-parts/post/content', 'merk');
+                        endwhile;
+                    endif;
+                    wp_reset_query();
+
+                ?>
+                    <!-- <article class="col s12 m12 l6 xl4">
                         <div class="c-logo__cards-item z-depth-1">
                             <a href="https://www.vaillant.be/consumenten/" target="_blank"><img class="c-logo__cards-img" src="images/vaillant-logo.png" alt="Vaillant" title="Vaillant"></a>
                             <h2 class="c-logo__cards-title">De Vaillant-ketels</h2>
@@ -76,7 +96,7 @@
                             <h2 class="c-logo__cards-title">De verwarmingsinstallaties van Junkers/Bosch</h2>
                             <p class="c-logo__cards-text">Junkers maakte sinds 1932 deel uit van de groep Bosch, maar het was wachten tot 2018 voor de naam officieel verdween en het gewoon Bosch werd. Ook dit merk is actief in alle segmenten van de verwarmingssystemen: gecombineerde verwarmingsketels, condensatieketels, wandketels en vloerketels, waterpompen...</p>
                         </div>
-                    </article>
+                    </article> -->
                 </div>
             </section>
         </div>

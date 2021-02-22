@@ -22,9 +22,11 @@
         <link rel="stylesheet" href="css/screen.css">
     </head>
     <body>
+        <div class="container">
         <header>
             Dit is een header.
         </header>
+        <main>
         <?php
         $arg = array(
             'post_type' => array ('reviews'),
@@ -38,14 +40,16 @@
 
         if ($query->have_posts()):
             while ($query->have_posts()):$query->the_post();
-            get_template_part('template-parts/post/content', 'reviews');
+            get_template_part('template-parts/post/content', 'review');
             endwhile;
         endif;
         wp_reset_query();
 
         ?>
-    <footer>
-        Dit is een footer
-    </footer>
+        </main>
+        <footer>
+            Dit is een footer
+        </footer>
+        </div>
     </body>
 </html>

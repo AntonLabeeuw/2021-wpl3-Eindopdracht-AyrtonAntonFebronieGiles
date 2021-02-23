@@ -10,18 +10,21 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- font awesome -->
-     <script src="https://kit.fontawesome.com/e3d5c31b7b.js" crossorigin="anonymous"></script>
-     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <!--Import AOS effect-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/effect.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js">
+    </script>
+    <!-- eigen CSS -->
+    <link rel="stylesheet" href="css/screen.css" />
+    <!-- javascript onze -->
+    <script type="text/javascript" src="js/navbar.js"></script>
+    
   
    
    

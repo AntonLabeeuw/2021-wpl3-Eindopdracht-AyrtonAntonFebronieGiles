@@ -1,6 +1,4 @@
 // main dropdown initialization
-
-
 jQuery(document).ready(function() {
 
   $('.dropdown-button.main-menu-item').dropdown({

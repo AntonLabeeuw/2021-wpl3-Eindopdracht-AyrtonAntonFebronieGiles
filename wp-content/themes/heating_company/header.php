@@ -12,10 +12,10 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+          <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="css/screen.css" />
     <!-- javascript onze -->
     <script type="text/javascript" src="js/navbar.js"></script>
-    <script type="text/javascript" src="js/sidebar.js">></script>
+    <script type="text/javascript" src="js/effect.js">></script>
 
     
     
@@ -82,7 +82,7 @@
                             'menu_id' => 'mobile-menu',
                             'theme_location'=>'main-menu',
                             'menu_class' => 'side-nav',
-                            'container' => 'side-nav',
+                            'container' => '',
                             
                             'walker' => new wp_materialize_navwalker()
                         ));

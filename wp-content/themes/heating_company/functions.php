@@ -22,11 +22,23 @@ register_nav_menus(
       // just change the 'primary' to another name
   )
 );
+
+function theme_name_scripts() {   
+	wp_enqueue_script( 
+		'script-name', 
+		get_template_directory_uri() . '/js/navbar.js', 
+		array('jquery'), 
+		'1.0.0', 
+		true 
+	);
+  }
+  
+  add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
     function cg_add_theme_scripts() {
 		$pathTheme = get_template_directory_uri();
 		wp_enqueue_style("materialize",$pathTheme . '/css/materialize.min.css');
 		wp_enqueue_style('screen',$pathTheme . '/css/screen.css', ['materialize']);
-		wp_enqueue_script( "eigenjs", get_template_directory_uri(). "/js/navbar.js" );
+		
 		
     }
 

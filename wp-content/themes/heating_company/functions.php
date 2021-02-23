@@ -1,12 +1,41 @@
 <?php
+require_once get_template_directory() . '/wp_materialize_navwalker.php';
 
+function navbar_script() {   
+  wp_enqueue_script( 
+      'script-name', 
+      get_template_directory_uri() . '/js/navbar.js', 
+      array('jquery'), 
+      '1.0.0', 
+      true 
+  );
+}
+
+add_action( 'wp_enqueue_scripts', 'theme_name_scripts' );
+
+register_nav_menus(
+  array(
+      'main-menu'   =>  __( 'Primary Menu', 'THEMENAME' ),
+      // Register the Primary menu and Drawer menu
+      // Theme uses wp_nav_menu() in TWO locations.
+      // Copy and paste the line above right here if you want to make another menu,
+      // just change the 'primary' to another name
+  )
+);
     function cg_add_theme_scripts() {
 		$pathTheme = get_template_directory_uri();
 		wp_enqueue_style("materialize",$pathTheme . '/css/materialize.min.css');
 		wp_enqueue_style('screen',$pathTheme . '/css/screen.css', ['materialize']);
 		wp_enqueue_script( "eigenjs", get_template_directory_uri(). "/js/navbar.js" );
+		
     }
 
+	add_action( 'wp_enqueue_scripts', 'add_aos_animation' );
+ 	function add_aos_animation() {
+     wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
+     wp_enqueue_script('AOS', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js', false, null, true);
+     wp_enqueue_script('theme-js', get_template_directory_uri() . '/js/effect.js', array( 'AOS' ), null, true);
+ }
     function register_my_menus() {
         register_nav_menus(
             array(
@@ -632,7 +661,7 @@
 
 
 
-
+	add_action( 'wp_enqueue_scripts', 'navbar_script' );
     add_action( 'wp_enqueue_scripts', 'cg_add_theme_scripts' );
     add_action( 'init', 'register_my_menus' );
     add_theme_support( 'post-thumbnails' );

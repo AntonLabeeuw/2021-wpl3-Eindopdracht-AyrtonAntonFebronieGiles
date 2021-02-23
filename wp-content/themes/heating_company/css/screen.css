@@ -1565,4 +1565,32 @@ input:not([type]), input[type=text]:not(.browser-default), input[type=password]:
 
 .c-registeerlink-opmaak:hover {
   color: #f29100;
+
 }
+/*# sourceMappingURL=screen.css.map */
+/* wordpress navbar */
+
+.main-menu-item {
+  font-size: 1.8rem;
+  font-family: "Roboto", "sans-serif";
+  color: #e84e1b;
+}
+.hide-on-med-and-down {
+  display: flex;
+  flex-direction: row;
+  margin-top: 6.4rem;
+}
+.hide-on-med-and-down li a {
+  padding: 0 2rem;
+  color: #023c48;
+}
+.hide-on-med-and-down li a:hover {
+  padding: 0 2rem;
+  color: #e84e1b;
+}
+
+i.material-icons.right {
+  margin-left: 0;
+}
+
+

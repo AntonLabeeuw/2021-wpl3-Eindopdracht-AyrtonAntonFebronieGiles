@@ -2,12 +2,8 @@
 
         <main>
             <div class="container">
-                <h1> Dé absolute verwarmingsspecialist</h1>
-                <p>The Heating Company is een ervaren dynamisch bedrijf dat zich specialiseert in plaatsing, onderhoud
-                    en
-                    herstelling van verwarmings-
-                    installaties regio Kortrijk.</p>
-                <h2> Ons team</h2>
+                <?php echo the_content()
+                ?>
                 <section class="c-team">
                     <?php
 
@@ -35,10 +31,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s12 m6 l8">
-                            <p class="c-banner-contact-text">Laat ons weten wat je van The Heating Company verwacht</p>
+                            <p class="c-banner-contact-text"><?php echo get_the_title(); ?></p>
                         </div>
                         <div class="col s12 m6 l4">
-                            <a class="o-button o-button-effect o-button-effect-1 right" href="">Neem contact op</a>
+                            <a class="o-button o-button-effect o-button-effect-1 right" href=""><?php the_content(); ?></a>
                         </div>
                     </div>
                 </div>

@@ -7,8 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php echo get_bloginfo('name') ;?></title>
     <?php wp_head(  )?>
+   
+    
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -24,15 +30,23 @@
     <link rel="stylesheet" href="css/screen.css" />
     <!-- javascript onze -->
     <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/sidebar.js">></script>
+
     
-  
-   
+    
    
 </head>
 <body>
     <header>
         <div class="c-topnav container">
-            <img src="icons/logo-groot.svg" class="c-topnav__logo col s12 m12" alt="The Heating Company logo">
+        <?php
+        echo '
+                <img
+                class="c-footer__logo-groot"
+                src= "'. get_template_part('icons/inline', 'footer-logo-groot.svg') .'"
+                alt="The Heating Company logo"
+                />'; 
+        ?>
             <nav>
                 <ul>
                     <li><a href="#">Over ons</a></li>
@@ -46,14 +60,34 @@
                     href="tel:+32 56 56 56 16"><span>Noodnummer</span></a>
             </div>
         </div>
-        <div class="container">
-        <?php
-            wp_nav_menu( array(
-                'menu' => 'main-menu',
-                'theme_location'=>'main-menu',
-                'menu_class' => 'hide-on-med-and-down',
-                'walker' => new wp_materialize_navwalker()
-            ));
-        ?>
+        
+        <div class="nav-wrapper">
+            <div class="container">
+                <a href="#" data-activates="mobile-menu" class="button-collapse">
+                                <i class="material-icons nav__hamburger">menu</i>
+                </a>
+                    <?php
+                        wp_nav_menu( array(
+                            'menu' => 'main-menu',
+                            'theme_location'=>'main-menu',
+                            'menu_class' => 'hide-on-med-and-down',
+                            'container' => '',
+                            'walker' => new wp_materialize_navwalker()
+                        ));
+                    ?>
+                <!-- mobile and tablet menu content -->
+                <?php
+                        wp_nav_menu( array(
+                            'menu' => 'main-menu',
+                            'menu_id' => 'mobile-menu',
+                            'theme_location'=>'main-menu',
+                            'menu_class' => 'side-nav',
+                            'container' => 'side-nav',
+                            
+                            'walker' => new wp_materialize_navwalker()
+                        ));
+                    ?>
+            </div>
         </div>
+     
     </header>

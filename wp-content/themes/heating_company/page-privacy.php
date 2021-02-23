@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Privacy statement</title>
-        
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-        <!-- eigen css -->
-        <link rel="stylesheet" href="css/screen.css">
-    </head>
-    <body>
-        <header>
-            Dit is een header
-        </header>
+<?php get_header(); ?>
         <main>
             <div class="container">
                 <h1>Privacy Policy</h1>
@@ -39,8 +19,4 @@
                 <p>Deze privacy policy is gegenereerd door <a href="http://privacypolicygenerator.be" class="c-policy-link" target="_blank">privacypolicygenerator.be</a>.</p>
             </div>
         </main>
-        <footer>
-            Dit is een footer
-        </footer>
-    </body>
-</html>
+<?php get_footer(); ?>

@@ -1,4 +1,3 @@
-
 <article class="c-reviews__review">
     <p class="c-reviews__text"><?php echo get_the_title(); ?></p>
     <p class="c-reviews__quote"><?php echo get_the_content(); ?></p>

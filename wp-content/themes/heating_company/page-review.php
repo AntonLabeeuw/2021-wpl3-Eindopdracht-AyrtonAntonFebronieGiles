@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Verwarmingsoplossingen</title>
-
-        <!-- jQuery -->
-        <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
-
-        <!-- fontawesome -->
-        <script src="https://kit.fontawesome.com/72aae3cd92.js" crossorigin="anonymous"></script>
-        
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-        <!-- eigen css -->
-        <link rel="stylesheet" href="css/screen.css">
-    </head>
-    <body>
-        <div class="container">
-        <header>
-            Dit is een header.
-        </header>
+<?php get_header(); ?>
         <main>
         <?php
         $arg = array(
@@ -47,9 +20,4 @@
 
         ?>
         </main>
-        <footer>
-            Dit is een footer
-        </footer>
-        </div>
-    </body>
-</html>
+<?php get_footer(); ?>

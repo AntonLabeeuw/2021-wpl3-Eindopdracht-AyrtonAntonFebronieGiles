@@ -510,8 +510,41 @@
 	}
 
 
+	function ih_customize_register($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-txt-h1', array('default'=> 'Geïnstalleerde apparatuur in uw woning/residentie') );
+		//header 2
+		$wp_customize->add_setting( 'setting-txt-h2', array('default'=> 'Condensatieketel') );
+		//header 3
+		$wp_customize->add_setting( 'setting-txt-h3', array('default'=> '/') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-txt-p', array('default'=> '/') );
 
+		/* CONTROLS */
+		//header 1
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
+		//header 2
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
+		//header 3
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-h3', array('label'=> 'Tekst header 3','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
 
+		//paragraaf
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-p', array('label'=> 'Tekst paragraaf','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
+
+		/* SECTION */
+		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+		$wp_customize->add_section( 'section-id-heating-installatie', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		'is_front_page', 
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+	
+	add_action( 'customize_register', 'ih_customize_register');
 
 
 

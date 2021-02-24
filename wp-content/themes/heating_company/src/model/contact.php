@@ -1,6 +1,6 @@
 <?php
 
-    class Kamp{
+    class Contact{
 
         public $bericht_id;
         public $voornaam;

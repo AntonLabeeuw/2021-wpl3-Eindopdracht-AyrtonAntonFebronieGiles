@@ -1625,3 +1625,6 @@ i.material-icons.right {
 i.material-icons.right {
   margin-left: 0;
 }
+.dropdown-content {
+  overflow: visible !important;
+}

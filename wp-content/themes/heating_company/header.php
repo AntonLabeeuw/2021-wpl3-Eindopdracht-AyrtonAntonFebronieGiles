@@ -49,13 +49,13 @@
         ?>
             <nav>
                 <ul>
-                    <li><a href="#">Over ons</a></li>
-                    <li><a href="#">Attesten</a></li>
+                    <li><a href="<?php echo site_url('/overons'); ?>">Over ons</a></li>
+                    <li><a href="<?php echo site_url('/attesten'); ?>">Attesten</a></li>
                 </ul>
             </nav>
             <div class="c-topnav__knoppen">
                 <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte"
-                    href="">Offerte</a>
+                    href="<?php echo site_url('/offerte'); ?>">Offerte</a>
                 <a class="o-button o-button--noodnummer c-topnav__knop"
                     href="tel:+32 56 56 56 16"><span>Noodnummer</span></a>
             </div>

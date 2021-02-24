@@ -36,7 +36,9 @@
     <!-- javascript onze -->
     <!-- <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/effect.js"></script> -->
+
     
+   
 
     <?php wp_head(  )?>
     
@@ -44,16 +46,16 @@
 <body <?php body_class(  ) ?>>
     <header>
         <div class="c-topnav container">
-        <a href="<?php echo get_option("siteurl"); ?>">
+        <a  class="c-topnav__logo col s12 m12" href="<?php echo get_option("siteurl"); ?>">
         <?php
         echo '
                 <img
-                class="c-topnav__logo col s12 m12"
-                src= "'. get_template_part('icons/inline', 'footer-logo-groot.svg') .'"
+                class=""
+                src= "'. get_template_directory_uri() .' /icons/logo-groot.svg"
                 alt="The Heating Company logo"
                 />'; 
         ?>
-        
+        </a>
             <nav>
                 <ul>
                     <li><a href="<?php echo site_url('/overons'); ?>">Over ons</a></li>
@@ -73,6 +75,7 @@
                 <a href="#" data-activates="mobile-menu" class="button-collapse">
                                 <i class="material-icons nav__hamburger">menu</i>
                 </a>
+                 <!-- mobile and tablet menu content -->
                 <?php
                         wp_nav_menu( array(
                             'menu' => 'main-menu',
@@ -84,6 +87,7 @@
                             'walker' => new wp_materialize_navwalker()
                         ));
                     ?>
+                     <!-- desktop menu content -->
                     <?php
                         wp_nav_menu( array(
                             'menu' => 'main-menu',
@@ -93,7 +97,7 @@
                             'walker' => new wp_materialize_navwalker()
                         ));
                     ?>
-                <!-- mobile and tablet menu content -->
+               
             </div>
             
         </div>

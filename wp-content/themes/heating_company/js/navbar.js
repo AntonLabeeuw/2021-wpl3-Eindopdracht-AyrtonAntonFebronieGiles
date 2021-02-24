@@ -27,5 +27,8 @@ jQuery(document).ready(function() {
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
   });
  
-
+  $("a.dropdown-toggle").on("click", function() {
+    $("ul.dropdown-menu.show").removeClass("show");
+    $(this).next( "ul.dropdown-menu" ).addClass("show");
+});
 });

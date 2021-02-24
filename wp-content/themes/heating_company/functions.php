@@ -625,7 +625,36 @@
 		//wanneer moet deze setting worden getoond
 		) );
 	}
+
+	function ih_customize_banner($wp_customize) {
+		/* SETTINGS */
+		//Tekst banner
+		$wp_customize->add_setting( 'setting-txt-banner', array('default'=> 'Reken op een betrouwbare partner') );
+		//Tekst button
+		$wp_customize->add_setting( 'setting-txt-btn', array('default'=> 'Neem contact op') );
+		//Link button
+		$wp_customize->add_setting( 'setting-txt-btnlink', array('default'=> 'https://wpl3.antonlabeeuw.be/') );
+
+		/* CONTROLS */
+		//Tekst banner
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-banner', array('label'=> 'Tekst banner','type'=> 'textarea','section'=> 'section-id-heating-banner',) );
+		//Tekst knop
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-btn', array('label'=> 'Tekst knop','type'=> 'input','section'=> 'section-id-heating-banner',) );
+		//Link knop
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-btnlink', array('label'=> 'Link knop','type'=> 'textarea','section'=> 'section-id-heating-banner',) );
+
+		/* SECTION */
+		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+		$wp_customize->add_section( 'section-id-heating-banner', array('title'=>  'Instellingen banner','description'=>  'Stel de tekst in','active_callback'=> 
+		'is_front_page', 
+		//wanneer moet deze setting worden getoond
+		) );
+	}
 	
+	add_action( 'customize_register', 'ih_customize_banner');
 	add_action( 'customize_register', 'ih_customize_register');
 
 

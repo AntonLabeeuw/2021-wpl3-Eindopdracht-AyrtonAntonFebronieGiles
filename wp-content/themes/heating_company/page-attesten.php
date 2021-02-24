@@ -34,14 +34,14 @@
           <div class="row">
             <div class="col s12 m6 l8">
               <p class="c-banner-contact-text">
-                Reken op een betrouwbare partner
+              <?php echo get_theme_mod('setting-txt-banner'); ?>
               </p>
             </div>
             <div class="col s12 m6 l4">
               <a
                 class="o-button o-button-effect o-button-effect-1 right"
-                href=""
-                >Neem contact op</a
+                href="<?php echo get_theme_mod('setting-txt-btnlink'); ?>"
+                ><?php echo get_theme_mod('setting-txt-btn'); ?></a
               >
             </div>
           </div>

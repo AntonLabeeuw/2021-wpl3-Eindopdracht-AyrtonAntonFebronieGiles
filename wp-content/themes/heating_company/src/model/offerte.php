@@ -20,7 +20,7 @@
         public $gemeente;
         public $opmerkingen;
 
-        public function __construct($offerte_id = -1, $soort_woning = "", $staat_woning = "", $huidig_verwarmingstype = "", $gewenst_verwarmingstype = "", $wanneer = "", $voornaam = "", $naam = "", $email = "", $telefoon = "", $straat = "", $nummer = 1, $bus = -1, $postcode = "", $gemeente = "", $opmerkingen = ""){
+        public function __construct($offerte_id = -1, $soort_woning = "", $staat_woning = "", $huidig_verwarmingstype = "", $gewenst_verwarmingstype = "", $wanneer = "", $voornaam = "", $naam = "", $email = "", $telefoon = "", $straat = "", $nummer = 1, $bus = "", $postcode = "", $gemeente = "", $opmerkingen = ""){
             $this->offerte_id = $offerte_id;
             $this->soort_woning = $soort_woning;
             $this->staat_woning = $staat_woning;

@@ -2,28 +2,26 @@
 
     <main>
       <div class="container">
-        <h1>Attesten en certificaten</h1>
+        <h1><?php echo get_theme_mod('setting-txt-h1'); ?></h1>
         <p>
-          De installateurs van The Heating Company beschikken over de nodige
-          attesten en certificaten om elke opdracht tot een goed einde te
-          brengen.
+        <?php echo get_theme_mod('setting-txt-p1'); ?>
         </p>
-        <h2>Behaalde attesten en certificaten:</h2>
+        <h2><?php echo get_theme_mod('setting-txt-h2'); ?></h2>
       </div>
 
       <!-- list -->
       <div class="container">
         <!-- voorbeeld van list -->
         <ul class="c-list">
-          <li class="c-list-item">Onderhouden en afstellen van stookolieinstallaties : TV9189
+          <li class="c-list-item"><?php echo get_theme_mod('setting-txt-li1'); ?>
           </li>
-          <li class="c-list-item">Onderhouden van gasinstallaties: SGA016
+          <li class="c-list-item"><?php echo get_theme_mod('setting-txt-li2'); ?>
           </li>
-          <li class="c-list-item">Tanktechnicus : SV00666
+          <li class="c-list-item"><?php echo get_theme_mod('setting-txt-li3'); ?>
           </li>
-          <li class="c-list-item">Aardgashabilitatie : 02-01661-N
+          <li class="c-list-item"><?php echo get_theme_mod('setting-txt-li4'); ?>
           </li>
-          <li class="c-list-item">Energiedeskundige : 2007-350-EAP – EPO8489
+          <li class="c-list-item"><?php echo get_theme_mod('setting-txt-li5'); ?>
           </li>
         </ul>
       </div>

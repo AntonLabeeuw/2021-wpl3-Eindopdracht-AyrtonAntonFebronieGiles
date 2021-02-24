@@ -751,35 +751,58 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	function ih_customize_register($wp_customize) {
 		/* SETTINGS */
 		//header 1
-		$wp_customize->add_setting( 'setting-txt-h1', array('default'=> 'Geïnstalleerde apparatuur in uw woning/residentie') );
-		//header 2
-		$wp_customize->add_setting( 'setting-txt-h2', array('default'=> 'Condensatieketel') );
-		//header 3
-		$wp_customize->add_setting( 'setting-txt-h3', array('default'=> '/') );
+		$wp_customize->add_setting( 'setting-txt-h1', array('default'=> 'Attesten en certificaten') );
 		//paragraaf
-		$wp_customize->add_setting( 'setting-txt-p', array('default'=> '/') );
+		$wp_customize->add_setting( 'setting-txt-p1', array('default'=> 'De installateurs van The Heating Company beschikken over de nodige attesten en certificaten om elke opdracht tot een goed einde te brengen.') );
+		//header 2
+		$wp_customize->add_setting( 'setting-txt-h2', array('default'=> 'Behaalde attesten en certificaten:') );
+		//Lijstitem1
+		$wp_customize->add_setting( 'setting-txt-li1', array('default'=> 'Onderhouden en afstellen van stookolieinstallaties : TV9189
+		') );
+		//Lijstitem2
+		$wp_customize->add_setting( 'setting-txt-li2', array('default'=> 'Onderhouden van gasinstallaties: SGA016') );
+		//Lijstitem3
+		$wp_customize->add_setting( 'setting-txt-li3', array('default'=> 'Tanktechnicus : SV00666
+		') );
+		//Lijstitem4
+		$wp_customize->add_setting( 'setting-txt-li4', array('default'=> 'Aardgashabilitatie : 02-01661-N
+		') );
+		//Lijstitem5
+		$wp_customize->add_setting( 'setting-txt-li5', array('default'=> 'Energiedeskundige : 2007-350-EAP – EPO8489
+		') );
 
 		/* CONTROLS */
 		//header 1
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
-		//header 2
-		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
-		//header 3
-		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-h3', array('label'=> 'Tekst header 3','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
-
+		$wp_customize->add_control( 'setting-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-p', array('label'=> 'Tekst paragraaf','type'=> 'textarea','section'=> 'section-id-heating-installatie',) );
+		$wp_customize->add_control( 'setting-txt-p1', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		//header 2
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		//lijst
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-txt-li1', array('label'=> 'Item 1','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li2', array('label'=> 'Item 2','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li3', array('label'=> 'Item 3','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li4', array('label'=> 'Item 4','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li5', array('label'=> 'Item 5','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
 
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-		$wp_customize->add_section( 'section-id-heating-installatie', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
-		'is_front_page', 
+		$wp_customize->add_section( 'section-id-heating-attest', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		'callback_check_if_page_attest',
 		//wanneer moet deze setting worden getoond
 		) );
+	}
+
+	function callback_check_if_page_attest(){
+		if (is_page('attest')){
+		return true;
+		}else{
+		return false;
+		}
 	}
 
 	function ih_customize_banner($wp_customize) {
@@ -804,8 +827,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-		$wp_customize->add_section( 'section-id-heating-banner', array('title'=>  'Instellingen banner','description'=>  'Stel de tekst in','active_callback'=> 
-		'is_front_page', 
+		$wp_customize->add_section( 'section-id-heating-banner', array('title'=>  'Instellingen banner','description'=>  'Stel de tekst in', 
 		//wanneer moet deze setting worden getoond
 		) );
 	}

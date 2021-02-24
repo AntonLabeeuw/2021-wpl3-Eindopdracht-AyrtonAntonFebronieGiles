@@ -358,7 +358,7 @@ function theme_name_scripts() {
 			'show_ui'               => true,
 			'show_in_menu'          => true,
 			'menu_position'         => 5,
-			'menu_icon'				=> 'dashicons-cart',
+			'menu_icon'				=> 'dashicons-welcome-add-page',
 			'show_in_admin_bar'     => true,
 			'show_in_nav_menus'     => true,
 			'can_export'            => true,
@@ -368,6 +368,58 @@ function theme_name_scripts() {
 			'capability_type'       => 'page',
 		);
 		register_post_type( 'banners', $args );
+    }
+
+	function h_register_cards(){
+        $labels = array(
+			'name'                  => 'card',
+			'singular_name'         => 'card',
+			'menu_name'             => 'cards',
+			'name_admin_bar'        => 'cards',
+			'archives'              => 'card archives',
+			'attributes'            => 'card attributes',
+			'parent_item_colon'     => 'Parent item:',
+			'all_items'             => 'Alle cards',
+			'add_new_item'          => 'Add new card',
+			'add_new'               => 'Add card',
+			'new_item'              => 'New card',
+			'edit_item'             => 'Edit card',
+			'update_item'           => 'Update card',
+			'view_item'             => 'View card',
+			'view_items'            => 'View cards',
+			'search_items'          => 'Search card',
+			'not_found'             => 'Not found',
+			'not_found_in_trash'    => 'Not found in trash',
+			'featured_image'        => 'Featured image',
+			'set_featured_image'    => 'Set featured image',
+			'remove_featured_image' => 'Remove featured image',
+			'use_featured_image'    => 'Use as featured image',
+			'insert_into_item'      => 'Insert into item',
+			'uploaded_to_this_item' => 'Uploaded to this item',
+			'items_list'            => 'Items list',
+			'items_list_navigation' => 'Items list navigation',
+			'filter_items_list'     => 'Filter items list',
+		);
+		$args = array(
+			'label'                 => 'cards',
+			'description'           => 'Card',
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail',),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'				=> 'dashicons-index-card',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'cards', $args );
     }
 
     function h_add_custom_box(){
@@ -404,7 +456,29 @@ function theme_name_scripts() {
 			'h_custom_box_banner_html',
 			'banners'
 		);
+		add_meta_box(
+			'h_banner_box_id',
+			'Banners',
+			'h_custom_box_cards_html',
+			'banners'
+		);
     }
+
+	function h_custom_box_cards_html($post){
+        $value_tekst = get_post_meta($post->ID, '_tekst', true);
+		$value_tekstBtn = get_post_meta($post->ID, '_btn', true);
+
+		echo "<h1>Extra info over de banner</h1>";
+		echo "<div class='c-form-row'>";
+		echo "<div class='c-form-row__label'>";
+		echo "Button tekst";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<input type='text' id='btn' name='btn' value='" . $value_tekstBtn . "'>";
+		echo "</div>";
+		echo "</div>";
+	}
+
 
 	function h_custom_box_banner_html($post){
         $value_tekst = get_post_meta($post->ID, '_tekst', true);
@@ -712,6 +786,7 @@ function theme_name_scripts() {
 	add_action( 'init', 'h_register_reviews', 0 );
 	add_action( 'init', 'h_register_realisaties' );
 	add_action( 'init', 'h_register_banners', 0 );
+	add_action( 'init', 'h_register_cards', 0 );
 	add_action( 'add_meta_boxes', 'h_add_custom_box' );
     add_action( 'save_post', 'h_save_postdata' );
     add_action( 'admin_enqueue_scripts', 'p_admin_css_js' );

@@ -1593,11 +1593,15 @@ textarea.materialize-textarea {
   margin-top: 6.4rem;
 }
 .hide-on-med-and-down li a {
-  padding: 0 2rem;
   color: #023c48;
 }
 .hide-on-med-and-down li a:hover {
-  padding: 0 2rem;
+  color: #e84e1b;
+}
+.hide-on-med-and-down li {
+  padding-right: 2rem;
+}
+.hide-on-med-and-down li a:hover {
   color: #e84e1b;
 }
 .dropdown-content {
@@ -1608,7 +1612,7 @@ i.material-icons.right {
 }
 .dropdown-content li a {
   color: #023c48;
-  padding-bottom: 0;
+  padding-bottom: 2rem;
 }
 .dropdown-content li a:hover {
   color: #e84e1b;
@@ -1625,6 +1629,33 @@ i.material-icons.right {
 i.material-icons.right {
   margin-left: 0;
 }
-.dropdown-content {
-  overflow: visible !important;
+
+.side-nav li a {
+  color: #023c48;
+  font-size: 1.8rem;
+}
+.side-nav li a:hover {
+  color: #e84e1b;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.side-nav {
+  padding-top: 5rem;
+}
+.hide-on-med-and-down {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1128px) {
+  i.material-icons.nav__hamburger {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1128px) {
+  .hide-on-med-and-down {
+    display: none !important;
+  }
+  i.material-icons.right {
+    padding-top: 2rem;
+  }
 }

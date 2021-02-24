@@ -2,21 +2,23 @@
         <div class="c-footer__row container">
             <div class="c-footer__logo">
             <?php
-                echo '
+        echo '
                 <img
-                class="c-footer__logo-groot"
-                src= "'. get_template_part('icons/inline', 'footer-logo-groot.svg') .'"
+                class="c-footer__logo-klein""
+                src= "'. get_template_directory_uri() .' /icons/footer-logo.svg"
                 alt="The Heating Company logo"
-                 title="The Heating Company logo"
-                />';          
-                echo '
+                />'; 
+        ?>
+              <?php
+        echo '
                 <img
-                class="c-footer__logo-klein"
-                src= "'. get_template_part('icons/inline', 'footer-logo-klein.svg') .'"
+                class="c-footer__logo-groot""
+                src= "'. get_template_directory_uri() .' /icons/logo-groot.svg"
                 alt="The Heating Company logo"
-                title="The Heating Company logo"
-                />';        
-            ?>
+                />'; 
+        ?>
+            
+            
 
             </div>
             <div class="c-footer__copyright">
@@ -63,7 +65,7 @@
                     </svg>
                 </a>
                 <!-- mail -->
-                <a href="mailto:info@theheatingcompany.be?subject=Contacteer mij&"><svg
+                <a href="mailto:theheatingcompany@gmail.com.be?subject=Contacteer mij&"><svg
                         class="c-footer__icons--mail c-footer__icon" id="email_met_hover" data-name="email met hover"
                         xmlns="http://www.w3.org/2000/svg" width="34.952" height="33.432" viewBox="0 0 34.952 33.432">
                         <path id="icon-mail-1" data-name="Path 20"
@@ -116,7 +118,8 @@
        
         
     </footer>
-   
+
 </body>
+
 <?php wp_footer(); ?>
 </html>

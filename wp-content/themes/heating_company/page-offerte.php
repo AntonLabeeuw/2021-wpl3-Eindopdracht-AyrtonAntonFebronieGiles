@@ -21,7 +21,7 @@
                 </div>
                 <p class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">Je wil een nieuwe ketel voor:</p>
                 <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
-                  <select class="form-control browser-default">
+                  <select class="form-control browser-default" name="soort_woning">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">Huis</option>
                     <option value="2">Een appartement</option>
@@ -49,7 +49,7 @@
               <div class="row">
                 <p class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">Huidig verwarmingstype:</p>
                 <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
-                  <select class="form-control browser-default">
+                  <select class="form-control browser-default" name="huidig_verwarmingstype">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">Gas</option>
                     <option value="2">Gas met warme lucht</option>
@@ -62,7 +62,7 @@
   
                 <p class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">Gewenst verwarmingstype:</p>
                 <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
-                  <select class="form-control browser-default">
+                  <select class="form-control browser-default" name="gewenst_verwarmingstype">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">Gas</option>
                     <option value="2">Gas met warme lucht</option>
@@ -77,7 +77,7 @@
                   Wanneer wil je je ketel laten vervangen?
                 </p>
                 <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
-                  <select class="form-control browser-default">
+                  <select class="form-control browser-default" name="wanneer">
                     <option value="" disabled selected>Choose your option</option>
                     <option value="1">
                       Het is niet dringend: ik kan nog wachten tot de zomer

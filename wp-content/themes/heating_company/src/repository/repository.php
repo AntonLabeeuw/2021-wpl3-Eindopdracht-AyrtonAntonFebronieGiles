@@ -3,7 +3,7 @@
 //database importeren
 require_once dirname(__FILE__)."/../database/database.php";
 //dataklasse ophalen
-require_once dirname(__FILE__)."/..model/contact.php";
+require_once dirname(__FILE__)."/../model/contact.php";
 
 class Repository{
 

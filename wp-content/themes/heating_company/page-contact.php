@@ -1,46 +1,11 @@
-<!doctype html>
-<html lang="nl">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>design system</title>
-    <!-- Compiled and minified CSS
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/e3d5c31b7b.js" crossorigin="anonymous"></script>
-    <!--Import AOS effect-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/effect.js"></script>
-    <!-- bewerkte mimified -->
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <!-- eigen CSS -->
-    <link rel="stylesheet" href="css/screen.css" />
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <!--Import AOS effect-->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="js/effect.js"></script>
-</head>
-  <body>
-      <header>
-        <p>dit is de header</p>
-      </header>
+<?php get_header(); ?>
       <main>
             <section class="c-contactform">
                 <div class="container">
                     <h1>Contacteer ons</h1>
                     <p>We helpen graag met al je wensen en vragen. Vul hieronder je bericht in en je krijgt antwoord binnen de 24 uur.</p>
 
-                    <form class="col-6 offset-3 o-form" action="admin/create-bericht-verwerk.php" method="POST">
+                    <form class="col-6 offset-3 o-form" action="/create-bericht-verwerk.php" method="POST">
                       <div class="row">
                       <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
                         <input
@@ -118,12 +83,13 @@
                       <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
                         <label>
                           <input type="checkbox" name="privacy" class="filled-in" />
-                          <span class="c-form-span">Ik ga akkoord met het <a class="c-privacy-link" href="policy.html">privacy statement</a> </span>
+                          <span class="c-form-span">Ik ga akkoord met hetd <a class="c-privacy-link" href="policy.html">privacy statement</a> </span>
                         </label>
                       </div>
 
                       </div>
-                      <a class="o-button o-button-effect o-button-effect-1 center" name="submit" href="">Stel je vraag</a>
+                      <input type="submit" name="submit">
+                      <!-- <a class="o-button o-button-effect o-button-effect-1 center" name="submit" href="">Stel je vraag</a> -->
                     </form>
                 </div>
             </section>
@@ -137,25 +103,4 @@
             </section>
         
       </main>
-      <footer class="c-footer">
-        <div class="c-footer__row container">
-            <div class="c-footer__logo">
-              <img src="icons/footer-logo.svg" class="c-footer__logo-klein" alt="The Heating Company logo"
-                title="The Heating Company logo" />
-              <img src="icons/logo-groot.svg" class="c-footer__logo-groot" alt="The Heating Company logo"
-                title="The Heating Company logo" />
-            </div>
-            <div class="c-footer__copyright">
-              <p>© 2021 The Heating Company</p>
-            </div>
-            <div class="c-footer__icons">
-              <img src="icons/footer-mark.svg" class="c-footer__icon" alt="Adres" title="Adres">
-              <img src="icons/footer-phone.svg" class="c-footer__icon" alt="contacteer ons via telefoon"
-                title="contacteer ons via telefoon">
-              <img src="icons/footer-mail.svg" class="c-footer__icon" alt="contacteer ons via mail"
-                title="contacteer ons via mail">
-            </div>
-          </div>
-      </footer>
-  </body>
-</html>
+<?php get_footer(); ?>

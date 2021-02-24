@@ -1,5 +1,12 @@
 // main dropdown initialization
+
 jQuery(document).ready(function() {
+  $(".button-collapse").sideNav(
+    {
+      menuWidth: 325, // Default is 240
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
 
   $('.dropdown-button.main-menu-item').dropdown({
       inDuration: 300,
@@ -19,4 +26,6 @@ jQuery(document).ready(function() {
       belowOrigin: false, // Displays dropdown below the button
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
   });
+ 
+
 });

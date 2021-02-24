@@ -7,12 +7,14 @@
                 class="c-footer__logo-groot"
                 src= "'. get_template_part('icons/inline', 'footer-logo-groot.svg') .'"
                 alt="The Heating Company logo"
+                 title="The Heating Company logo"
                 />';          
                 echo '
                 <img
                 class="c-footer__logo-klein"
                 src= "'. get_template_part('icons/inline', 'footer-logo-klein.svg') .'"
                 alt="The Heating Company logo"
+                title="The Heating Company logo"
                 />';        
             ?>
 
@@ -85,7 +87,7 @@
                 </a>
             </div>
         </div>
-
+      
         <!-- onder de footer -->
         <div class="container c-footer-bottom">
         <?php
@@ -111,7 +113,10 @@
                 }
             ?>
         </div>
+       
+        
     </footer>
-    <?php wp_footer(); ?>
+   
 </body>
+<?php wp_footer(); ?>
 </html>

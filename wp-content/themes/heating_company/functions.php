@@ -848,6 +848,42 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		}
 	}
 
+	function ih_customize_over_ons($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-over-ons-h1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-over-ons-p1', array('default'=> '') );
+		//header 2
+		$wp_customize->add_setting( 'setting-over-ons-h2', array('default'=> '') );
+
+		/* CONTROLS */
+		//header 1
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-over-ons-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
+		//paragraaf
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-over-ons-p1', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
+		//header 2
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-over-ons-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
+
+		/* SECTION */
+		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+		$wp_customize->add_section( 'section-id-heating-over-ons', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		'callback_check_if_page_over_ons',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_over_ons(){
+		if (is_page('over-ons')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
 	function ih_customize_banner($wp_customize) {
 		/* SETTINGS */
 		//Tekst banner
@@ -874,7 +910,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		//wanneer moet deze setting worden getoond
 		) );
 	}
-	
+	add_action( 'customize_register', 'ih_customize_over_ons');
 	add_action( 'customize_register', 'ih_customize_banner');
 	add_action( 'customize_register', 'ih_customize_register');
 	add_action( 'customize_register', 'ih_customize_oplossing');

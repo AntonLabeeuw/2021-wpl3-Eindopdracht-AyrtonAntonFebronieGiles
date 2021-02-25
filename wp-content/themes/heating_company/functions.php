@@ -747,7 +747,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		wp_enqueue_style('admin-cpt-css',$pathTheme . '/css/cpt.css');
 	}
 
-	function ih_customize_oplossing($wp_customize) {
+	function h_customize_oplossing($wp_customize) {
 		/* SETTINGS */
 		//header 1
 		$wp_customize->add_setting( 'setting-txt-oplossing-h1', array('default'=> '') );
@@ -791,7 +791,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 
 
 
-	function ih_customize_register($wp_customize) {
+	function h_customize_register($wp_customize) {
 		/* SETTINGS */
 		//header 1
 		$wp_customize->add_setting( 'setting-txt-h1', array('default'=> 'Attesten en certificaten') );
@@ -848,7 +848,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		}
 	}
 
-	function ih_customize_over_ons($wp_customize) {
+	function h_customize_over_ons($wp_customize) {
 		/* SETTINGS */
 		//header 1
 		$wp_customize->add_setting( 'setting-over-ons-h1', array('default'=> '') );
@@ -884,7 +884,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		}
 	}
 
-	function ih_customize_home($wp_customize) {
+	function h_customize_home($wp_customize) {
 		/* SETTINGS */
 		//header 1
 		$wp_customize->add_setting( 'setting-home-h1', array('default'=> '') );
@@ -927,7 +927,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
-	function ih_customize_home_button($wp_customize) {
+	function h_customize_home_button($wp_customize) {
 		/* SETTINGS */
 		//header 2
 		$wp_customize->add_setting( 'setting-home-button1_h2', array('default'=> '') );
@@ -993,8 +993,139 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
+	function h_customize_onderhoud($wp_customize) {
+		/* SETTINGS */
+		//header 2
+		$wp_customize->add_setting( 'setting-onderhoud-h1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-p1', array('default'=> '') );
+		//Tekst button
+		$wp_customize->add_setting( 'setting-onderhoud-button_txt', array('default'=> 'Onderhoud aavragen') );
+		//Link button
+		$wp_customize->add_setting( 'setting-onderhoud-button_link', array('default'=> 'https://wpl3.antonlabeeuw.be/') );
 
-	function ih_customize_banner($wp_customize) {
+		//header 2
+		$wp_customize->add_setting( 'setting-onderhoud-h2.1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-h3.1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-p2', array('default'=> '') );
+		//header 3
+		$wp_customize->add_setting( 'setting-onderhoud-h3.2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-p3', array('default'=> '') );
+		//header 3
+		$wp_customize->add_setting( 'setting-onderhoud-h3.3', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-p4', array('default'=> '') );
+		//header 3
+		$wp_customize->add_setting( 'setting-onderhoud-h3.4', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-p5', array('default'=> '') );
+
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-onderhoud-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-onderhoud-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//Tekst knop
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-onderhoud-button_txt', array('label'=> 'Tekst knop','type'=> 'input','section'=> 'section-id-heating-onderhoud',) );
+		//Link knop
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-onderhoud-button_link', array('label'=> 'Link knop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+
+		//header 2
+		$wp_customize->add_control( 'setting-onderhoud-h2.1', array('label'=> 'Subtitel 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//header 3
+		$wp_customize->add_control( 'setting-onderhoud-h3.1', array('label'=> 'header 3.1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-onderhoud-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//header 3
+		$wp_customize->add_control( 'setting-onderhoud-h3.2', array('label'=> 'header 3.2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-onderhoud-p3', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//header 3
+		$wp_customize->add_control( 'setting-onderhoud-h3.3', array('label'=> 'header 3.3','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-onderhoud-p4', array('label'=> 'Paragraaf 4','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//header 4
+		$wp_customize->add_control( 'setting-onderhoud-h3.4', array('label'=> 'header 3.4','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-onderhoud-p5', array('label'=> 'Paragraaf 5','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-onderhoud', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_onderhoud',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function h_customize_onderhoud_list($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-onderhoud-list-h2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-list-p1', array('default'=> '') );
+		//li1
+		$wp_customize->add_setting( 'setting-onderhoud-list-li1', array('default'=> '') );
+		//li2
+		$wp_customize->add_setting( 'setting-onderhoud-list-li2', array('default'=> '') );
+		//li3
+		$wp_customize->add_setting( 'setting-onderhoud-list-li3', array('default'=> '') );
+		//li4
+		$wp_customize->add_setting( 'setting-onderhoud-list-li4', array('default'=> '') );
+		//li5
+		$wp_customize->add_setting( 'setting-onderhoud-list-li5', array('default'=> '') );
+		//li6
+		$wp_customize->add_setting( 'setting-onderhoud-list-li6', array('default'=> '') );
+		//li7
+		$wp_customize->add_setting( 'setting-onderhoud-list-li7', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-onderhoud-list-p2', array('default'=> '') );
+		
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-onderhoud-list-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-onderhoud-list-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li1
+		$wp_customize->add_control( 'setting-onderhoud-list-li1', array('label'=> 'Li 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li2
+		$wp_customize->add_control( 'setting-onderhoud-list-li2', array('label'=> 'Li 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li3
+		$wp_customize->add_control( 'setting-onderhoud-list-li3', array('label'=> 'Li 3','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li4
+		$wp_customize->add_control( 'setting-onderhoud-list-li4', array('label'=> 'Li 4','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li5
+		$wp_customize->add_control( 'setting-onderhoud-list-li5', array('label'=> 'Li 5','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li6
+		$wp_customize->add_control( 'setting-onderhoud-list-li6', array('label'=> 'Li 6','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li7
+		$wp_customize->add_control( 'setting-onderhoud-list-li7', array('label'=> 'Li 7','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//p2
+		$wp_customize->add_control( 'setting-onderhoud-list-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-onderhoud-list', array('title'=>  'Instellingen lijst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_onderhoud',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_onderhoud(){
+		if (is_page('onderhoud')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
+
+
+	function h_customize_banner($wp_customize) {
 		/* SETTINGS */
 		//Tekst banner
 		$wp_customize->add_setting( 'setting-txt-banner', array('default'=> 'Reken op een betrouwbare partner') );
@@ -1021,12 +1152,14 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 	
-	add_action( 'customize_register', 'ih_customize_home_button');
-	add_action( 'customize_register', 'ih_customize_home');
-	add_action( 'customize_register', 'ih_customize_over_ons');
-	add_action( 'customize_register', 'ih_customize_banner');
-	add_action( 'customize_register', 'ih_customize_register');
-	add_action( 'customize_register', 'ih_customize_oplossing');
+	add_action( 'customize_register', 'h_customize_onderhoud_list');
+	add_action( 'customize_register', 'h_customize_onderhoud');
+	add_action( 'customize_register', 'h_customize_home_button');
+	add_action( 'customize_register', 'h_customize_home');
+	add_action( 'customize_register', 'h_customize_over_ons');
+	add_action( 'customize_register', 'h_customize_banner');
+	add_action( 'customize_register', 'h_customize_register');
+	add_action( 'customize_register', 'h_customize_oplossing');
 
 
 

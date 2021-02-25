@@ -3,12 +3,12 @@
     <main>
       <div class="container">
         <h1 class="col-lg-12 col-xl-12 col-xxl-12">
-          Laat je ketel onderhouden voor een winter zonder zorgen
+        <?php echo get_theme_mod('setting-onderhoud-h1'); ?>
         </h1>
         <p class="col-lg-12 col-xl-12 col-xxl-12">
-          Bespaar tot 10% op je energieverbruik.
+        <?php echo get_theme_mod('setting-onderhoud-p1'); ?>
         </p>
-        <a class="o-button" href="">Onderhoud aavragen</a>
+        <a class="o-button" href="<?php echo get_theme_mod('setting-onderhoud-button_link'); ?>"> <?php echo get_theme_mod('setting-onderhoud-button_txt'); ?></a>
       </div>
 
       <!-- banner -->
@@ -118,26 +118,22 @@
       <!-- einde uspBanner ----------------------------------------->
 
       <div class="container">
-        <h2>4 voordelen van een regelmatig onderhoud</h2>
-        <h3>Je bespaart 8-10% energie</h3>
+        <h2><?php echo get_theme_mod('setting-onderhoud-h2.1'); ?></h2>
+        <h3> <?php echo get_theme_mod('setting-onderhoud-h3.1'); ?></h3>
         <p>
-          Een goed onderhouden ketel verbruikt minder energie. Dat bespaart een
-          gemiddeld gezin elk jaar tot 100 euro.
+        <?php echo get_theme_mod('setting-onderhoud-p2'); ?>
         </p>
-        <h3>Je beperkt je risico op pannes</h3>
+        <h3> <?php echo get_theme_mod('setting-onderhoud-h3.2'); ?></h3>
         <p>
-          Tijdens het onderhoud kan de technieker kleine defecten opsporen en zo
-          grotere herstellingskosten vermijden.
+        <?php echo get_theme_mod('setting-onderhoud-p3'); ?>
         </p>
-        <h3>Je verwarmingsketel gaat langer mee</h3>
+        <h3><?php echo get_theme_mod('setting-onderhoud-h3.3'); ?></h3>
         <p>
-          Elk onderhoud verlengt de levensduur van je ketel, en da's opnieuw
-          goed nieuws voor je portefeiulle.
+        <?php echo get_theme_mod('setting-onderhoud-p4'); ?>
         </p>
-        <h3>Je bent wettelijk in orde</h3>
+        <h3><?php echo get_theme_mod('setting-onderhoud-h3.4'); ?></h3>
         <p>
-          Het is wettelijk verplicht om je mazoutketel elk jaar en je gasketel
-          elke 2 (Vlaanderen en Brussel) of 3 (Wallonië) jaar te laten nakijken.
+        <?php echo get_theme_mod('setting-onderhoud-p5'); ?>
         </p>
       </div>
       <!-- reviews -->
@@ -172,32 +168,28 @@
       <div class="container">
         <div class="row">
           <h2>
-            Wat mag u bij een ketelonderhoud door The Heating Company
-            verwachten?
+          <?php echo get_theme_mod('setting-onderhoud-list-h2'); ?>
           </h2>
           <p>
-            Onze specialisten maken werk van een volledig onderhoud volgens de
-            regels van de kunst:
+          <?php echo get_theme_mod('setting-onderhoud-list-p1'); ?>
           </p>
           <ul class="c-list">
-            <li class="c-list-item">Reinigen van de ketel</li>
+            <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li1'); ?></li>
             <li class="c-list-item">
-              Schoorsteen controleren (gas) en vegen (andere brandstoftypes)
+            <?php echo get_theme_mod('setting-onderhoud-list-li2'); ?>
             </li>
             <li class="c-list-item">
-              Onderhouden van het elektrische deel en gasgedeelte
+            <?php echo get_theme_mod('setting-onderhoud-list-li3'); ?>
             </li>
-            <li class="c-list-item">Veiligheidscontrole</li>
-            <li class="c-list-item">Verbrandingstest en afstellingen</li>
+            <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li4'); ?></li>
+            <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li5'); ?></li>
             <li class="c-list-item">
-              Keuren, schoonmaken, afstellen en smeren van de brander
+            <?php echo get_theme_mod('setting-onderhoud-list-li6'); ?>
             </li>
-            <li class="c-list-item">Wettelijke attest afleveren</li>
+            <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li7'); ?></li>
           </ul>
           <p>
-            Laat u het onderhoud van uw ketel door onze technici uitvoeren? Dan
-            kan u gedurende het volledige daaropvolgende jaar rekenen op onze
-            interventiedienst.
+          <?php echo get_theme_mod('setting-onderhoud-list-p2'); ?>
           </p>
         </div>
       </div>

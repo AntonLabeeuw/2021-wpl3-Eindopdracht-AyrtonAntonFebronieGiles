@@ -884,6 +884,116 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		}
 	}
 
+	function ih_customize_home($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-home-h1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-home-p1', array('default'=> '') );
+		//header 2
+		$wp_customize->add_setting( 'setting-home-h2.1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-home-p2', array('default'=> '') );
+		//header 2
+		$wp_customize->add_setting( 'setting-home-h2.2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-home-p3', array('default'=> '') );
+
+		/* CONTROLS */
+		//header 1
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-home-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		//paragraaf
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-home-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		//header 2
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-home-h2.1', array('label'=> 'Subtitel 1','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		//paragraaf
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-home-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		//header 2
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-home-h2.2', array('label'=> 'Subtitel 2','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		//paragraaf
+		//De section aanpassen dus 'section-id-heating-installatie'.
+		$wp_customize->add_control( 'setting-home-p3', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+
+		/* SECTION */
+		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+		$wp_customize->add_section( 'section-id-heating-home', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		'is_front_page',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function ih_customize_home_button($wp_customize) {
+		/* SETTINGS */
+		//header 2
+		$wp_customize->add_setting( 'setting-home-button1_h2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-home-button1_p', array('default'=> '') );
+		//Tekst button
+		$wp_customize->add_setting( 'setting-home-button1_txt', array('default'=> 'Maak een afspraak') );
+		//Link button
+		$wp_customize->add_setting( 'setting-home-button1_link', array('default'=> 'https://wpl3.antonlabeeuw.be/') );
+
+		//header 2
+		$wp_customize->add_setting( 'setting-home-button2_h2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-home-button2_p', array('default'=> '') );
+		//Tekst button
+		$wp_customize->add_setting( 'setting-home-button2_txt', array('default'=> 'Maak een afspraak') );
+		//Link button
+		$wp_customize->add_setting( 'setting-home-button2_link', array('default'=> 'https://wpl3.antonlabeeuw.be/') );
+
+		//header 2
+		$wp_customize->add_setting( 'setting-home-button3_h2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-home-button3_p', array('default'=> '') );
+		//Tekst button
+		$wp_customize->add_setting( 'setting-home-button3_txt', array('default'=> 'Maak een afspraak') );
+		//Link button
+		$wp_customize->add_setting( 'setting-home-button3_link', array('default'=> 'https://wpl3.antonlabeeuw.be/') );
+
+
+		/* CONTROLS */
+		//header 2
+		$wp_customize->add_control( 'setting-home-button1_h2', array('label'=> 'Titel 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-home-button1_p', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//button text
+		$wp_customize->add_control( 'setting-home-button1_txt', array('label'=> 'Tekst van de button 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//button link
+		$wp_customize->add_control( 'setting-home-button1_link', array('label'=> 'Button link 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+
+		//header 2
+		$wp_customize->add_control( 'setting-home-button2_h2', array('label'=> 'Titel 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-home-button2_p', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//button text
+		$wp_customize->add_control( 'setting-home-button2_txt', array('label'=> 'Tekst van de button 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//button link
+		$wp_customize->add_control( 'setting-home-button2_link', array('label'=> 'Button link 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+
+		//header 2
+		$wp_customize->add_control( 'setting-home-button3_h2', array('label'=> 'Titel 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-home-button3_p', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//button text
+		$wp_customize->add_control( 'setting-home-button3_txt', array('label'=> 'Tekst van de button 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		//button link
+		$wp_customize->add_control( 'setting-home-button3_link', array('label'=> 'Button link 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		
+		/* SECTION */
+		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+		$wp_customize->add_section( 'section-id-heating-home-buttons', array('title'=>  'Instellingen buttons met tekst','description'=>  'Stel de tekst boven en in de button in','active_callback'=> 
+		'is_front_page',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+
 	function ih_customize_banner($wp_customize) {
 		/* SETTINGS */
 		//Tekst banner
@@ -910,6 +1020,9 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		//wanneer moet deze setting worden getoond
 		) );
 	}
+	
+	add_action( 'customize_register', 'ih_customize_home_button');
+	add_action( 'customize_register', 'ih_customize_home');
 	add_action( 'customize_register', 'ih_customize_over_ons');
 	add_action( 'customize_register', 'ih_customize_banner');
 	add_action( 'customize_register', 'ih_customize_register');

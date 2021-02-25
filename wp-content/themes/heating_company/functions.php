@@ -861,7 +861,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		}
 	}
 	// plaatsing
-	function ih_customize_verwarmingsketel_plaatsen($wp_customize) {
+	function h_customize_verwarmingsketel_plaatsen($wp_customize) {
         /* SETTINGS */
         //header 1
         $wp_customize->add_setting( 'setting-plaatsing-txt-h1', array('default'=> '') );
@@ -896,7 +896,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	//plaatsing stop
 
 	// plaatsing-residentie
-	function ih_customize_verwarmingsketel_plaatsen_residentie($wp_customize) {
+	function h_customize_verwarmingsketel_plaatsen_residentie($wp_customize) {
         /* SETTINGS */
 		// aaaa
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h2.1', array('default'=> '') );
@@ -1266,8 +1266,37 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
+	function h_customize_realisaties($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-realisaties-h1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-realisaties-p1', array('default'=> '') );
+		
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-realisaties-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-realisaties',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-realisaties-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-realisaties',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-realisaties', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_realisaties',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
 	function callback_check_if_page_onderhoud(){
 		if (is_page('onderhoud')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
+	function callback_check_if_page_realisaties(){
+		if (is_page('realisaties')){
 		return true;
 		}else{
 		return false;
@@ -1303,6 +1332,9 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 	
+	add_action( 'customize_register', 'h_customize_realisatie');
+	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen');
+	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen_residentie');
 	add_action( 'customize_register', 'h_customize_onderhoud_list');
 	add_action( 'customize_register', 'h_customize_onderhoud');
 	add_action( 'customize_register', 'h_customize_home_button');

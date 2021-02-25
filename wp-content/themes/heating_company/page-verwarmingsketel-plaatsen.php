@@ -2,14 +2,13 @@
 
     <main>
         <div class="container">
-            <h1>Plaatsing verwarmingsketel</h1>
-            <p>The Heating Company is gespecialiseerd in het plaatsen van verwarmingsketels in zowel woningen als
-                residenties</p>
-            <h2>Waar wil je een verwarmingsketel laten plaatsen?</h2>
+        <h1><?php echo get_theme_mod('setting-plaatsing-txt-h1'); ?></h1>
+        <p><?php echo get_theme_mod('setting-plaatsing-txt-p'); ?></p>
+        <h2><?php echo get_theme_mod('setting-plaatsing-txt-h2'); ?></h2>
             <!-- de 2 cards -->
             <div class="row c-ketels">
                 <div class="col s12 m6">
-                    <a href="">
+                    <a href="https://wpl3.antonlabeeuw.be/verwarmingsketel-plaatsen-woning/">
                         <div class="card c-ketels-cards">
                             <div class="card-content white-text c-ketels-card">
                                 <span class="card-title c-ketels-title">Woning</span>
@@ -18,7 +17,7 @@
                         </div>
                 </div></a>
                 <div class="col s12 m6">
-                    <a href="">
+                    <a href="https://wpl3.antonlabeeuw.be/verwarmingsketel-plaatsen-residentie/">
                         <div class="card c-ketels-cards">
                             <div class="card-content white-text c-ketels-card">
                                 <span class="card-title  c-ketels-title">Residentie</span>
@@ -28,18 +27,25 @@
                 </div></a>
             </div>
         </div>
-        <div class="container-fluid c-banner-contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12 m6 l8">
-                        <p class="c-banner-contact-text">Neem met ons contact op</p>
-                    </div>
-                    <div class="col s12 m6 l4">
-                        <a class="o-button o-button-effect o-button-effect-1 right" href="">Neem contact op</a>
-                    </div>
-                </div>
+        <!-- contact -->
+      <div class="container-fluid c-banner-contact">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6 l8">
+              <p class="c-banner-contact-text">
+              <?php echo get_theme_mod('setting-txt-banner'); ?>
+              </p>
             </div>
+            <div class="col s12 m6 l4">
+              <a
+                class="o-button o-button-effect o-button-effect-1 right"
+                href="<?php echo get_theme_mod('setting-txt-btnlink'); ?>"
+                ><?php echo get_theme_mod('setting-txt-btn'); ?></a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </main>
 
 <?php get_footer(); ?>

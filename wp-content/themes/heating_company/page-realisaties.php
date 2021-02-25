@@ -2,10 +2,9 @@
 
     <!-- mijn main -->
     <main class="container">
-      <h1>Realisaties en referenties</h1>
+      <h1><?php echo get_theme_mod('setting-realisaties-h1'); ?></h1>
       <p>
-        Bekijk hier enkele realisaties van installaties van verwarmingsketels en
-        kom te weten wat klanten over ons zeggen.
+      <?php echo get_theme_mod('setting-realisaties-p1'); ?>
       </p>
 
       <section class="c-reviews">

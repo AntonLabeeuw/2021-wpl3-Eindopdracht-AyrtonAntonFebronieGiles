@@ -1266,7 +1266,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
-	function h_customize_realisaties($wp_customize) {
+	function h_customize_realisatie($wp_customize) {
 		/* SETTINGS */
 		//header 1
 		$wp_customize->add_setting( 'setting-realisaties-h1', array('default'=> '') );
@@ -1296,7 +1296,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	}
 
 	function callback_check_if_page_realisaties(){
-		if (is_page('realisaties')){
+		if (is_page('realisatie')){
 		return true;
 		}else{
 		return false;

@@ -1,8 +1,24 @@
 <?php
-require_once get_template_directory() . '/wp_materialize_navwalker.php';
+// require_once get_template_directory() . '/wp_materialize_navwalker.php';
+// Require Materialize Custom Nav Walker Class
+require get_template_directory() . '/class-materialize-navwalker.php';
 
 
+add_action( 'wp_footer' , 'materialize_nav_walker_dropdown_init' );
 
+if( ! function_exists('materialize_nav_walker_dropdown_init') ) {
+
+  function materialize_nav_walker_dropdown_init() { ?>
+      <script>
+          jQuery(document).ready(function($) {
+              jQuery(".nav-item-dropdown-button").dropdown({constrainWidth: true,hover: true});
+              jQuery(".side-menu-nav-item-dropdown-button").dropdown({constrainWidth: false,hover: true});
+              
+          });
+      </script>
+  <?php }
+
+}
 
 
 
@@ -17,10 +33,11 @@ wp_enqueue_script("1", "https://code.jquery.com/jquery-2.2.4.min.js");
 wp_enqueue_script("10",get_template_directory_uri() ."/js/slick.min.js", array(), "", true);
 wp_enqueue_style("18",get_template_directory_uri() ."/css/slick-theme.css");
 // wp_enqueue_style("14","slick-master/slick/slick-theme.css");
-wp_enqueue_script('15',"//code.jquery.com/jquery-migrate-1.2.1.min.js");
-wp_enqueue_script('16',"//code.jquery.com/jquery-1.11.0.min.js");
+//wp_enqueue_script('15',"//code.jquery.com/jquery-migrate-1.2.1.min.js");
+//wp_enqueue_script('16',"//code.jquery.com/jquery-1.11.0.min.js");
 // wp_enqueue_script('17',"slick-master/slick/slick.min.js");
 wp_enqueue_style("17",get_template_directory_uri() ."/css/slick.css");
+
 
 
 
@@ -843,6 +860,40 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		return false;
 		}
 	}
+	// plaatsing
+	function ih_customize_verwarmingsketel_plaatsen($wp_customize) {
+        /* SETTINGS */
+        //header 1
+        $wp_customize->add_setting( 'setting-plaatsing-txt-h1', array('default'=> '') );
+        //paragraaf
+        $wp_customize->add_setting( 'setting-plaatsing-txt-p', array('default'=> '') );
+        //header 2
+        $wp_customize->add_setting( 'setting-plaatsing-txt-h2', array('default'=> '') );
+        /* CONTROLS */
+        //header 1
+        //De section aanpassen dus 'section-id-heating-installatie'.
+        $wp_customize->add_control( 'setting-plaatsing-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        //paragraaf
+        //De section aanpassen dus 'section-id-heating-installatie'.
+        $wp_customize->add_control( 'setting-plaatsing-txt-p', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        //header 2
+        //De section aanpassen dus 'section-id-heating-installatie'.
+        $wp_customize->add_control( 'setting-plaatsing-txt-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        /* SECTION */
+        //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        'callback_check_if_page_verwarmingsketel_plaatsen',
+        //wanneer moet deze setting worden getoond
+        ) );
+    }
+    function callback_check_if_page_verwarmingsketel_plaatsen(){
+        if (is_page('verwarmingsketel-plaatsen')){
+        return true;
+        }else{
+        return false;
+        }
+    }
+	//plaatsing stop
 
 
 
@@ -1082,9 +1133,8 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	add_action( 'customize_register', 'ih_customize_banner');
 	add_action( 'customize_register', 'ih_customize_register');
 	add_action( 'customize_register', 'ih_customize_oplossing');
-
-
-
+	add_action( 'customize_register', 'ih_customize_verwarmingsketel_plaatsen');
+	
 	add_action( 'wp_enqueue_scripts', 'js_script' );
 	// add_action( 'wp_enqueue_scripts', 'navbar_script' );
     add_action( 'wp_enqueue_scripts', 'cg_add_theme_scripts' );

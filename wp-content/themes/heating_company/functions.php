@@ -826,6 +826,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	// plaatsing-residentie
 	function ih_customize_verwarmingsketel_plaatsen_residentie($wp_customize) {
         /* SETTINGS */
+		// aaaa
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h2.1', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.1', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h2.2', array('default'=> '') );

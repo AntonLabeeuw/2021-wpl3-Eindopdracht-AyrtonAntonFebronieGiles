@@ -782,7 +782,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	}
 
 	function callback_check_if_page_oplossing(){
-		if (is_page('oplossing')){
+		if (is_page('verwarmingsoplossingen')){
 		return true;
 		}else{
 		return false;

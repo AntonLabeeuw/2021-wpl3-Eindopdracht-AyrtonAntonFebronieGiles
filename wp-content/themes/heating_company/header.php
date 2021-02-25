@@ -58,7 +58,7 @@
         </a>
             <nav>
                 <ul>
-                    <li><a href="<?php echo site_url('/overons'); ?>">Over ons</a></li>
+                    <li><a href="<?php echo site_url('/over-ons'); ?>">Over ons</a></li>
                     <li><a href="<?php echo site_url('/attesten'); ?>">Attesten</a></li>
                 </ul>
             </nav>
@@ -71,34 +71,37 @@
         </div>
         
         <div class="nav-wrapper">
-            <div class="container">
-                <a href="#" data-activates="mobile-menu" class="button-collapse">
+        <div class="container">
+            <!-- <div class="container"> -->
+                <a href="#" data-activates="primary-mobile-menu" class="button-collapse">
                                 <i class="material-icons nav__hamburger">menu</i>
                 </a>
                  <!-- mobile and tablet menu content -->
                 <?php
-                        wp_nav_menu( array(
-                            'menu' => 'main-menu',
-                            'menu_id' => 'mobile-menu',
-                            'theme_location'=>'main-menu',
-                            'menu_class' => 'side-nav',
-                            'container' => '',
-                            
-                            'walker' => new wp_materialize_navwalker()
-                        ));
-                    ?>
-                     <!-- desktop menu content -->
-                    <?php
-                        wp_nav_menu( array(
+                    wp_nav_menu( array(
+                        'menu' => 'main-menu',
+                        'menu_id' => 'primary-mobile-menu',
+                        'theme_location'=>'main-menu',
+                        'menu_class' => 'side-nav',
+                        'container' => '',
+                        'walker' => new Materialize_Walker_Nav_Menu()
+                    ));
+                ?>
+                <?php
+                    wp_nav_menu( array(
                             'menu' => 'main-menu',
                             'theme_location'=>'main-menu',
+                            'menu_id'=>'primary-menu',
                             'menu_class' => 'hide-on-med-and-down',
                             'container' => '',
-                            'walker' => new wp_materialize_navwalker()
+                            'walker' => new Materialize_Walker_Nav_Menu()
                         ));
-                    ?>
+                      
+                ?>                
+                       
+                   
                
             </div>
-            
+                    <!-- </div> -->
         </div>
     </header>

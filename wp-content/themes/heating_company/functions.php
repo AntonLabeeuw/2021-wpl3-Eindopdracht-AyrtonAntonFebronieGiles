@@ -1,8 +1,24 @@
 <?php
-require_once get_template_directory() . '/wp_materialize_navwalker.php';
+// require_once get_template_directory() . '/wp_materialize_navwalker.php';
+// Require Materialize Custom Nav Walker Class
+require get_template_directory() . '/class-materialize-navwalker.php';
 
 
+add_action( 'wp_footer' , 'materialize_nav_walker_dropdown_init' );
 
+if( ! function_exists('materialize_nav_walker_dropdown_init') ) {
+
+  function materialize_nav_walker_dropdown_init() { ?>
+      <script>
+          jQuery(document).ready(function($) {
+              jQuery(".nav-item-dropdown-button").dropdown({constrainWidth: true,hover: true});
+              jQuery(".side-menu-nav-item-dropdown-button").dropdown({constrainWidth: false,hover: true});
+              
+          });
+      </script>
+  <?php }
+
+}
 
 
 
@@ -13,11 +29,11 @@ function js_script(){
 wp_enqueue_style("5","https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css");
 wp_enqueue_style("12","https://code.jquery.com/jquery-2.1.1.min.js");
 wp_enqueue_script("1", "https://code.jquery.com/jquery-2.2.4.min.js");
-wp_enqueue_style("13","slick-master/slick/slick.css");
-wp_enqueue_style("14","slick-master/slick/slick-theme.css");
-wp_enqueue_script('15',"//code.jquery.com/jquery-migrate-1.2.1.min.js");
-wp_enqueue_script('16',"//code.jquery.com/jquery-1.11.0.min.js");
-wp_enqueue_script('17',"slick-master/slick/slick.min.js");
+// wp_enqueue_style("13","slick-master/slick/slick.css");
+// wp_enqueue_style("14","slick-master/slick/slick-theme.css");
+// wp_enqueue_script('15',"//code.jquery.com/jquery-migrate-1.2.1.min.js");
+// wp_enqueue_script('16',"//code.jquery.com/jquery-1.11.0.min.js");
+// wp_enqueue_script('17',"slick-master/slick/slick.min.js");
 
 
 

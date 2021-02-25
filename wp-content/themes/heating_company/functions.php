@@ -750,29 +750,29 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	function ih_customize_oplossing($wp_customize) {
 		/* SETTINGS */
 		//header 1
-		$wp_customize->add_setting( 'setting-txt-h1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-txt-oplossing-h1', array('default'=> '') );
 		//paragraaf
-		$wp_customize->add_setting( 'setting-txt-p.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-txt-oplossing-p.1', array('default'=> '') );
 		//header 2
-		$wp_customize->add_setting( 'setting-txt-h2.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-txt-oplossing-h2.1', array('default'=> '') );
 		//header 2
-		$wp_customize->add_setting( 'setting-txt-h2.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-txt-oplossing-h2.2', array('default'=> '') );
 		//paragraaf
-		$wp_customize->add_setting( 'setting-txt-p.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-txt-oplssing-p.2', array('default'=> '') );
 		/* CONTROLS */
 		//header 1
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-p.1', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-p.1', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//header 2
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-h2.1', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-h2.1', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-h2.2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-h2.2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-p.2', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplssing-p.2', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
 		$wp_customize->add_section( 'section-id-heating-oplossing', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 

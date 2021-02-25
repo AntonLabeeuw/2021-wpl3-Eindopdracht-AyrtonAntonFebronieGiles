@@ -35,73 +35,66 @@
 
       <section>
         <div class="c-realisaties__btns">
-          <button type="button" class="btn btn__active">Alles</button>
-          <button type="button" class="btn btn__notactive">Woning</button>
-          <button type="button" class="btn btn__notactive">Residenties</button>
+          <?php
+            if ($_GET["gebouw"] == "1"){
+              ?>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/" class="btn btn__notactive">Alles</a>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/?gebouw=1" class="btn btn__active">Woningen</a>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/?gebouw=2" class="btn btn__notactive">Residenties</a>
+              <?php
+            } elseif ($_GET["gebouw"] == "2"){
+              ?>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/" class="btn btn__notactive">Alles</a>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/?gebouw=1" class="btn btn__notactive">Woningen</a>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/?gebouw=2" class="btn btn__active">Residenties</a>
+              <?php
+            } else{
+              ?>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/" class="btn btn__active">Alles</a>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/?gebouw=1" class="btn btn__notactive">Woningen</a>
+              <a href="https://wpl3.antonlabeeuw.be/realisatie/?gebouw=2" class="btn btn__notactive">Residenties</a>
+              <?php
+            }
+          ?>
         </div>
         <div class="c-realisaties row">
             <?php
 
-              // if ($_GET["realisaties"]){
+              if ($_GET["gebouw"]){
 
-              //   if ($_GET["realisaties"] == 1){
-
-              //     $arg = array(
-              //         'post_type' => array ('realisaties'),
-              //         'nopaging' => false,
-              //         'posts_per_page' => '20',
-              //         'order' => 'ASC',
-              //         'orderby' => 'date'
-              //     );
-
-              //   } elseif ($_GET["realisaties"] == 2){
-              //     $arg = array(
-              //       'post_type' => array ('realisaties'),
-              //       'meta_key'     => '_soortGebouw',
-              //       'meta_value'   => 'woning',
-              //       'meta_compare' => '==',
-              //       'nopaging' => false,
-              //       'posts_per_page' => '20',
-              //       'order' => 'ASC',
-              //       'orderby' => 'date'
-              //     );
-                  
-              //   } elseif ($_GET["realisaties"] == 3){
-
-              //     $arg = array(
-              //       'post_type' => array ('realisaties'),
-              //       'meta_key'     => '_soortGebouw',
-              //       'meta_value'   => 'woning',
-              //       'meta_compare' => '==',
-              //       'nopaging' => false,
-              //       'posts_per_page' => '20',
-              //       'order' => 'ASC',
-              //       'orderby' => 'date'
-              //     );
-
-              //   }
-
-              // }
-              // else{
-
-              //   $arg = array(
-              //     'post_type' => array ('realisaties'),
-              //     'nopaging' => false,
-              //     'posts_per_page' => '20',
-              //     'order' => 'ASC',
-              //     'orderby' => 'date'
-              //   );
-
-              // }
-
+                if ($_GET["gebouw"] == "1"){
                   $arg = array(
                     'post_type' => array ('realisaties'),
+                    'meta_key'     => '_soortGebouw',
+                    'meta_value'   => 'woning',
+                    'meta_compare' => '==',
                     'nopaging' => false,
                     'posts_per_page' => '20',
                     'order' => 'ASC',
                     'orderby' => 'date'
                   );
-
+                } elseif($_GET["gebouw"] == "2"){
+                  $arg = array(
+                    'post_type' => array ('realisaties'),
+                    'meta_key'     => '_soortGebouw',
+                    'meta_value'   => 'residentie',
+                    'meta_compare' => '==',
+                    'nopaging' => false,
+                    'posts_per_page' => '20',
+                    'order' => 'ASC',
+                    'orderby' => 'date'
+                  );
+                }
+              }
+              else{
+                $arg = array(
+                  'post_type' => array ('realisaties'),
+                  'nopaging' => false,
+                  'posts_per_page' => '20',
+                  'order' => 'ASC',
+                  'orderby' => 'date'
+                );
+              }
                   $query = new WP_Query($arg);
 
                   if ($query->have_posts()):
@@ -110,9 +103,7 @@
                       endwhile;
                   endif;
                   wp_reset_query();
-
-
-
+                  
             ?>
         </div>
       </section>

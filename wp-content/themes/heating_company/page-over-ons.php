@@ -2,8 +2,9 @@
 
         <main>
             <div class="container">
-                <?php echo the_content()
-                ?>
+                <h1><?php echo get_theme_mod('setting-over-ons-h1'); ?></h1>
+                <p><?php echo get_theme_mod('setting-over-ons-p1'); ?></p>
+                <h2><?php echo get_theme_mod('setting-over-ons-h2'); ?></h2>
                 <section class="c-team">
                     <?php
 
@@ -31,10 +32,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s12 m6 l8">
-                            <p class="c-banner-contact-text"><?php echo get_the_title(); ?></p>
+                            <p class="c-banner-contact-text"><?php echo get_theme_mod('setting-txt-banner'); ?></p>
                         </div>
                         <div class="col s12 m6 l4">
-                            <a class="o-button o-button-effect o-button-effect-1 right" href=""><?php the_content(); ?></a>
+                            <a class="o-button o-button-effect o-button-effect-1 right" href="<?php echo get_theme_mod('setting-txt-btnlink'); ?>"><?php echo get_theme_mod('setting-txt-btn'); ?></a>
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 <?php get_header(); ?>
         <main>
             <div class="container">
-                <h1>Verwarmingsketel kiezen en vergelijken</h1>
-                <p>Er bestaan veel verschillende soorten verwramingsketels. Welk type het meest geschikt is, hangt af van het gewenste comfort, de oppervlakte van je woning, het aantal gezinsleden en het beschikbare budget.</p>
+                <h1><?php echo get_theme_mod('setting-txt-h1'); ?></h1>
+                <p><?php echo get_theme_mod('setting-txt-p.1'); ?></p>
                 <section>   
-                    <h2>Soorten verwarmingsketels</h2>
+                    <h2><?php echo get_theme_mod('setting-txt-h2.1'); ?></h2>
                     <?php
 
                         $arg = array(
@@ -27,8 +27,8 @@
                     ?>
                 </section>
                 <section>
-                    <h2>Kwaliteitsketels van topmerken</h2>
-                    <p>Kies samen met onze expert het merk dat best bij jouw situatie past.</p>
+                    <h2><?php echo get_theme_mod('setting-txt-h2.2'); ?></h2>
+                    <p><?php echo get_theme_mod('setting-txt-p.2'); ?></p>
                     <div class="c-logo__cards row">
                         <?php
 

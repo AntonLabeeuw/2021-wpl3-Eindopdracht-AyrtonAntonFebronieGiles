@@ -563,12 +563,21 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 			'h_custom_box_review_html',
 			'reviews'
 		);
+
+		add_meta_box(
+			'h_realisatie_box_id',
+			'Realisaties',
+			'h_custom_box_realisatie_html',
+			'realisaties'
+		);
+
 		add_meta_box(
 			'h_banner_box_id',
 			'Banners',
 			'h_custom_box_banner_html',
 			'banners'
 		);
+
 		add_meta_box(
 			'h_banner_box_id',
 			'Banners',
@@ -709,6 +718,21 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		echo "</div>";
 	}
 
+	function h_custom_box_realisatie_html($post){
+		$value_soortGebouw = get_post_meta( $post->ID, '_soortGebouw', true );
+
+		echo "<div class='c-form-row__label'>";
+		echo "Is de realisatie van een woning of een residentie";
+		echo "</div>";
+		echo "<div class='c-form-row__control'>";
+		echo "<select name='soortGebouw' id='soortGebouw'>";
+		echo "<option value='woning' " . ($value_soortGebouw == 'woning' ? "selected":"") . ">woning</option>";
+		echo "<option value='residentie' " . ($value_soortGebouw == 'residentie' ? "selected":"") . ">residentie</option>";
+		echo "</select>";
+		echo "</div>";
+		echo "</div>";
+	}
+
     function h_save_postdata($post_id){
         $naam_post_type = get_post_type($post_id);
 
@@ -803,6 +827,17 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 				);
 			}
 		}
+
+		if ($naam_post_type == 'realisaties'){
+			if (array_key_exists('soortGebouw', $_POST)){
+				update_post_meta(
+					$post_id,
+					'_soortGebouw',
+					$_POST['soortGebouw']
+				);
+			}
+		}
+
 		if ($naam_post_type == 'banners'){
 			if (array_key_exists('btn', $_POST)){
 				update_post_meta(

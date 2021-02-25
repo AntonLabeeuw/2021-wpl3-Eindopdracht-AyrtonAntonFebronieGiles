@@ -42,22 +42,76 @@
         <div class="c-realisaties row">
             <?php
 
-                $arg = array(
+              // if ($_GET["realisaties"]){
+
+              //   if ($_GET["realisaties"] == 1){
+
+              //     $arg = array(
+              //         'post_type' => array ('realisaties'),
+              //         'nopaging' => false,
+              //         'posts_per_page' => '20',
+              //         'order' => 'ASC',
+              //         'orderby' => 'date'
+              //     );
+
+              //   } elseif ($_GET["realisaties"] == 2){
+              //     $arg = array(
+              //       'post_type' => array ('realisaties'),
+              //       'meta_key'     => '_soortGebouw',
+              //       'meta_value'   => 'woning',
+              //       'meta_compare' => '==',
+              //       'nopaging' => false,
+              //       'posts_per_page' => '20',
+              //       'order' => 'ASC',
+              //       'orderby' => 'date'
+              //     );
+                  
+              //   } elseif ($_GET["realisaties"] == 3){
+
+              //     $arg = array(
+              //       'post_type' => array ('realisaties'),
+              //       'meta_key'     => '_soortGebouw',
+              //       'meta_value'   => 'woning',
+              //       'meta_compare' => '==',
+              //       'nopaging' => false,
+              //       'posts_per_page' => '20',
+              //       'order' => 'ASC',
+              //       'orderby' => 'date'
+              //     );
+
+              //   }
+
+              // }
+              // else{
+
+              //   $arg = array(
+              //     'post_type' => array ('realisaties'),
+              //     'nopaging' => false,
+              //     'posts_per_page' => '20',
+              //     'order' => 'ASC',
+              //     'orderby' => 'date'
+              //   );
+
+              // }
+
+                  $arg = array(
                     'post_type' => array ('realisaties'),
                     'nopaging' => false,
                     'posts_per_page' => '20',
                     'order' => 'ASC',
                     'orderby' => 'date'
-                );
+                  );
 
-                $query = new WP_Query($arg);
+                  $query = new WP_Query($arg);
 
-                if ($query->have_posts()):
-                    while ($query->have_posts()):$query->the_post();
-                    get_template_part('template-parts/post/content', 'realisatie');
-                    endwhile;
-                endif;
-                wp_reset_query();
+                  if ($query->have_posts()):
+                      while ($query->have_posts()):$query->the_post();
+                      get_template_part('template-parts/post/content', 'realisatie');
+                      endwhile;
+                  endif;
+                  wp_reset_query();
+
+
 
             ?>
         </div>

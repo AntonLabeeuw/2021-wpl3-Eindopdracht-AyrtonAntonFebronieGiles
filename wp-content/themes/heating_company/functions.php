@@ -804,6 +804,40 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		return false;
 		}
 	}
+	// plaatsing
+	function ih_customize_verwarmingsketel_plaatsen($wp_customize) {
+        /* SETTINGS */
+        //header 1
+        $wp_customize->add_setting( 'setting-plaatsing-txt-h1', array('default'=> '') );
+        //paragraaf
+        $wp_customize->add_setting( 'setting-plaatsing-txt-p', array('default'=> '') );
+        //header 2
+        $wp_customize->add_setting( 'setting-plaatsing-txt-h2', array('default'=> '') );
+        /* CONTROLS */
+        //header 1
+        //De section aanpassen dus 'section-id-heating-installatie'.
+        $wp_customize->add_control( 'setting-plaatsing-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        //paragraaf
+        //De section aanpassen dus 'section-id-heating-installatie'.
+        $wp_customize->add_control( 'setting-plaatsing-txt-p', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        //header 2
+        //De section aanpassen dus 'section-id-heating-installatie'.
+        $wp_customize->add_control( 'setting-plaatsing-txt-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        /* SECTION */
+        //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        'callback_check_if_page_verwarmingsketel_plaatsen',
+        //wanneer moet deze setting worden getoond
+        ) );
+    }
+    function callback_check_if_page_verwarmingsketel_plaatsen(){
+        if (is_page('verwarmingsketel-plaatsen')){
+        return true;
+        }else{
+        return false;
+        }
+    }
+	//plaatsing stop
 
 
 
@@ -1043,9 +1077,8 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	add_action( 'customize_register', 'ih_customize_banner');
 	add_action( 'customize_register', 'ih_customize_register');
 	add_action( 'customize_register', 'ih_customize_oplossing');
-
-
-
+	add_action( 'customize_register', 'ih_customize_verwarmingsketel_plaatsen');
+	
 	add_action( 'wp_enqueue_scripts', 'js_script' );
 	// add_action( 'wp_enqueue_scripts', 'navbar_script' );
     add_action( 'wp_enqueue_scripts', 'cg_add_theme_scripts' );

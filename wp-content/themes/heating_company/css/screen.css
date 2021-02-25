@@ -1630,20 +1630,26 @@ i.material-icons.right {
   margin-left: 0;
 }
 
-.side-nav li a {
+.side-menu li a {
   color: #023c48;
   font-size: 1.8rem;
+  text-transform: capitalize;
 }
-.side-nav li a:hover {
+.side-menu li a:hover {
   color: #e84e1b;
   font-weight: 600;
   font-size: 1.8rem;
 }
-.side-nav {
+.side-menu {
   padding-top: 5rem;
 }
 .hide-on-med-and-down {
   margin-top: 2rem;
+}
+.hide-on-med-and-down a.item {
+  color: #023c48;
+  font-size: 1.8rem !important;
+  text-transform: capitalize;
 }
 
 @media screen and (min-width: 1128px) {
@@ -1652,10 +1658,10 @@ i.material-icons.right {
   }
 }
 @media screen and (max-width: 1128px) {
-  .hide-on-med-and-down {
-    display: none !important;
-  }
   i.material-icons.right {
     padding-top: 2rem;
+  }
+  .side-nav {
+    display: none !important;
   }
 }

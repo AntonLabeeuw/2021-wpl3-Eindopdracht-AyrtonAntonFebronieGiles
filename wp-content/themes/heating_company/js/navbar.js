@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
   $(".button-collapse").sideNav(
     {
       menuWidth: 325, // Default is 240
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      closeOnClick: false // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );
 
@@ -27,8 +27,5 @@ jQuery(document).ready(function() {
       alignment: 'left' // Displays dropdown with edge aligned to the left of button
   });
  
-  $("a.dropdown-toggle").on("click", function() {
-    $("ul.dropdown-menu.show").removeClass("show");
-    $(this).next( "ul.dropdown-menu" ).addClass("show");
-});
+
 });

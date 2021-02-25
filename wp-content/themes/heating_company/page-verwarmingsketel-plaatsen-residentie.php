@@ -2,23 +2,27 @@
 
     <main>
         <div class="container">
-            <h2>Gemeenschappelijke verwarmingsketels</h2>
-            <p>Voor verwarmingsketels in appartementsgebouwen en residenties gelden specifieke regels. The Heating Company is expert in deze materie en kan je verder wegwijs maken in wat kan en mag.</p>
+
+            <h2><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h2.1'); ?></h2>
+            <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.1'); ?></p>
             <a class="o-button o-button-effect o-button-effect-1" href="#">Neem contact op</a>
 
             <div class="row">
                 <div class="col l7 m12">
-                    <h2>Waarom een ketel laten plaatsen door The Heating Company?</h2>
-                    <h3>Topmerken aan aantrekkelijke prijzen</h3>
-                    <p>We kiezen samen de beste ketel voor de residentie.</p>
-                    <h3>Snelheid van plaatsing</h3>
-                    <p>We garanderen een vervanging van een ketel binnen de 30 dagen.</p>
-                    <h3>24/7 bereikbaar via ons noodnummer</h3>
-                    <p> +32 56 56 56 16</p>
-                    <h3>Grote vakkennis</h3>
-                    <p>Bel ons de klok rond, ook op zon- en feestdagen.</br>We zijn zeer ervaren in de plaatsing van verwarmingsketelsin residenties.</p>
-                    <h3>Grondige en propere plaatsing</h3>
-                    <p>Na de plaatsing wordt je huis opnieuw in een nette staat achtergelaten.</p>
+                    <h2><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h2.2'); ?></h2>
+                    <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.1'); ?></h3>
+                    <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.2'); ?></p>
+                    <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.2'); ?></h3>
+                    <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.3'); ?></p>
+                    <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.3'); ?></h3>
+
+                    <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.4'); ?></p>
+
+                    <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.4'); ?></h3>
+
+                    <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.5'); ?></p>
+                    <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.5'); ?></h3>
+                    <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.6'); ?></p>
                     <a class="o-button o-button-effect o-button-effect-1" href="#">Offerte aanvragen</a>
                 </div>
                 <div class="col l5 m12">

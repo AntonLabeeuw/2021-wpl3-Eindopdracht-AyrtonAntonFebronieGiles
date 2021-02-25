@@ -823,7 +823,51 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
     }
 	//plaatsing stop
 
-
+	// plaatsing-residentie
+	function ih_customize_verwarmingsketel_plaatsen_residentie($wp_customize) {
+        /* SETTINGS */
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h2.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h2.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h3.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h3.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h3.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h3.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.5', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h3.5', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.6', array('default'=> '') );
+        /* CONTROLS */
+        $wp_customize->add_control( 'setting-plaatsing-residentie-txt-h2.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h2.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+        /* SECTION */
+        //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen-residentie', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        'callback_check_if_page_verwarmingsketel_plaatsen_residentie',
+        //wanneer moet deze setting worden getoond
+        ) );
+    }
+    function callback_check_if_page_verwarmingsketel_plaatsen_residentie(){
+        if (is_page('verwarmingsketel-plaatsen-residentie')){
+        return true;
+        }else{
+        return false;
+        }
+    }
+	//plaatsing-residentie stop
 
 	function ih_customize_register($wp_customize) {
 		/* SETTINGS */
@@ -1062,6 +1106,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	add_action( 'customize_register', 'ih_customize_register');
 	add_action( 'customize_register', 'ih_customize_oplossing');
 	add_action( 'customize_register', 'ih_customize_verwarmingsketel_plaatsen');
+	add_action( 'customize_register', 'ih_customize_verwarmingsketel_plaatsen_residentie');
 	
 	add_action( 'wp_enqueue_scripts', 'js_script' );
 	// add_action( 'wp_enqueue_scripts', 'navbar_script' );

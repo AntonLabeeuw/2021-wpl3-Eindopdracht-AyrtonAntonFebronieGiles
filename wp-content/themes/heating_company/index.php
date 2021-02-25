@@ -2,12 +2,34 @@
 
 <main>
         <section class="c-carousel container">
-            <a href="images/carousel1-groot.jpg" data-lightbox="mygallery"><img src="images/carousel1.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
+            <?php
+
+                $arg = array(
+                    'post_type' => array ('carousels'),
+                    'nopaging' => false,
+                    'posts_per_page' => '20',
+                    'order' => 'ASC',
+                    'orderby' => 'date'
+                );
+
+                $query = new WP_Query($arg);
+
+                if ($query->have_posts()):
+                    while ($query->have_posts()):$query->the_post();
+                    get_template_part('template-parts/post/content', 'carousel');
+                    endwhile;
+                endif;
+                wp_reset_query();
+
+            ?>         
+
+
+            <!-- <a href="images/carousel1-groot.jpg" data-lightbox="mygallery"><img src="images/carousel1.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
             <a href="images/carousel2-groot.jpg" data-lightbox="mygallery"><img src="images/carousel2.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
             <a href="images/carousel3-groot.jpg" data-lightbox="mygallery"><img src="images/carousel3.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
             <a href="images/carousel4-groot.jpg" data-lightbox="mygallery"><img src="images/carousel4.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
             <a href="images/carousel5-groot.jpg" data-lightbox="mygallery"><img src="images/carousel5.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
-            <a href="images/carousel6-groot.jpg" data-lightbox="mygallery"><img src="images/carousel6.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
+            <a href="images/carousel6-groot.jpg" data-lightbox="mygallery"><img src="images/carousel6.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a> -->
         </section>
         <div class="container">
             <h1><?php echo get_theme_mod('setting-home-h1'); ?></h1>

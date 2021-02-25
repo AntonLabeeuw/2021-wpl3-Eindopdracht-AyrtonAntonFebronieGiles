@@ -13,11 +13,14 @@ function js_script(){
 wp_enqueue_style("5","https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css");
 wp_enqueue_style("12","https://code.jquery.com/jquery-2.1.1.min.js");
 wp_enqueue_script("1", "https://code.jquery.com/jquery-2.2.4.min.js");
-wp_enqueue_style("13","slick-master/slick/slick.css");
-wp_enqueue_style("14","slick-master/slick/slick-theme.css");
+// wp_enqueue_style("13","slick-master/slick/slick.css");
+wp_enqueue_script("10",get_template_directory_uri() ."/js/slick.min.js", array(), "", true);
+wp_enqueue_style("18",get_template_directory_uri() ."/css/slick-theme.css");
+// wp_enqueue_style("14","slick-master/slick/slick-theme.css");
 wp_enqueue_script('15',"//code.jquery.com/jquery-migrate-1.2.1.min.js");
 wp_enqueue_script('16',"//code.jquery.com/jquery-1.11.0.min.js");
-wp_enqueue_script('17',"slick-master/slick/slick.min.js");
+// wp_enqueue_script('17',"slick-master/slick/slick.min.js");
+wp_enqueue_style("17",get_template_directory_uri() ."/css/slick.css");
 
 
 
@@ -461,6 +464,58 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 			'capability_type'       => 'page',
 		);
 		register_post_type( 'cards', $args );
+    }
+
+	function h_register_carousels(){
+        $labels = array(
+			'name'                  => 'carousel',
+			'singular_name'         => 'carousel',
+			'menu_name'             => 'carousels',
+			'name_admin_bar'        => 'carousels',
+			'archives'              => 'carousel archives',
+			'attributes'            => 'carousel attributes',
+			'parent_item_colon'     => 'Parent item:',
+			'all_items'             => 'Alle carousels',
+			'add_new_item'          => 'Add new carousel',
+			'add_new'               => 'Add carousel',
+			'new_item'              => 'New carousel',
+			'edit_item'             => 'Edit carousel',
+			'update_item'           => 'Update carousel',
+			'view_item'             => 'View carousel',
+			'view_items'            => 'View carousels',
+			'search_items'          => 'Search carousel',
+			'not_found'             => 'Not found',
+			'not_found_in_trash'    => 'Not found in trash',
+			'featured_image'        => 'Featured image',
+			'set_featured_image'    => 'Set featured image',
+			'remove_featured_image' => 'Remove featured image',
+			'use_featured_image'    => 'Use as featured image',
+			'insert_into_item'      => 'Insert into item',
+			'uploaded_to_this_item' => 'Uploaded to this item',
+			'items_list'            => 'Items list',
+			'items_list_navigation' => 'Items list navigation',
+			'filter_items_list'     => 'Filter items list',
+		);
+		$args = array(
+			'label'                 => 'carousels',
+			'description'           => 'carousel',
+			'labels'                => $labels,
+			'supports'              => array( 'title', 'editor', 'thumbnail',),
+			'hierarchical'          => false,
+			'public'                => true,
+			'show_ui'               => true,
+			'show_in_menu'          => true,
+			'menu_position'         => 5,
+			'menu_icon'				=> 'dashicons-format-gallery',
+			'show_in_admin_bar'     => true,
+			'show_in_nav_menus'     => true,
+			'can_export'            => true,
+			'has_archive'           => true,
+			'exclude_from_search'   => false,
+			'publicly_queryable'    => true,
+			'capability_type'       => 'page',
+		);
+		register_post_type( 'carousels', $args );
     }
 
     function h_add_custom_box(){
@@ -1042,6 +1097,7 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	add_action( 'init', 'h_register_realisaties' );
 	add_action( 'init', 'h_register_banners', 0 );
 	add_action( 'init', 'h_register_cards', 0 );
+	add_action( 'init', 'h_register_carousels', 0);
 	add_action( 'add_meta_boxes', 'h_add_custom_box' );
     add_action( 'save_post', 'h_save_postdata' );
     add_action( 'admin_enqueue_scripts', 'p_admin_css_js' );

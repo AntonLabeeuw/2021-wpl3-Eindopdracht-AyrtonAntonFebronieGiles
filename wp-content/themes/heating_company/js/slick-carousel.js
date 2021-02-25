@@ -25,21 +25,21 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function(){
-    $('.c-carousel').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        draggable: false,
-        responsive: [
-            {
-                breakpoint: 600,
-                settings: {
-                    arrows: false,
-                    draggable: true
-                }
-            }
-        ]
-    });
-});
+// $(document).ready(function(){
+//     $('.c-carousel').slick({
+//         dots: true,
+//         infinite: true,
+//         slidesToShow: 1,
+//         slidesToScroll: 1,
+//         draggable: false,
+//         responsive: [
+//             {
+//                 breakpoint: 600,
+//                 settings: {
+//                     arrows: false,
+//                     draggable: true
+//                 }
+//             }
+//         ]
+//     });
+// });

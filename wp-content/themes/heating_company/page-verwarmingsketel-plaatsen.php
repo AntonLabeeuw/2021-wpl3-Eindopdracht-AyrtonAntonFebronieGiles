@@ -12,7 +12,7 @@
                         <div class="card c-ketels-cards">
                             <div class="card-content white-text c-ketels-card">
                                 <span class="card-title c-ketels-title">Woning</span>
-                                <img src="icons/woning.svg" class="c-ketels-img" alt="icoon van een huis">
+                                <img src="<?php echo get_template_directory_uri(  )?>/icons/woning.svg" class="c-ketels-img" alt="icoon van een huis">
                             </div>
                         </div>
                 </div></a>
@@ -21,7 +21,7 @@
                         <div class="card c-ketels-cards">
                             <div class="card-content white-text c-ketels-card">
                                 <span class="card-title  c-ketels-title">Residentie</span>
-                                <img src="icons/residentie.svg" class="c-ketels-img" alt="icoon van een residentie">
+                                <img src="<?php echo get_template_directory_uri(  )?>/icons/residentie.svg" class="c-ketels-img" alt="icoon van een residentie">
                             </div>
                         </div>
                 </div></a>

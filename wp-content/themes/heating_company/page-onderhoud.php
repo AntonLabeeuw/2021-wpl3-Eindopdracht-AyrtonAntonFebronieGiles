@@ -147,7 +147,7 @@
               'meta_value'   => '1',
               'meta_compare' => '==',
               'nopaging' => false,
-              'posts_per_page' => '20',
+              'posts_per_page' => '3',
               'order' => 'ASC',
               'orderby' => 'date'
           );

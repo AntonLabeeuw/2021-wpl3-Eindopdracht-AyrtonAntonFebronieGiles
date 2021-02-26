@@ -1521,6 +1521,30 @@ function js_script(){
 		}
 	}
 
+	function h_customize_installatie_ingelogd($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-installatie-ingelogd-h1', array('default'=> '') );
+
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-installatie-ingelogd-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-installatie-ingelogd',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-installatie-ingelogd', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_afspraak_installatie',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_afspraak_installatie(){
+		if (is_page('installatie-ingelogd')){
+		return true;
+		}else{
+		return false;
+		}
+	}
 
 	function h_customize_banner($wp_customize) {
 		/* SETTINGS */
@@ -1549,7 +1573,7 @@ function js_script(){
 		) );
 	}
 	
-
+	add_action( 'customize_register', 'h_customize_installatie_ingelogd');
 
 	add_action( 'customize_register', 'h_customize_offerte');
 

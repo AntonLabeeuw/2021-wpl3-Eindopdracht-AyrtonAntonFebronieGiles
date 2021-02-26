@@ -37,6 +37,8 @@ wp_enqueue_style("18",get_template_directory_uri() ."/css/slick-theme.css");
 //wp_enqueue_script('16',"//code.jquery.com/jquery-1.11.0.min.js");
 // wp_enqueue_script('17',"slick-master/slick/slick.min.js");
 wp_enqueue_style("17",get_template_directory_uri() ."/css/slick.css");
+wp_enqueue_style("lightbox-css",get_template_directory_uri() ."/css/lightbox.min.css");
+wp_enqueue_script("lightbox-css",get_template_directory_uri() ."/js/lightbox-plus-jquery.min.js");
 
 
 

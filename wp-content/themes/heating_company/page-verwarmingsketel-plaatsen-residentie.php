@@ -15,11 +15,8 @@
                     <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.2'); ?></h3>
                     <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.3'); ?></p>
                     <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.3'); ?></h3>
-
                     <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.4'); ?></p>
-
                     <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.4'); ?></h3>
-
                     <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.5'); ?></p>
                     <h3><?php echo get_theme_mod('setting-plaatsing-residentie-txt-h3.5'); ?></h3>
                     <p><?php echo get_theme_mod('setting-plaatsing-residentie-txt-p.6'); ?></p>

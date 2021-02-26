@@ -20,7 +20,30 @@ if( ! function_exists('materialize_nav_walker_dropdown_init') ) {
 
 }
 
-
+function wpf_dev_display_field_before( $field, $form_data ) {
+	if ( absint( $form_data['id'] ) !== 1289 ) {
+	return;
+	}
+		remove_action( 'wpforms_display_field_before', array( wpforms()->frontend, 'field_label' ), 15 );
+	}
+	 
+	add_action( 'wpforms_display_field_before', 'wpf_dev_display_field_before', 10, 2 );
+	 
+	/**
+	 * Move the field label to below the field for form ID 1289
+	 *
+	 * @link https://wpforms.com/developers/how-to-create-a-form-with-floating-labels/
+	 */
+	 
+	function wpf_dev_display_field_after( $field, $form_data ) {
+	if ( absint( $form_data['id'] ) !== 1289 ) {
+	return;
+	}
+	 
+		wpforms()->frontend->field_label( $field, $form_data );
+	}
+	 
+	add_action( 'wpforms_display_field_after', 'wpf_dev_display_field_after', 1, 2 );
 
 
 
@@ -1573,6 +1596,30 @@ function js_script(){
 		}
 	}
 
+	function h_customize_installatie_ingelogd($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-installatie-ingelogd-h1', array('default'=> '') );
+
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-installatie-ingelogd-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-installatie-ingelogd',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-installatie-ingelogd', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_afspraak_installatie',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_afspraak_installatie(){
+		if (is_page('installatie-ingelogd')){
+		return true;
+		}else{
+		return false;
+		}
+	}
 
 	function h_customize_banner($wp_customize) {
 		/* SETTINGS */
@@ -1602,13 +1649,11 @@ function js_script(){
 	}
 	
 
-	
 	add_action( 'customize_register', 'h_customize_privacy');
+	add_action( 'customize_register', 'h_customize_installatie_ingelogd');
 	add_action( 'customize_register', 'h_customize_offerte');
-
 	add_action( 'customize_register', 'h_customize_afspraak_ingelogd');
 	add_action( 'customize_register', 'h_customize_contact');
-
 	add_action( 'customize_register', 'h_customize_realisatie');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen_residentie');
@@ -1621,8 +1666,6 @@ function js_script(){
 	add_action( 'customize_register', 'h_customize_banner');
 	add_action( 'customize_register', 'h_customize_register');
 	add_action( 'customize_register', 'h_customize_oplossing');
-
-
 
 	add_action( 'wp_enqueue_scripts', 'js_script' );
 	// add_action( 'wp_enqueue_scripts', 'navbar_script' );

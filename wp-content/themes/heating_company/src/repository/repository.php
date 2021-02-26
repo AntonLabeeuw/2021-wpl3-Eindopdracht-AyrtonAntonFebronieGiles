@@ -18,6 +18,19 @@ class Repository{
         $int = Database::execute("INSERT INTO offertes (soort_persoon, soort_woning, staat_woning, huidig_verwarmingstype, gewenst_verwarmingstype, wanneer, voornaam, naam, email, telefoon, straat, nummer, bus, postcode, gemeente, opmerkingen) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [$parOfferte->soort_persoon, $parOfferte->soort_woning, $parOfferte->staat_woning, $parOfferte->huidig_verwarmingstype, $parOfferte->gewenst_verwarmingstype, $parOfferte->wanneer, $parOfferte->voornaam, $parOfferte->naam, $parOfferte->email, $parOfferte->telefoon, $parOfferte->straat, $parOfferte->nummer, $parOfferte->bus, $parOfferte->postcode, $parOfferte->gemeente, $parOfferte->opmerkingen]);
         return $int;
     }
+
+    //om gebruiker op te vragen op basis van gebruikersnaam
+    public static function getUserByLogin($login){
+        $item = Database::getSingleRow("SELECT * FROM gebruikers WHERE gebruikersnaam=?" , [$login], "user");
+        return $item;
+    }
+
+    //om gebruiker toe te voegen
+    public static function createUser($parUser){
+        $res = Database::execute("INSERT INTO gebruikers (voornaam, naam, gebruikersnaam, wachtwoord, email, telefoon, straat, nummer, bus, postcode, gemeente, soort_gebouw, installatie, datum_installatie, laatste_onderhoud, staat) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [$parUser->voornaam, $parUser->naam, $parUser->gebruikersnaam, $parUser->wachtwoord, $parUser->email, $parUser->telefoon, $parUser->straat, $parUser->nummer, $parUser->bus, $parUser->postcode, $parUser->gemeente, $parUser->soort_gebouw, $parUser->installatie, $parUser->datum_installatie, $parUser->laatste_onderhoud, $parUser->staat]);
+        return $res;
+    }
+
 }
 
 ?>

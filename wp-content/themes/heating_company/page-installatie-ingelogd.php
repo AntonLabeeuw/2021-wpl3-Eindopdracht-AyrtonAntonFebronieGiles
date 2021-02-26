@@ -9,7 +9,7 @@
 
     <!-- verwarmingsoplossingen component-->
     <div class="container">
-      <h1>Geïnstalleerde apparatuur in uw woning/residentie </h3>
+      <h1><?php echo get_theme_mod('setting-installatie-ingelogd-h1'); ?></h3>
       <div class="c-installatie row">
         <div class="col s12 m12 l12 xl5">
           <img

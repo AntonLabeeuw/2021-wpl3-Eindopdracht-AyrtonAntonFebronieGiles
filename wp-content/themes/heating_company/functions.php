@@ -1429,6 +1429,56 @@ function js_script(){
 		}
 	}
 
+	function h_customize_afspraak_ingelogd($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-h1', array('default'=> '') );
+		//header 2
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-h2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-p1', array('default'=> '') );
+		//button tekst
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-button-txt', array('default'=> '') );
+		//button tekst
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-button-link', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-p2', array('default'=> '') );
+		//header 2
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-h3', array('default'=> '') );
+
+		
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//header 2
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-h2', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-p1', array('label'=> 'Paragraaf als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//button txt
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-txt', array('label'=> 'Button tekst als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//button link
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-link', array('label'=> 'Button link als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-p2', array('label'=> 'Paragraaf als je bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//header 3
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-h3', array('label'=> 'Tijdstip','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-afspraak-ingelogd', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_afspraak_ingelogd',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_afspraak_ingelogd(){
+		if (is_page('afspraak-ingelogd')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
 
 	function h_customize_banner($wp_customize) {
 		/* SETTINGS */
@@ -1456,7 +1506,8 @@ function js_script(){
 		//wanneer moet deze setting worden getoond
 		) );
 	}
-
+	
+	add_action( 'customize_register', 'h_customize_afspraak_ingelogd');
 	add_action( 'customize_register', 'h_customize_contact');
 	add_action( 'customize_register', 'h_customize_realisatie');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen');

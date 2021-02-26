@@ -12,7 +12,15 @@
                         <div class="card c-ketels-cards">
                             <div class="card-content white-text c-ketels-card">
                                 <span class="card-title c-ketels-title">Woning</span>
-                                <img src="<?php echo get_template_directory_uri(  )?>/icons/woning.svg" class="c-ketels-img" alt="icoon van een huis">
+                                <?php
+                                echo '
+                                  <img
+                                  class="c-ketels-img"
+                                  src= "'. get_template_directory_uri() .' /icons/woning.svg"
+                                  alt="icoon van een huis"
+                                  />'; 
+                                ?>
+                                <!-- <img src="/icons/woning.svg" class="c-ketels-img" alt="icoon van een huis"> -->
                             </div>
                         </div>
                 </div></a>
@@ -20,8 +28,8 @@
                     <a href="https://wpl3.antonlabeeuw.be/verwarmingsketel-plaatsen-residentie/">
                         <div class="card c-ketels-cards">
                             <div class="card-content white-text c-ketels-card">
-                                <span class="card-title  c-ketels-title">Residentie</span>
-                                <img src="<?php echo get_template_directory_uri(  )?>/icons/residentie.svg" class="c-ketels-img" alt="icoon van een residentie">
+                                <span class="card-title c-ketels-title">Residentie</span>
+                                <img src="<?php echo get_template_directory_uri()?>/icons/residentie.svg" class="c-ketels-img" alt="icoon van een residentie">
                             </div>
                         </div>
                 </div></a>

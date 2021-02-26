@@ -51,7 +51,7 @@
         echo '
                 <img
                 class=""
-                src= "'. get_template_directory_uri() .' /icons/logo-groot.svg"
+                src= "'. get_template_directory_uri() .'/icons/logo-groot.svg"
                 alt="The Heating Company logo"
                 />'; 
         ?>

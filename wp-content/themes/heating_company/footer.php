@@ -5,7 +5,7 @@
         echo '
                 <img
                 class="c-footer__logo-klein""
-                src= "'. get_template_directory_uri() .' /icons/footer-logo.svg"
+                src= "'. get_template_directory_uri() .'/icons/footer-logo.svg"
                 alt="The Heating Company logo"
                 />'; 
         ?>
@@ -13,7 +13,7 @@
         echo '
                 <img
                 class="c-footer__logo-groot""
-                src= "'. get_template_directory_uri() .' /icons/logo-groot.svg"
+                src= "'. get_template_directory_uri() .'/icons/logo-groot.svg"
                 alt="The Heating Company logo"
                 />'; 
         ?>

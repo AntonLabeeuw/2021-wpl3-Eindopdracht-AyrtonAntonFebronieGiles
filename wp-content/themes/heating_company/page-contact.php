@@ -4,8 +4,8 @@
                 <div class="container">
                     <h1><?php echo get_theme_mod('setting-contact-h1'); ?></h1>
                     <p><?php echo get_theme_mod('setting-contact-p1'); ?></p>
-
-                    <form class="col-6 offset-3 o-form" action="/create-bericht-verwerk.php" method="POST">
+                    <?php echo do_shortcode('[wpforms id="518"]')?>
+                    <!-- <form class="col-6 offset-3 o-form" action="/create-bericht-verwerk.php" method="POST">
                       <div class="row">
                       <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
                         <input
@@ -88,9 +88,9 @@
                       </div>
 
                       </div>
-                      <input type="submit" name="submit">
+                      <input type="submit" name="submit"> -->
                       <!-- <a class="o-button o-button-effect o-button-effect-1 center" name="submit" href="">Stel je vraag</a> -->
-                    </form>
+                    <!-- </form> -->
                 </div>
             </section>
             <section class="c-contactgegevens">

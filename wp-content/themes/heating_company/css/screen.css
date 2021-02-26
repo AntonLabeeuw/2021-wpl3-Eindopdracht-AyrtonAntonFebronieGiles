@@ -1666,6 +1666,11 @@ i.material-icons.right {
   }
 }
 
+
+.hide-on-med-and-down li {
+  margin-bottom: 5rem !important;
+}
+
 .c-ketels {
   margin-top: 5rem;
   margin-bottom: 5rem;
@@ -1724,3 +1729,4 @@ i.material-icons.right {
   font-family: "omnium", "sans-serif" !important;
   padding-bottom: 2rem !important;
 }
+

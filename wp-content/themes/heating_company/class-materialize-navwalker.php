@@ -126,7 +126,7 @@ class Materialize_Walker_Nav_Menu extends Walker_Nav_Menu {
 				$atts['class'] = '';
 			}
 
-			$atts['class'] .= ' waves-effect waves-light';
+			$atts['class'] .= ' nav__item';
 
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 

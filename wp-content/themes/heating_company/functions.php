@@ -1055,6 +1055,81 @@ function js_script(){
         }
     }
 	//plaatsing-woning stop
+	// privacy start 
+	function h_customize_privacy($wp_customize) {
+        /* SETTINGS */
+		$wp_customize->add_setting( 'setting-privacy-h1.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.5', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.6', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.7', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.8', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.5', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.5', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.5', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.9', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.6', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.10', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.11', array('default'=> '') );
+        /* CONTROLS */
+        $wp_customize->add_control( 'setting-privacy-h1.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.7', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.8', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.9', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.10', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.11', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+        /* SECTION */
+        //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+        $wp_customize->add_section( 'section-id-privacy', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        'callback_check_if_page_privacy',
+        //wanneer moet deze setting worden getoond
+        ) );
+    }
+    function callback_check_if_page_privacy(){
+        if (is_page('privacy')){
+        return true;
+        }else{
+        return false;
+        }
+    }
+	//privacy stop
 
 	function h_customize_register($wp_customize) {
 		/* SETTINGS */
@@ -1573,13 +1648,12 @@ function js_script(){
 		) );
 	}
 	
+
+	add_action( 'customize_register', 'h_customize_privacy');
 	add_action( 'customize_register', 'h_customize_installatie_ingelogd');
-
 	add_action( 'customize_register', 'h_customize_offerte');
-
 	add_action( 'customize_register', 'h_customize_afspraak_ingelogd');
 	add_action( 'customize_register', 'h_customize_contact');
-
 	add_action( 'customize_register', 'h_customize_realisatie');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen_residentie');
@@ -1592,8 +1666,6 @@ function js_script(){
 	add_action( 'customize_register', 'h_customize_banner');
 	add_action( 'customize_register', 'h_customize_register');
 	add_action( 'customize_register', 'h_customize_oplossing');
-
-
 
 	add_action( 'wp_enqueue_scripts', 'js_script' );
 	// add_action( 'wp_enqueue_scripts', 'navbar_script' );

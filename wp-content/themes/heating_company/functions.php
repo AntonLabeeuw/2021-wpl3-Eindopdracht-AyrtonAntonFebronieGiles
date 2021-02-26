@@ -20,7 +20,30 @@ if( ! function_exists('materialize_nav_walker_dropdown_init') ) {
 
 }
 
-
+function wpf_dev_display_field_before( $field, $form_data ) {
+	if ( absint( $form_data['id'] ) !== 1289 ) {
+	return;
+	}
+		remove_action( 'wpforms_display_field_before', array( wpforms()->frontend, 'field_label' ), 15 );
+	}
+	 
+	add_action( 'wpforms_display_field_before', 'wpf_dev_display_field_before', 10, 2 );
+	 
+	/**
+	 * Move the field label to below the field for form ID 1289
+	 *
+	 * @link https://wpforms.com/developers/how-to-create-a-form-with-floating-labels/
+	 */
+	 
+	function wpf_dev_display_field_after( $field, $form_data ) {
+	if ( absint( $form_data['id'] ) !== 1289 ) {
+	return;
+	}
+	 
+		wpforms()->frontend->field_label( $field, $form_data );
+	}
+	 
+	add_action( 'wpforms_display_field_after', 'wpf_dev_display_field_after', 1, 2 );
 
 
 

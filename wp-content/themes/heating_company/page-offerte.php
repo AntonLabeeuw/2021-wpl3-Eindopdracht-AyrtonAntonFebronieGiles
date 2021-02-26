@@ -3,7 +3,6 @@
         <section class="c-contactform">
           <div class="container">
             <h1><?php echo get_theme_mod('offerte-txt-h1'); ?></h1>
-            <h1>Hallo</h1>
             <h2 class="c-offerte-h2">
               Vertel ons wat meer over uw woonsituatie.
             </h2>

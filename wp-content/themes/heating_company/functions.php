@@ -26,44 +26,24 @@ if( ! function_exists('materialize_nav_walker_dropdown_init') ) {
 
 
 function js_script(){
-wp_enqueue_style("5","https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css");
-wp_enqueue_style("12","https://code.jquery.com/jquery-2.1.1.min.js");
-wp_enqueue_script("1", "https://code.jquery.com/jquery-2.2.4.min.js");
-// wp_enqueue_style("13","slick-master/slick/slick.css");
-wp_enqueue_script("10",get_template_directory_uri() ."/js/slick.min.js", array(), "", true);
-wp_enqueue_style("18",get_template_directory_uri() ."/css/slick-theme.css");
-// wp_enqueue_style("14","slick-master/slick/slick-theme.css");
-//wp_enqueue_script('15',"//code.jquery.com/jquery-migrate-1.2.1.min.js");
-//wp_enqueue_script('16',"//code.jquery.com/jquery-1.11.0.min.js");
-// wp_enqueue_script('17',"slick-master/slick/slick.min.js");
-wp_enqueue_style("17",get_template_directory_uri() ."/css/slick.css");
-
-
-
-
-
-wp_enqueue_style("2","https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
-wp_enqueue_script("3", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js");
-
-wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
-wp_enqueue_script("4", "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js");
-wp_enqueue_script("11", "https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js");
-
-wp_enqueue_script('AOS', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js');
-
-wp_enqueue_style("8","https://fonts.googleapis.com/icon?family=Material+Icons");
-
-
-
-
-
-
-wp_enqueue_script("9", "https://kit.fontawesome.com/e3d5c31b7b.js");
-
-wp_enqueue_script('6',get_template_directory_uri() . '/js/effect.js');
-wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
-
-
+	wp_enqueue_style("5","https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css");
+	wp_enqueue_style("12","https://code.jquery.com/jquery-2.1.1.min.js");//nodig?
+	wp_enqueue_script("1", "https://code.jquery.com/jquery-2.2.4.min.js");//nodig?
+	wp_enqueue_script("slick-js",get_template_directory_uri() ."/js/slick.min.js", array(), "", true);
+	wp_enqueue_style("slick-theme-css",get_template_directory_uri() ."/css/slick-theme.css");
+	wp_enqueue_style("slick-css",get_template_directory_uri() ."/css/slick.css");
+	wp_enqueue_style("lightbox-css",get_template_directory_uri() ."/css/lightbox.min.css");
+	wp_enqueue_script("lightbox-js",get_template_directory_uri() ."/js/lightbox-plus-jquery.min.js");
+	wp_enqueue_style("materialize-css","https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
+	wp_enqueue_script("materialize-js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js");
+	wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
+	wp_enqueue_script("4", "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js");
+	wp_enqueue_script("11", "https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js");
+	wp_enqueue_script('AOS', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js');
+	wp_enqueue_style("8","https://fonts.googleapis.com/icon?family=Material+Icons");
+	wp_enqueue_script("font-awesome", "https://kit.fontawesome.com/e3d5c31b7b.js");
+	wp_enqueue_script("eigen-js-effect",get_template_directory_uri() . '/js/effect.js');
+	wp_enqueue_script("eigen-js-navbar",get_template_directory_uri() . '/js/navbar.js');
 }
 
 
@@ -1377,6 +1357,14 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
+	function callback_check_if_page_onderhoud(){
+		if (is_page('onderhoud')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
 	function h_customize_realisatie($wp_customize) {
 		/* SETTINGS */
 		//header 1
@@ -1398,14 +1386,6 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
-	function callback_check_if_page_onderhoud(){
-		if (is_page('onderhoud')){
-		return true;
-		}else{
-		return false;
-		}
-	}
-
 	function callback_check_if_page_realisaties(){
 		if (is_page('realisatie')){
 		return true;
@@ -1414,6 +1394,109 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		}
 	}
 
+	function h_customize_contact($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-contact-h1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-contact-p1', array('default'=> '') );
+
+		//header 
+		$wp_customize->add_setting( 'setting-contact-h2', array('default'=> '') );
+		//paragraaf 2
+		$wp_customize->add_setting( 'setting-contact-p2', array('default'=> '') );
+		//paragraaf 3 
+		$wp_customize->add_setting( 'setting-contact-p3', array('default'=> '') );
+		//paragraaf 4
+		$wp_customize->add_setting( 'setting-contact-p4', array('default'=> '') );
+		//paragraaf 5
+		$wp_customize->add_setting( 'setting-contact-p5', array('default'=> '') );
+		//link 1
+		$wp_customize->add_setting( 'setting-contact-a', array('default'=> '') );
+		
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-contact-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//header 2
+		$wp_customize->add_control( 'setting-contact-h2', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p3', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p4', array('label'=> 'Paragraaf 4','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p5', array('label'=> 'Paragraaf 5','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//link
+		$wp_customize->add_control( 'setting-contact-a', array('label'=> 'Link','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-contact', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_contact',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_contact(){
+		if (is_page('contact')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
+	function h_customize_afspraak_ingelogd($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-h1', array('default'=> '') );
+		//header 2
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-h2', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-p1', array('default'=> '') );
+		//button tekst
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-button-txt', array('default'=> '') );
+		//button tekst
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-button-link', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-p2', array('default'=> '') );
+		//header 2
+		$wp_customize->add_setting( 'setting-afspraak-ingelogd-h3', array('default'=> '') );
+
+		
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//header 2
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-h2', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-p1', array('label'=> 'Paragraaf als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//button txt
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-txt', array('label'=> 'Button tekst als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//button link
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-link', array('label'=> 'Button link als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-p2', array('label'=> 'Paragraaf als je bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		//header 3
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-h3', array('label'=> 'Tijdstip','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-afspraak-ingelogd', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_afspraak_ingelogd',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_afspraak_ingelogd(){
+		if (is_page('afspraak-ingelogd')){
+		return true;
+		}else{
+		return false;
+		}
+	}
 
 
 	function h_customize_banner($wp_customize) {
@@ -1444,7 +1527,12 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 	}
 	
 
+
 	add_action( 'customize_register', 'h_customize_offerte');
+
+	add_action( 'customize_register', 'h_customize_afspraak_ingelogd');
+	add_action( 'customize_register', 'h_customize_contact');
+
 	add_action( 'customize_register', 'h_customize_realisatie');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen_residentie');

@@ -1621,6 +1621,31 @@ function js_script(){
 		}
 	}
 
+	function h_customize_ingelogd_jouw_profiel($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-jouw-profiel-h1', array('default'=> '') );
+
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-jouw-profiel-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-jouw-profiel',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-jouw-profiel', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_jouw_profiel',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_jouw_profiel(){
+		if (is_page('jouw-profiel')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
 	function h_customize_banner($wp_customize) {
 		/* SETTINGS */
 		//Tekst banner
@@ -1648,7 +1673,7 @@ function js_script(){
 		) );
 	}
 	
-
+	add_action( 'customize_register', 'h_customize_ingelogd_jouw_profiel');
 	add_action( 'customize_register', 'h_customize_privacy');
 	add_action( 'customize_register', 'h_customize_installatie_ingelogd');
 	add_action( 'customize_register', 'h_customize_offerte');

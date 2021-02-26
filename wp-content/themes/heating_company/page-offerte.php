@@ -6,7 +6,8 @@
             <h2 class="c-offerte-h2">
               Vertel ons wat meer over uw woonsituatie.
             </h2>
-            <form class="o-form" action="/create-offerte-verwerk.php" method="POST">
+            <?php echo do_shortcode('[wpforms id="442"]')?>
+            <!-- <form class="o-form" action="/create-offerte-verwerk.php" method="POST">
               <div class="row">
                 <p class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">Bent u:</p>
                 <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
@@ -265,7 +266,7 @@
                   </div>
                   <input type="submit" name="submit">
               </div>
-            </form>
+            </form> -->
           </div>
         </section>
       </main>

@@ -1665,3 +1665,7 @@ i.material-icons.right {
     display: none !important;
   }
 }
+
+.hide-on-med-and-down li {
+  margin-bottom: 5rem !important;
+}

@@ -927,6 +927,10 @@ function js_script(){
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.5', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-h3.5', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-txt-p.6', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-button_text', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-button_link', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-button_text.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-residentie-button_link.1', array('default'=> '') );
         /* CONTROLS */
         $wp_customize->add_control( 'setting-plaatsing-residentie-txt-h2.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
 		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
@@ -941,6 +945,10 @@ function js_script(){
 		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
 		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
 		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_link', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_text', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_link.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_text.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
         /* SECTION */
         //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
         $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen-residentie', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
@@ -956,6 +964,55 @@ function js_script(){
         }
     }
 	//plaatsing-residentie stop
+	// plaatsing-woning start
+	function h_customize_verwarmingsketel_plaatsen_woning($wp_customize) {
+        /* SETTINGS */
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-h2.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-p.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-button_link', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-button_text', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-h3.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-p.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-h3.2', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-p.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-p.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-h3.3', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-p.5', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-h3.4', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-txt-p.6', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-button_link.1', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-plaatsing-woning-button_text.1', array('default'=> '') );
+        /* CONTROLS */
+        $wp_customize->add_control( 'setting-plaatsing-woning-txt-h2.1', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_link', array('label'=> 'Button link 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_text', array('label'=> 'Button tekst 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.1', array('label'=> 'Header 3 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_link.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_text.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+        /* SECTION */
+        //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
+        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen-woning', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        'callback_check_if_page_verwarmingsketel_plaatsen_woning',
+        //wanneer moet deze setting worden getoond
+        ) );
+    }
+    function callback_check_if_page_verwarmingsketel_plaatsen_woning(){
+        if (is_page('verwarmingsketel-plaatsen-woning')){
+        return true;
+        }else{
+        return false;
+        }
+    }
+	//plaatsing-woning stop
 
 	function h_customize_register($wp_customize) {
 		/* SETTINGS */
@@ -1404,6 +1461,7 @@ function js_script(){
 	add_action( 'customize_register', 'h_customize_realisatie');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen_residentie');
+	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen_woning');
 	add_action( 'customize_register', 'h_customize_onderhoud_list');
 	add_action( 'customize_register', 'h_customize_onderhoud');
 	add_action( 'customize_register', 'h_customize_home_button');

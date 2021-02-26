@@ -2,8 +2,8 @@
       <main>
             <section class="c-contactform">
                 <div class="container">
-                    <h1>Contacteer ons</h1>
-                    <p>We helpen graag met al je wensen en vragen. Vul hieronder je bericht in en je krijgt antwoord binnen de 24 uur.</p>
+                    <h1><?php echo get_theme_mod('setting-contact-h1'); ?></h1>
+                    <p><?php echo get_theme_mod('setting-contact-p1'); ?></p>
 
                     <form class="col-6 offset-3 o-form" action="/create-bericht-verwerk.php" method="POST">
                       <div class="row">
@@ -95,9 +95,9 @@
             </section>
             <section class="c-contactgegevens">
                 <div class="container">
-                    <h2>The Heating Company</h2>
-                    <p>Industriestraat 15</br>8500 Kortrijk</br>België</p>
-                    <p>Tel. +32 56 56 16</br><a href="mailto:info@theheatingcompany.be">info@theheatingcompany.be</a></p>
+                    <h2><?php echo get_theme_mod('setting-contact-h2'); ?></h2>
+                    <p><?php echo get_theme_mod('setting-contact-p2'); ?></br><?php echo get_theme_mod('setting-contact-p3'); ?></br><?php echo get_theme_mod('setting-contact-p4'); ?></p>
+                    <p><?php echo get_theme_mod('setting-contact-p5'); ?></br><a href="mailto:<?php echo get_theme_mod('setting-contact-a'); ?>"><?php echo get_theme_mod('setting-contact-a'); ?></a></p>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2505.5254682850923!2d3.106184815641067!3d51.098764479570015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c34dab7d28055b%3A0x2b312375b141287e!2sIndustriestraat%2015%2C%208211%20Zedelgem!5e0!3m2!1snl!2sbe!4v1613140814831!5m2!1snl!2sbe" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </section>

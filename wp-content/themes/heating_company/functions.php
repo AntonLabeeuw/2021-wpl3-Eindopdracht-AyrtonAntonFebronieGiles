@@ -1301,6 +1301,14 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
+	function callback_check_if_page_onderhoud(){
+		if (is_page('onderhoud')){
+		return true;
+		}else{
+		return false;
+		}
+	}
+
 	function h_customize_realisatie($wp_customize) {
 		/* SETTINGS */
 		//header 1
@@ -1322,14 +1330,6 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		) );
 	}
 
-	function callback_check_if_page_onderhoud(){
-		if (is_page('onderhoud')){
-		return true;
-		}else{
-		return false;
-		}
-	}
-
 	function callback_check_if_page_realisaties(){
 		if (is_page('realisatie')){
 		return true;
@@ -1338,6 +1338,59 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		}
 	}
 
+	function h_customize_contact($wp_customize) {
+		/* SETTINGS */
+		//header 1
+		$wp_customize->add_setting( 'setting-contact-h1', array('default'=> '') );
+		//paragraaf
+		$wp_customize->add_setting( 'setting-contact-p1', array('default'=> '') );
+
+		//header 
+		$wp_customize->add_setting( 'setting-contact-h2', array('default'=> '') );
+		//paragraaf 2
+		$wp_customize->add_setting( 'setting-contact-p2', array('default'=> '') );
+		//paragraaf 3 
+		$wp_customize->add_setting( 'setting-contact-p3', array('default'=> '') );
+		//paragraaf 4
+		$wp_customize->add_setting( 'setting-contact-p4', array('default'=> '') );
+		//paragraaf 5
+		$wp_customize->add_setting( 'setting-contact-p5', array('default'=> '') );
+		//link 1
+		$wp_customize->add_setting( 'setting-contact-a', array('default'=> '') );
+		
+		/* CONTROLS */
+		//header 1
+		$wp_customize->add_control( 'setting-contact-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//header 2
+		$wp_customize->add_control( 'setting-contact-h2', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p3', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p4', array('label'=> 'Paragraaf 4','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//paragraaf
+		$wp_customize->add_control( 'setting-contact-p5', array('label'=> 'Paragraaf 5','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		//link
+		$wp_customize->add_control( 'setting-contact-a', array('label'=> 'Link','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+
+		/* SECTION */
+		//wanneer moet deze setting worden getoond
+		$wp_customize->add_section( 'section-id-heating-contact', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in', 'active_callback'=> 
+		'callback_check_if_page_contact',
+		//wanneer moet deze setting worden getoond
+		) );
+	}
+
+	function callback_check_if_page_contact(){
+		if (is_page('contact')){
+		return true;
+		}else{
+		return false;
+		}
+	}
 
 
 	function h_customize_banner($wp_customize) {
@@ -1366,7 +1419,8 @@ wp_enqueue_script('7',get_template_directory_uri() . '/js/navbar.js');
 		//wanneer moet deze setting worden getoond
 		) );
 	}
-	
+
+	add_action( 'customize_register', 'h_customize_contact');
 	add_action( 'customize_register', 'h_customize_realisatie');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen');
 	add_action( 'customize_register', 'h_customize_verwarmingsketel_plaatsen_residentie');

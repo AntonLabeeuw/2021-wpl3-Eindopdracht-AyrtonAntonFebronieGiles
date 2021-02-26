@@ -16,7 +16,7 @@
                                 echo '
                                   <img
                                   class="c-ketels-img"
-                                  src= "'. get_template_directory_uri() .' /icons/woning.svg"
+                                  src= "'. get_template_directory_uri() .'/icons/woning.svg"
                                   alt="icoon van een huis"
                                   />'; 
                                 ?>

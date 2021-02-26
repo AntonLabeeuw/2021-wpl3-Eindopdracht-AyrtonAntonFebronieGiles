@@ -20,7 +20,7 @@
                     <a class="o-button o-button-effect o-button-effect-1" href="<?php echo get_theme_mod('setting-plaatsing-woning-button_link.1'); ?>"><?php echo get_theme_mod('setting-plaatsing-woning-button_text.1'); ?></a>
                 </div>
                 <div class="col l5 m12">
-                    <img src="images/carousel6-groot.jpg" class="c-plaatsen__img" alt="Installatie in een woning" title="Installatie in een woning">
+                    <img src="<?php echo get_the_post_thumbnail_url()?>" class="c-plaatsen__img" alt="Installatie in een woning" title="Installatie in een woning">
                 </div>
             </div>
         </div>

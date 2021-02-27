@@ -26,7 +26,7 @@
                 <h2><?php echo get_theme_mod('setting-privacy-h2.10'); ?></h2>
                 <p><?php echo get_theme_mod('setting-privacy-p.15'); ?> <a href="<?php echo get_theme_mod('setting-privacy-link.9'); ?>" class="c-policy-link"><?php echo get_theme_mod('setting-privacy-text.9'); ?></a> <?php echo get_theme_mod('setting-privacy-p.16'); ?></p>
                 <!-- einde  -->
-                <p>Deze privacy policy is gegenereerd door<a href="http://privacypolicygenerator.be" class="c-policy-link" target="_blank">privacypolicygenerator.be</a>.</p>
+                <p>Deze privacy policy is gegenereerd door <a href="http://privacypolicygenerator.be" class="c-policy-link" target="_blank">privacypolicygenerator.be</a>.</p>
             </div>
         </main>
 <?php get_footer(); ?>

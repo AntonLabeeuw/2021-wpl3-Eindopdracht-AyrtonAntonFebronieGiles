@@ -114,6 +114,20 @@
                     }
                 }
             ?>
+
+            <?php
+
+            if (isset($_SESSION["gebruiker_id"])){
+                ?>
+                    <a  class="" href="http://localhost/logout/">Logout</a>
+                <?php
+            }else{
+                ?>
+                    <a href="http://localhost/login/">Login</a>
+                <?php
+            }
+            ?>
+
         </div>
        
         

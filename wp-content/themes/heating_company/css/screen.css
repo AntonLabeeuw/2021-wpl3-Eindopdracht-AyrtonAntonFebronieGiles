@@ -302,6 +302,10 @@ select {
 .nav__item {
   color: #023c48;
   font-size: 1.8rem;
+  display: block;
+}
+.nav__item::first-letter {
+  text-transform: uppercase !important;
 }
 
 .nav__item:hover {
@@ -1650,6 +1654,10 @@ i.material-icons.right {
   color: #023c48;
   font-size: 1.8rem !important;
   text-transform: capitalize;
+}
+
+li.active {
+  color: green;
 }
 
 @media screen and (min-width: 1128px) {

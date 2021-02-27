@@ -1,55 +1,40 @@
-<?php get_header( );?>
+<?php
+if (!defined('ABSPATH')) exit;
+  get_header(); 
+  require_once dirname(__FILE__)."/src/helper/debug.php";
+?>
 <!-- mijn main -->
 <main>
   <div class="container">
     <a class="o-button o-button-nav-active" href="">Onderhoud</a>
     <a class="o-button o-button-nav" href="">Installatie</a>
     <a class="o-button o-button-nav" href="">Mijn profiel</a>
-    <h1><?php echo get_theme_mod('setting-afspraak-ingelogd-h1'); ?> Freddy Desmet</h1>
+    <h1><?php echo get_theme_mod('setting-afspraak-ingelogd-h1'); ?> <?php echo $_SESSION["voornaam"] . " " . $_SESSION["naam"]; ?></h1>
   </div>
   <div class="container-fluid c-banner-klok">
     <p class="c-banner-klok-text">
       Het volgende onderhoud kan gepland worden vanaf
     </p>
-    <p class="c-banner-klok-text-xl">22/02/2021</p>
+    <?php 
+      $laatste_onderhoud = $_SESSION["laatste_onderhoud"];
+      $volgend_onderhoud_mogelijk = date("Y-m-d", strtotime(date("Y-m-d", strtotime($laatste_onderhoud)) . " + 1 year"));
+    ?>
+    <p class="c-banner-klok-text-xl"><?php echo $volgend_onderhoud_mogelijk; ?></p>
   </div>
   <div class="container">
     <h2><?php echo get_theme_mod('setting-afspraak-ingelogd-h2'); ?></h2>
     <?php
-      $i = false;
-      if($i == true){
-        echo '        
-        <p>
-        '
-        ?>
-        <?php echo get_theme_mod('setting-afspraak-ingelogd-p1');
-        echo '
-        </p>
-        <a class="o-button effect effect-1" href="'
-        ?>
-        <?php echo get_theme_mod('setting-afspraak-ingelogd-button-link');
-        echo '">
-        '
-        ?>
-        <?php echo get_theme_mod('setting-afspraak-ingelogd-button-txt');
-        echo '
-        </a>';
-
+      $afspraak_gemaakt = $_SESSION["afspraak_gemaakt"];
+      if ($afspraak_gemaakt == 0){
+        echo '<p>' . get_theme_mod('setting-afspraak-ingelogd-p1') . '</p>';
+        echo '<a class="o-button effect effect-1" href="' . get_theme_mod('setting-afspraak-ingelogd-button-link') . '">' . get_theme_mod("setting-afspraak-ingelogd-button-txt") . '</a>';
       }else{
-        echo '        
-        <p>
-        '
-        ?>
-        <?php echo get_theme_mod('setting-afspraak-ingelogd-p2');
-        echo '
-        </p>
-        <h3>
-        '
-        ?>
-        <?php echo get_theme_mod('setting-afspraak-ingelogd-h3');
-        echo '
-        </h3>';
+        echo '<p>' . get_theme_mod("setting-afspraak-ingelogd-p2") . '</p>';
+        // echo '<h3>' . get_theme_mod("setting-afspraak-ingelogd-h3") . '</h3>';
+        $volgende_afspraak = $_SESSION["volgende_afspraak"];
+        echo '<h3>' . $volgende_afspraak . '</h3>';
       }
+
     ?>
 
   </div>

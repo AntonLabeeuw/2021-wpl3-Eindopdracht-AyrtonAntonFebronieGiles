@@ -1481,8 +1481,10 @@ textarea.materialize-textarea {
 
 .c-overlay-img {
   display: block;
-  width: 100%;
   height: auto;
+  max-width: 20rem;
+  max-height: 20rem;
+  object-fit: cover;
 }
 
 .c-overlay-overlay {

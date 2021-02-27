@@ -187,6 +187,9 @@
             <?php echo get_theme_mod('setting-onderhoud-list-li6'); ?>
             </li>
             <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li7'); ?></li>
+            <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li8'); ?></li>
+            <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li9'); ?></li>
+            <li class="c-list-item"><?php echo get_theme_mod('setting-onderhoud-list-li10'); ?></li>
           </ul>
           <p>
           <?php echo get_theme_mod('setting-onderhoud-list-p2'); ?>

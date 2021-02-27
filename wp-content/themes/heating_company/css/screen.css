@@ -860,8 +860,7 @@ input[type="date"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime-local"]:not(.browser-default).invalid ~ .helper-text:after,
-input[type="datetime-local"]:not(.browser-default):focus.invalid
-  ~ .helper-text:after,
+input[type="datetime-local"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="tel"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="tel"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="number"]:not(.browser-default).invalid ~ .helper-text:after,
@@ -1176,16 +1175,16 @@ textarea.materialize-textarea {
 
 .c-team__collega-img {
   border-radius: 1rem;
-  width: 32.4rem;
-  height: 22rem;
-  max-width: 100%;
+  max-width: 32rem;
+  max-height: 20rem;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 1200px) {
   .c-team__collega-img {
-    max-width: 90%;
-    width: 32.4rem;
-    height: 22rem;
+    max-width: 32rem;
+    max-height: 20rem;
+    object-fit: cover;
     border-radius: 1rem;
   }
 }

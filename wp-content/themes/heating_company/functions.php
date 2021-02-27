@@ -1085,7 +1085,6 @@ function js_script(){
 		$wp_customize->add_setting( 'setting-privacy-p.9', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-privacy-h2.6', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-privacy-p.10', array('default'=> '') );
-		$wp_customize->add_setting( 'setting-privacy-p.11', array('default'=> '') );
 		// extra
 		$wp_customize->add_setting( 'setting-privacy-h2.7', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-privacy-p.12', array('default'=> '') );
@@ -1135,7 +1134,6 @@ function js_script(){
 		$wp_customize->add_control( 'setting-privacy-p.9', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
 		$wp_customize->add_control( 'setting-privacy-h2.6', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
 		$wp_customize->add_control( 'setting-privacy-p.10', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.11', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
         // extra
 		$wp_customize->add_control( 'setting-privacy-h2.7', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
 		$wp_customize->add_control( 'setting-privacy-p.12', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
@@ -1469,7 +1467,7 @@ function js_script(){
 		//li9
 		$wp_customize->add_setting( 'setting-onderhoud-list-li9', array('default'=> '') );
 		//li10
-		$wp_customize->add_setting( 'setting-onderhoud-list-li', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-onderhoud-list-li10', array('default'=> '') );
 		//paragraaf
 		$wp_customize->add_setting( 'setting-onderhoud-list-p2', array('default'=> '') );
 		
@@ -1492,9 +1490,14 @@ function js_script(){
 		$wp_customize->add_control( 'setting-onderhoud-list-li6', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li7
 		$wp_customize->add_control( 'setting-onderhoud-list-li7', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li8
+		$wp_customize->add_control( 'setting-onderhoud-list-li8', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li9
+		$wp_customize->add_control( 'setting-onderhoud-list-li9', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		//li10
+		$wp_customize->add_control( 'setting-onderhoud-list-li10', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//p2
 		$wp_customize->add_control( 'setting-onderhoud-list-p2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
-
 		/* SECTION */
 		//wanneer moet deze setting worden getoond
 		$wp_customize->add_section( 'section-id-heating-onderhoud-list', array('title'=>  'Instellingen lijst','description'=>  'Stel de tekst in', 'active_callback'=> 

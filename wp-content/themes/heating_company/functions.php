@@ -872,20 +872,20 @@ function js_script(){
 		/* CONTROLS */
 		//header 1
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-oplossing-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-oplossing-p.1', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-p.1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//header 2
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-oplossing-h2.1', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-h2.1', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-oplossing-h2.2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-h2.2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		//De section aanpassen dus 'section-id-heating-oplossing'.
-		$wp_customize->add_control( 'setting-txt-oplossing-p.2', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
+		$wp_customize->add_control( 'setting-txt-oplossing-p.2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-oplossing',) );
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-		$wp_customize->add_section( 'section-id-heating-oplossing', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		$wp_customize->add_section( 'section-id-heating-oplossing', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
 		'callback_check_if_page_oplossing',
 		//wanneer moet deze setting worden getoond
 		) );
@@ -910,16 +910,16 @@ function js_script(){
         /* CONTROLS */
         //header 1
         //De section aanpassen dus 'section-id-heating-installatie'.
-        $wp_customize->add_control( 'setting-plaatsing-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        $wp_customize->add_control( 'setting-plaatsing-txt-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
         //paragraaf
         //De section aanpassen dus 'section-id-heating-installatie'.
-        $wp_customize->add_control( 'setting-plaatsing-txt-p', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        $wp_customize->add_control( 'setting-plaatsing-txt-p', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
         //header 2
         //De section aanpassen dus 'section-id-heating-installatie'.
-        $wp_customize->add_control( 'setting-plaatsing-txt-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
+        $wp_customize->add_control( 'setting-plaatsing-txt-h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen',) );
         /* SECTION */
         //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
         'callback_check_if_page_verwarmingsketel_plaatsen',
         //wanneer moet deze setting worden getoond
         ) );
@@ -937,9 +937,9 @@ function js_script(){
 			/* SETTINGS */
 			$wp_customize->add_setting( 'offerte-txt-h1', array('default'=> '') );
 			/* CONTROLS */
-			$wp_customize->add_control( 'offerte-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-offerte',) );
+			$wp_customize->add_control( 'offerte-txt-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-offerte',) );
 			/* SECTION */
-			$wp_customize->add_section( 'section-id-offerte', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+			$wp_customize->add_section( 'section-id-offerte', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
 			'callback_check_if_page_offerte',
 			//wanneer moet deze setting worden getoond
 			) );
@@ -974,26 +974,26 @@ function js_script(){
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-button_text.1', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-plaatsing-residentie-button_link.1', array('default'=> '') );
         /* CONTROLS */
-        $wp_customize->add_control( 'setting-plaatsing-residentie-txt-h2.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-button_link', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-button_text', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h2.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-button_link.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
-		$wp_customize->add_control( 'setting-plaatsing-residentie-button_text.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+        $wp_customize->add_control( 'setting-plaatsing-residentie-txt-h2.1', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_link', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_text', array('label'=> 'Knop-tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h2.2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.1', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.2', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.3', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.3', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.4', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.4', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.5', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-h3.5', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-txt-p.6', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_link.1', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
+		$wp_customize->add_control( 'setting-plaatsing-residentie-button_text.1', array('label'=> 'Knop-tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-residentie',) );
         /* SECTION */
         //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen-residentie', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen-residentie', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
         'callback_check_if_page_verwarmingsketel_plaatsen_residentie',
         //wanneer moet deze setting worden getoond
         ) );
@@ -1025,24 +1025,24 @@ function js_script(){
 		$wp_customize->add_setting( 'setting-plaatsing-woning-button_link.1', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-plaatsing-woning-button_text.1', array('default'=> '') );
         /* CONTROLS */
-        $wp_customize->add_control( 'setting-plaatsing-woning-txt-h2.1', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-button_link', array('label'=> 'Button link 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-button_text', array('label'=> 'Button tekst 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.1', array('label'=> 'Header 3 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-button_link.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
-		$wp_customize->add_control( 'setting-plaatsing-woning-button_text.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+        $wp_customize->add_control( 'setting-plaatsing-woning-txt-h2.1', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_link', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_text', array('label'=> 'Knop-tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.1', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.2', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.3', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.4', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.3', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.5', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-h3.4', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-txt-p.6', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_link.1', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
+		$wp_customize->add_control( 'setting-plaatsing-woning-button_text.1', array('label'=> 'Knop-tekst','type'=> 'textarea','section'=> 'section-id-verwarmingsketel_plaatsen-woning',) );
         /* SECTION */
         //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen-woning', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        $wp_customize->add_section( 'section-id-verwarmingsketel_plaatsen-woning', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
         'callback_check_if_page_verwarmingsketel_plaatsen_woning',
         //wanneer moet deze setting worden getoond
         ) );
@@ -1086,38 +1086,80 @@ function js_script(){
 		$wp_customize->add_setting( 'setting-privacy-h2.6', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-privacy-p.10', array('default'=> '') );
 		$wp_customize->add_setting( 'setting-privacy-p.11', array('default'=> '') );
+		// extra
+		$wp_customize->add_setting( 'setting-privacy-h2.7', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.12', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.6', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.6', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.13', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.8', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.13', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.7', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.7', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.14', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.9', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.14', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.8', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.8', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.15', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-h2.10', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.15', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-link.9', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-text.9', array('default'=> '') );
+		$wp_customize->add_setting( 'setting-privacy-p.16', array('default'=> '') );
         /* CONTROLS */
-        $wp_customize->add_control( 'setting-privacy-h1.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-h2.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-link.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-text.1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-h2.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-link.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-text.2', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-h2.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-link.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-text.3', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-h2.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-link.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-text.4', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.7', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.8', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-h2.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-link.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-text.5', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.9', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-h2.6', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.10', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
-		$wp_customize->add_control( 'setting-privacy-p.11', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-privacy',) );
+        $wp_customize->add_control( 'setting-privacy-h1.1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.1', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.1', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.1', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.3', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.4', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.2', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.2', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.5', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.3', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.6', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.3', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.3', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.4', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.4', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.4', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.7', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.8', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.5', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.5', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.5', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.9', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.6', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.10', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.11', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+        // extra
+		$wp_customize->add_control( 'setting-privacy-h2.7', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.12', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.6', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.6', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.13', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.8', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.13', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.7', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.7', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.14', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.9', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.14', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.8', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.8', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.15', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-h2.10', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.15', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-link.9', array('label'=> 'Link-URL','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-text.9', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
+		$wp_customize->add_control( 'setting-privacy-p.16', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-privacy',) );
         /* SECTION */
         //'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-        $wp_customize->add_section( 'section-id-privacy', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+        $wp_customize->add_section( 'section-id-privacy', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
         'callback_check_if_page_privacy',
         //wanneer moet deze setting worden getoond
         ) );
@@ -1157,24 +1199,24 @@ function js_script(){
 		/* CONTROLS */
 		//header 1
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-p1', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-p1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
 		//header 2
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
 		//lijst
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-li1', array('label'=> 'Item 1','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
-		$wp_customize->add_control( 'setting-txt-li2', array('label'=> 'Item 2','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
-		$wp_customize->add_control( 'setting-txt-li3', array('label'=> 'Item 3','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
-		$wp_customize->add_control( 'setting-txt-li4', array('label'=> 'Item 4','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
-		$wp_customize->add_control( 'setting-txt-li5', array('label'=> 'Item 5','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li1', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li2', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li3', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li4', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
+		$wp_customize->add_control( 'setting-txt-li5', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-attest',) );
 
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-		$wp_customize->add_section( 'section-id-heating-attest', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		$wp_customize->add_section( 'section-id-heating-attest', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
 		'callback_check_if_page_attest',
 		//wanneer moet deze setting worden getoond
 		) );
@@ -1200,17 +1242,17 @@ function js_script(){
 		/* CONTROLS */
 		//header 1
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-over-ons-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
+		$wp_customize->add_control( 'setting-over-ons-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-over-ons-p1', array('label'=> 'Paragraaf','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
+		$wp_customize->add_control( 'setting-over-ons-p1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
 		//header 2
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-over-ons-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
+		$wp_customize->add_control( 'setting-over-ons-h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-over-ons',) );
 
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-		$wp_customize->add_section( 'section-id-heating-over-ons', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		$wp_customize->add_section( 'section-id-heating-over-ons', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
 		'callback_check_if_page_over_ons',
 		//wanneer moet deze setting worden getoond
 		) );
@@ -1245,23 +1287,23 @@ function js_script(){
 		$wp_customize->add_control( 'setting-home-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-home',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-home-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		$wp_customize->add_control( 'setting-home-p1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-home',) );
 		//header 2
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-home-h2.1', array('label'=> 'Subtitel 1','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		$wp_customize->add_control( 'setting-home-h2.1', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-home',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-home-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		$wp_customize->add_control( 'setting-home-p2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-home',) );
 		//header 2
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-home-h2.2', array('label'=> 'Subtitel 2','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		$wp_customize->add_control( 'setting-home-h2.2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-home',) );
 		//paragraaf
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-home-p3', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-home',) );
+		$wp_customize->add_control( 'setting-home-p3', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-home',) );
 
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
-		$wp_customize->add_section( 'section-id-heating-home', array('title'=>  'Instellingen text','description'=>  'Stel de tekst in','active_callback'=> 
+		$wp_customize->add_section( 'section-id-heating-home', array('title'=>  'Instellingen tekst','description'=>  'Stel de tekst in','active_callback'=> 
 		'is_front_page',
 		//wanneer moet deze setting worden getoond
 		) );
@@ -1299,31 +1341,31 @@ function js_script(){
 
 		/* CONTROLS */
 		//header 2
-		$wp_customize->add_control( 'setting-home-button1_h2', array('label'=> 'Titel 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button1_h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-home-button1_p', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button1_p', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//button text
-		$wp_customize->add_control( 'setting-home-button1_txt', array('label'=> 'Tekst van de button 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button1_txt', array('label'=> 'Knop-tekst','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//button link
-		$wp_customize->add_control( 'setting-home-button1_link', array('label'=> 'Button link 1','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button1_link', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 
 		//header 2
-		$wp_customize->add_control( 'setting-home-button2_h2', array('label'=> 'Titel 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button2_h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-home-button2_p', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button2_p', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//button text
-		$wp_customize->add_control( 'setting-home-button2_txt', array('label'=> 'Tekst van de button 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button2_txt', array('label'=> 'Knop-tekst','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//button link
-		$wp_customize->add_control( 'setting-home-button2_link', array('label'=> 'Button link 2','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button2_link', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 
 		//header 2
-		$wp_customize->add_control( 'setting-home-button3_h2', array('label'=> 'Titel 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button3_h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-home-button3_p', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button3_p', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//button text
-		$wp_customize->add_control( 'setting-home-button3_txt', array('label'=> 'Tekst van de button 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button3_txt', array('label'=> 'Knop-tekst','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		//button link
-		$wp_customize->add_control( 'setting-home-button3_link', array('label'=> 'Button link 3','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
+		$wp_customize->add_control( 'setting-home-button3_link', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-heating-home-buttons',) );
 		
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.
@@ -1365,34 +1407,34 @@ function js_script(){
 
 		/* CONTROLS */
 		//header 1
-		$wp_customize->add_control( 'setting-onderhoud-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-onderhoud-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-p1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//Tekst knop
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-onderhoud-button_txt', array('label'=> 'Tekst knop','type'=> 'input','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-button_txt', array('Knop-tekst'=> 'Knop-tekst','type'=> 'input','section'=> 'section-id-heating-onderhoud',) );
 		//Link knop
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-onderhoud-button_link', array('label'=> 'Link knop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-button_link', array('label'=> 'Knop-URL','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 
 		//header 2
-		$wp_customize->add_control( 'setting-onderhoud-h2.1', array('label'=> 'Subtitel 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-h2.1', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//header 3
-		$wp_customize->add_control( 'setting-onderhoud-h3.1', array('label'=> 'header 3.1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-h3.1', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-onderhoud-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-p2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//header 3
-		$wp_customize->add_control( 'setting-onderhoud-h3.2', array('label'=> 'header 3.2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-h3.2', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-onderhoud-p3', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-p3', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//header 3
-		$wp_customize->add_control( 'setting-onderhoud-h3.3', array('label'=> 'header 3.3','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-h3.3', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-onderhoud-p4', array('label'=> 'Paragraaf 4','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-p4', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//header 4
-		$wp_customize->add_control( 'setting-onderhoud-h3.4', array('label'=> 'header 3.4','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-h3.4', array('label'=> 'Tussenkop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-onderhoud-p5', array('label'=> 'Paragraaf 5','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
+		$wp_customize->add_control( 'setting-onderhoud-p5', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud',) );
 
 		/* SECTION */
 		//wanneer moet deze setting worden getoond
@@ -1422,30 +1464,36 @@ function js_script(){
 		$wp_customize->add_setting( 'setting-onderhoud-list-li6', array('default'=> '') );
 		//li7
 		$wp_customize->add_setting( 'setting-onderhoud-list-li7', array('default'=> '') );
+		//li8
+		$wp_customize->add_setting( 'setting-onderhoud-list-li8', array('default'=> '') );
+		//li9
+		$wp_customize->add_setting( 'setting-onderhoud-list-li9', array('default'=> '') );
+		//li10
+		$wp_customize->add_setting( 'setting-onderhoud-list-li', array('default'=> '') );
 		//paragraaf
 		$wp_customize->add_setting( 'setting-onderhoud-list-p2', array('default'=> '') );
 		
 		/* CONTROLS */
 		//header 1
-		$wp_customize->add_control( 'setting-onderhoud-list-h2', array('label'=> 'Tekst header 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-onderhoud-list-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-p1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li1
-		$wp_customize->add_control( 'setting-onderhoud-list-li1', array('label'=> 'Li 1','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-li1', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li2
-		$wp_customize->add_control( 'setting-onderhoud-list-li2', array('label'=> 'Li 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-li2', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li3
-		$wp_customize->add_control( 'setting-onderhoud-list-li3', array('label'=> 'Li 3','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-li3', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li4
-		$wp_customize->add_control( 'setting-onderhoud-list-li4', array('label'=> 'Li 4','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-li4', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li5
-		$wp_customize->add_control( 'setting-onderhoud-list-li5', array('label'=> 'Li 5','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-li5', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li6
-		$wp_customize->add_control( 'setting-onderhoud-list-li6', array('label'=> 'Li 6','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-li6', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//li7
-		$wp_customize->add_control( 'setting-onderhoud-list-li7', array('label'=> 'Li 7','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-li7', array('label'=> 'Opsomming','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 		//p2
-		$wp_customize->add_control( 'setting-onderhoud-list-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
+		$wp_customize->add_control( 'setting-onderhoud-list-p2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-onderhoud-list',) );
 
 		/* SECTION */
 		//wanneer moet deze setting worden getoond
@@ -1472,9 +1520,9 @@ function js_script(){
 		
 		/* CONTROLS */
 		//header 1
-		$wp_customize->add_control( 'setting-realisaties-h1', array('label'=> 'Tekst header 1','type'=> 'textarea','section'=> 'section-id-heating-realisaties',) );
+		$wp_customize->add_control( 'setting-realisaties-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-realisaties',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-realisaties-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-realisaties',) );
+		$wp_customize->add_control( 'setting-realisaties-p1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-realisaties',) );
 
 		/* SECTION */
 		//wanneer moet deze setting worden getoond
@@ -1516,19 +1564,19 @@ function js_script(){
 		//header 1
 		$wp_customize->add_control( 'setting-contact-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-contact-p1', array('label'=> 'Paragraaf 1','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		$wp_customize->add_control( 'setting-contact-p1', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 		//header 2
-		$wp_customize->add_control( 'setting-contact-h2', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		$wp_customize->add_control( 'setting-contact-h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-contact-p2', array('label'=> 'Paragraaf 2','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		$wp_customize->add_control( 'setting-contact-p2', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-contact-p3', array('label'=> 'Paragraaf 3','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		$wp_customize->add_control( 'setting-contact-p3', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-contact-p4', array('label'=> 'Paragraaf 4','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		$wp_customize->add_control( 'setting-contact-p4', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-contact-p5', array('label'=> 'Paragraaf 5','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		$wp_customize->add_control( 'setting-contact-p5', array('label'=> 'Tekst','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 		//link
-		$wp_customize->add_control( 'setting-contact-a', array('label'=> 'Link','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
+		$wp_customize->add_control( 'setting-contact-a', array('label'=> 'Link-tekst','type'=> 'textarea','section'=> 'section-id-heating-contact',) );
 
 		/* SECTION */
 		//wanneer moet deze setting worden getoond
@@ -1568,15 +1616,15 @@ function js_script(){
 		//header 1
 		$wp_customize->add_control( 'setting-afspraak-ingelogd-h1', array('label'=> 'Titel','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
 		//header 2
-		$wp_customize->add_control( 'setting-afspraak-ingelogd-h2', array('label'=> 'Subtitel','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-h2', array('label'=> 'Kop','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-afspraak-ingelogd-p1', array('label'=> 'Paragraaf als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-p1', array('label'=> 'Tekst als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
 		//button txt
-		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-txt', array('label'=> 'Button tekst als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-txt', array('label'=> 'Knop-tekst als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
 		//button link
-		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-link', array('label'=> 'Button link als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-button-link', array('label'=> 'Knop-link als je niet bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
 		//paragraaf
-		$wp_customize->add_control( 'setting-afspraak-ingelogd-p2', array('label'=> 'Paragraaf als je bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
+		$wp_customize->add_control( 'setting-afspraak-ingelogd-p2', array('label'=> 'Tekst als je bent ingelogd','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
 		//header 3
 		$wp_customize->add_control( 'setting-afspraak-ingelogd-h3', array('label'=> 'Tijdstip','type'=> 'textarea','section'=> 'section-id-heating-afspraak-ingelogd',) );
 
@@ -1658,13 +1706,13 @@ function js_script(){
 		/* CONTROLS */
 		//Tekst banner
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-banner', array('label'=> 'Tekst banner','type'=> 'textarea','section'=> 'section-id-heating-banner',) );
+		$wp_customize->add_control( 'setting-txt-banner', array('label'=> 'Banner tekst','type'=> 'textarea','section'=> 'section-id-heating-banner',) );
 		//Tekst knop
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-btn', array('label'=> 'Tekst knop','type'=> 'input','section'=> 'section-id-heating-banner',) );
+		$wp_customize->add_control( 'setting-txt-btn', array('label'=> 'Banner knop-tekst','type'=> 'input','section'=> 'section-id-heating-banner',) );
 		//Link knop
 		//De section aanpassen dus 'section-id-heating-installatie'.
-		$wp_customize->add_control( 'setting-txt-btnlink', array('label'=> 'Link knop','type'=> 'textarea','section'=> 'section-id-heating-banner',) );
+		$wp_customize->add_control( 'setting-txt-btnlink', array('label'=> 'Banner knop-URL','type'=> 'textarea','section'=> 'section-id-heating-banner',) );
 
 		/* SECTION */
 		//'section-id-heating-installatie' aanpassen! En ook de is_front_page.

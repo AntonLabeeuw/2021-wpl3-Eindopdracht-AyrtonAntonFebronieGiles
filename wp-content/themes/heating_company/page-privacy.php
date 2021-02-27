@@ -16,7 +16,17 @@
                 <p><a href="<?php echo get_theme_mod('setting-privacy-link.5'); ?>" class="c-policy-link"><?php echo get_theme_mod('setting-privacy-text.5'); ?></a><?php echo get_theme_mod('setting-privacy-p.9'); ?></p>
                 <h2><?php echo get_theme_mod('setting-privacy-h2.6'); ?></h2>
                 <p><?php echo get_theme_mod('setting-privacy-p.10'); ?></p>
-                <p><?php echo get_theme_mod('setting-privacy-p.11'); ?> <a href="http://privacypolicygenerator.be" class="c-policy-link" target="_blank">privacypolicygenerator.be</a>.</p>
+                <!-- 4 extra policy velden -->
+                <h2><?php echo get_theme_mod('setting-privacy-h2.7'); ?></h2>
+                <p><?php echo get_theme_mod('setting-privacy-p.12'); ?> <a href="<?php echo get_theme_mod('setting-privacy-link.6'); ?>" class="c-policy-link"><?php echo get_theme_mod('setting-privacy-text.6'); ?></a> <?php echo get_theme_mod('setting-privacy-p.13'); ?></p>
+                <h2><?php echo get_theme_mod('setting-privacy-h2.8'); ?></h2>
+                <p><?php echo get_theme_mod('setting-privacy-p.13'); ?> <a href="<?php echo get_theme_mod('setting-privacy-link.7'); ?>" class="c-policy-link"><?php echo get_theme_mod('setting-privacy-text.7'); ?></a> <?php echo get_theme_mod('setting-privacy-p.14'); ?></p>
+                <h2><?php echo get_theme_mod('setting-privacy-h2.9'); ?></h2>
+                <p><?php echo get_theme_mod('setting-privacy-p.14'); ?> <a href="<?php echo get_theme_mod('setting-privacy-link.8'); ?>" class="c-policy-link"><?php echo get_theme_mod('setting-privacy-text.8'); ?></a> <?php echo get_theme_mod('setting-privacy-p.15'); ?></p>
+                <h2><?php echo get_theme_mod('setting-privacy-h2.10'); ?></h2>
+                <p><?php echo get_theme_mod('setting-privacy-p.15'); ?> <a href="<?php echo get_theme_mod('setting-privacy-link.9'); ?>" class="c-policy-link"><?php echo get_theme_mod('setting-privacy-text.9'); ?></a> <?php echo get_theme_mod('setting-privacy-p.16'); ?></p>
+                <!-- einde  -->
+                <p>Deze privacy policy is gegenereerd door<a href="http://privacypolicygenerator.be" class="c-policy-link" target="_blank">privacypolicygenerator.be</a>.</p>
             </div>
         </main>
 <?php get_footer(); ?>

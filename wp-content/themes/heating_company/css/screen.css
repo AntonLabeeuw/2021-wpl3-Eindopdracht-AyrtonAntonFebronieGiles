@@ -860,7 +860,8 @@ input[type="date"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime-local"]:not(.browser-default).invalid ~ .helper-text:after,
-input[type="datetime-local"]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type="datetime-local"]:not(.browser-default):focus.invalid
+  ~ .helper-text:after,
 input[type="tel"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="tel"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="number"]:not(.browser-default).invalid ~ .helper-text:after,
@@ -1665,14 +1666,14 @@ li.active {
     display: none !important;
   }
 }
-@media screen and (max-width: 1128px) {
+/* @media screen and (max-width: 1128px) {
   i.material-icons.right {
     padding-top: 2rem;
   }
   .side-nav {
     display: none !important;
   }
-}
+} */
 
 .hide-on-med-and-down li {
   margin-bottom: 5rem !important;

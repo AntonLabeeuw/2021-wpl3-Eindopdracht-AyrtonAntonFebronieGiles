@@ -11,7 +11,7 @@
                         $arg = array(
                             'post_type' => array ('teamleden'),
                             'nopaging' => false,
-                            'posts_per_page' => '6',
+                            'posts_per_page' => '10',
                             'order' => 'ASC',
                             'orderby' => 'date'
                         );

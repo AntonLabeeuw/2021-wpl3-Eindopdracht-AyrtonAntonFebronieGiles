@@ -1,7 +1,6 @@
 <?php
 if (!defined('ABSPATH')) exit;
   get_header(); 
-  require_once dirname(__FILE__)."/src/helper/debug.php";
 ?>
 <!-- mijn main -->
 <main>
@@ -30,7 +29,6 @@ if (!defined('ABSPATH')) exit;
         echo '<a class="o-button effect effect-1" href="' . get_theme_mod('setting-afspraak-ingelogd-button-link') . '">' . get_theme_mod("setting-afspraak-ingelogd-button-txt") . '</a>';
       }else{
         echo '<p>' . get_theme_mod("setting-afspraak-ingelogd-p2") . '</p>';
-        // echo '<h3>' . get_theme_mod("setting-afspraak-ingelogd-h3") . '</h3>';
         $volgende_afspraak = $_SESSION["volgende_afspraak"];
         echo '<h3>' . $volgende_afspraak . '</h3>';
       }

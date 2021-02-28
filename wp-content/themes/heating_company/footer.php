@@ -65,7 +65,7 @@
                     </svg>
                 </a>
                 <!-- mail -->
-                <a href="mailto:theheatingcompany@gmail.com.be?subject=Contacteer mij&"><svg
+                <a href="mailto:theheatingcomany@gmail.com?subject=Contacteer mij&"><svg
                         class="c-footer__icons--mail c-footer__icon" id="email_met_hover" data-name="email met hover"
                         xmlns="http://www.w3.org/2000/svg" width="34.952" height="33.432" viewBox="0 0 34.952 33.432">
                         <path id="icon-mail-1" data-name="Path 20"

@@ -7,7 +7,7 @@
             </div>
             <section class="c-profielform">
               <div class="container">
-                <form class="o-form">
+                <form class="o-form" action="/registratie-verwerk.php" method="POST">
                   <div class="row">
                     <div
                     class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
@@ -271,10 +271,10 @@
                     >
                       <input
                         type="password"
-                        name="password"
-                        id="password"
+                        name="wachtwoord"
+                        id="wachtwoord"
                         class="form-control c-form__input validate"
-                        placeholder="password"
+                        placeholder="Wachtwoord"
                         minlength="2"
                         required
                       />

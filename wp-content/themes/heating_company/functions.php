@@ -60,8 +60,6 @@ function wpf_dev_display_field_before( $field, $form_data ) {
 
 
 
-
-
 add_action( 'wp_footer', 'add_aos_animation' );
  function add_aos_animation() {
      wp_enqueue_style('AOS_animate', 'https://unpkg.com/aos@next/dist/aos.css', false, null);

@@ -321,7 +321,6 @@ select {
 
 .nav__hamburger {
   color: #023c48;
-  font-size: 5rem;
 }
 
 .nav__hamburger:hover {
@@ -1688,7 +1687,7 @@ i.material-icons.right {
 } */
 
 .hide-on-med-and-down li {
-  margin-bottom: 5rem !important;
+  margin-bottom: 1rem;
 }
 
 .c-ketels {

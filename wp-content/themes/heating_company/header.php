@@ -39,11 +39,12 @@
     <script type="text/javascript" src="js/effect.js"></script> -->
 
     
-   
+ 
 
     <?php wp_head(  )?>
     
 </head>
+
 <body <?php body_class(  ) ?>>
     <header>
         <div class="c-topnav container">

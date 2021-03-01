@@ -44,7 +44,7 @@ if (!defined('ABSPATH')) exit;
             Laat ons weten wat je van The Heating Company verwacht
           </p>
         </div>
-        <div class="col s12 m6 l4">
+        <div class="col s12 m6 l4 c-banner-contact-btn">
           <a class="o-button effect effect-1 right" href="">Neem contact op</a>
         </div>
       </div>

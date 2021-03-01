@@ -939,7 +939,7 @@ textarea.materialize-textarea {
 }
 
 .c-banner-contact {
-  height: 8.5rem;
+  /* height: 8.5rem; */
   background-color: #023c48;
   margin-bottom: 5rem;
   margin-top: 2rem;
@@ -947,7 +947,17 @@ textarea.materialize-textarea {
 
 @media screen and (max-width: 600px) {
   .c-banner-contact {
-    height: 16rem;
+    height: 20rem;
+  }
+  .c-banner-contact-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .c-banner-contact-text {
+    text-align: center;
+  }
+  .o-button {
+    margin: 0;
   }
 }
 
@@ -959,9 +969,11 @@ textarea.materialize-textarea {
 
 .c-banner-contact-text {
   color: #edf3f4;
-  display: inline-block;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 0;
+  background-color: #023c48;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  min-height: 100%;
 }
 
 @media screen and (min-width: 500px) {
@@ -989,6 +1001,8 @@ textarea.materialize-textarea {
 
 .c-uspbanner__background {
   background-color: #023c48;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .c-uspbanner__text {
@@ -1065,6 +1079,7 @@ textarea.materialize-textarea {
   width: 32%;
   margin-right: 8px;
   margin-left: 8px;
+  outline: none;
 }
 
 @media (max-width: 401px) {

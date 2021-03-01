@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <div class="container">
-      <a class="o-button o-button-nav" href="">Onderhoud</a>
-      <a class="o-button o-button-nav" href="">Installatie</a>
+      <a class="o-button o-button-nav" href="http://localhost/afspraak-ingelogd">Onderhoud</a>
+      <a class="o-button o-button-nav" href="http://localhost/ingelogd-installatie">Installatie</a>
       <a class="o-button o-button-nav-active" href="">Mijn profiel</a>
       <h1 class="c-login-titel">Jouw profiel</h1>
     </div>
@@ -19,6 +19,7 @@
                 class="form-control c-form__input validate"
                 placeholder="Voornaam"
                 minlength="2"
+                value="<?php echo $_SESSION["voornaam"]; ?>"
                 required
               />
               <label class="c-form__label" for="voornaam"> Voornaam </label>
@@ -38,6 +39,7 @@
                 class="form-control c-form__input validate"
                 placeholder="Naam"
                 minlength="2"
+                value="<?php echo $_SESSION["naam"]; ?>"
                 required
               />
               <label class="c-form__label" for="naam"> Naam </label>
@@ -51,33 +53,13 @@
               class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
             >
               <input
-                type="text"
-                name="gebruikersnaam"
-                id="gebruikersnaam"
-                class="form-control c-form__input validate"
-                placeholder="Gebruikersnaam"
-                minlength="2"
-                required
-              />
-              <label class="c-form__label" for="gebruikersnaam">
-                Gebruikersnaam
-              </label>
-              <span
-                class="helper-text"
-                data-error="Dit is geen geldig gebruikersnaam"
-              ></span>
-            </div>
-
-            <div
-              class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
-            >
-              <input
                 type="email"
                 name="email"
                 id="email"
                 class="form-control c-form__input validate"
                 placeholder="E-mail"
                 minlength="2"
+                value="<?php echo $_SESSION["email"]; ?>"
                 required
               />
               <label class="c-form__label" for="email"> E-mail </label>
@@ -92,7 +74,7 @@
             >
               <input
                 type="tel"
-                name="tel"
+                name="telefoon"
                 id="tel"
                 pattern="((^[+\s0-9]{2,6}[\s\./0-9]*$))"
                 class="form-control c-form__input validate"
@@ -101,9 +83,10 @@
                 maxlength="11"
                 min="0000000001"
                 max="99999999999"
+                value="<?php echo $_SESSION["telefoon"]; ?>"
                 required
               />
-              <label class="c-form__label" for="tel"> Telefoonnummer </label>
+              <label class="c-form__label" for="telefoon"> Telefoonnummer </label>
               <span
                 class="helper-text"
                 data-error="Dit is geen geldig telefoonnummer"
@@ -120,6 +103,7 @@
                 class="form-control c-form__input validate"
                 placeholder="straat"
                 minlength="2"
+                value="<?php echo $_SESSION["straat"]; ?>"
                 required
               />
               <label class="c-form__label" for="straat"> Straat </label>
@@ -143,6 +127,7 @@
                 maxlength="4"
                 min="1"
                 max="1000"
+                value="<?php echo $_SESSION["nummer"]; ?>"
                 required
               />
               <label class="c-form__label" for="nummer"> Nr </label>
@@ -161,8 +146,7 @@
                 id="bus"
                 class="form-control c-form__input validate"
                 placeholder="bus"
-                minlength="2"
-                maxlength="2"
+                value="<?php echo $_SESSION["bus"]; ?>"
                 required
               />
               <label class="c-form__label" for="bus"> Bus </label>
@@ -186,6 +170,7 @@
                 maxlength="4"
                 min="1000"
                 max="9999"
+                value="<?php echo $_SESSION["postcode"]; ?>"
                 required
               />
               <label class="c-form__label" for="Postcode"> Postcode </label>
@@ -205,6 +190,7 @@
                 class="form-control c-form__input validate"
                 placeholder="Gemeente"
                 minlength="2"
+                value="<?php echo $_SESSION["gemeente"]; ?>"
                 required
               />
               <label class="c-form__label" for="gemeente"> Gemeente </label>
@@ -214,20 +200,26 @@
               ></span>
             </div>
 
+            <?php
+              $value_soortGebouw
+            ?>
             <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
               <select class="form-control browser-default" name="soort_gebouw" style="margin-bottom: 20px;">
                 <option value="" disabled selected>Soort gebouw</option>
-                <option value="woning">Woning</option>
-                <option value="residentie">Residentie</option>
+                <option value="woning" <?php ($value_soortGebouw == 'woning' ? "selected":"") ?>>Woning</option>
+                <option value="residentie" <?php ($value_soortGebouw == 'residentie' ? "selected":"") ?>>Residentie</option>
               </select>
             </div>
 
+            <?php 
+              $value_installatie = $_SESSION["installatie"];
+            ?>
             <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
               <select class="form-control browser-default" name="installatie" style="margin-bottom: 20px;">
                 <option value="" disabled selected>Huidige installatie</option>
-                <option value="condensatieketel">Condensatieketel</option>
-                <option value="waterpomp">Waterpomp</option>
-                <option value="zonneboiler">Zonneboiler</option>
+                <option value="condensatieketel" <?php ($value_installatie == 'condensatieketel' ? "selected":"") ?>>Condensatieketel</option>
+                <option value="waterpomp" <?php ($value_installatie == 'waterpomp' ? "selected":"") ?>>Waterpomp</option>
+                <option value="zonneboiler" <?php ($value_installatie == 'zonneboiler' ? "selected":"") ?>>Zonneboiler</option>
               </select>
             </div>
 
@@ -238,7 +230,7 @@
                 id="datum_installatie"
                 class="form-control c-form__input validate"
                 placeholder="Datum installatie"
-                value="0000-00-00"
+                value="<?php echo $_SESSION["datum_installatie"]; ?>"
                 required
               />
               <label class="c-form__label" for="datum_installatie"> Datum installatie </label>
@@ -252,7 +244,7 @@
                 id="laatste_onderhoud"
                 class="form-control c-form__input validate"
                 placeholder="Laatste onderhoud"
-                value="0000-00-00"
+                value="<?php echo $_SESSION["laatste_onderhoud"]; ?>"
                 required
               />
               <label class="c-form__label" for="laatste_onderhoud"> Datum laatste onerhoud </label>
@@ -266,6 +258,7 @@
                         id="staat"
                         class="form-control c-form__input validate"
                         placeholder="Staat"
+                        value="<?php echo $_SESSION["staat"]; ?>"
                         required
                       />
                       <label class="c-form__label" for="staat"> Staat van de installatie </label>
@@ -282,6 +275,7 @@
                         class="form-control c-form__input validate"
                         placeholder="Gebruikersnaam"
                         minlength="2"
+                        value="<?php echo $_SESSION["gebruikersnaam"]; ?>"
                         required
                       />
                       <label class="c-form__label" for="gebruikersnaam">

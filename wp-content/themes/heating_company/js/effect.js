@@ -22,10 +22,7 @@ jQuery(document).ready(function() {
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     
     });
-    let samt = 0;
-    window.addEventListener('scroll', function() {
-    samt <= 10 ? samt++ : AOS.refresh();
-    });
+
       
 });
 // You can also pass an optional settings object

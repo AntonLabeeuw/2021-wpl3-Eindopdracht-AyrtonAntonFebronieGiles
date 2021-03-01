@@ -43,28 +43,20 @@ function wpf_dev_display_field_before( $field, $form_data ) {
 	 
 	add_action( 'wpforms_display_field_after', 'wpf_dev_display_field_after', 1, 2 );
 
-
-
-
-
-
-
-	function js_script(){
-	wp_enqueue_style("5","https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css");
-	wp_enqueue_style("12","https://code.jquery.com/jquery-3.5.1.js");
-	wp_enqueue_script("slick-js",get_template_directory_uri() ."/js/slick.min.js", array(), "", true);
-	wp_enqueue_style("slick-theme-css",get_template_directory_uri() ."/css/slick-theme.css");
-	wp_enqueue_style("slick-css",get_template_directory_uri() ."/css/slick.css");
-	wp_enqueue_style("lightbox-css",get_template_directory_uri() ."/css/lightbox.min.css");
-	wp_enqueue_script("lightbox-js",get_template_directory_uri() ."/js/lightbox-plus-jquery.min.js");
-	wp_enqueue_style("materialize-css","https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
-	wp_enqueue_script("materialize-js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js");
-	wp_enqueue_script("4", "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js");
-	wp_enqueue_style("8","https://fonts.googleapis.com/icon?family=Material+Icons");
-	wp_enqueue_script("font-awesome", "https://kit.fontawesome.com/e3d5c31b7b.js");
-	wp_enqueue_script("eigen-js-navbar",get_template_directory_uri() . '/js/navbar.js');
-}
-
+    function js_script(){
+		wp_enqueue_style("5","https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css");
+		wp_enqueue_style("12","https://code.jquery.com/jquery-2.1.1.min.js");//nodig?
+		wp_enqueue_script("1", "https://code.jquery.com/jquery-2.2.4.min.js");//nodig?
+		wp_enqueue_script("slick-js",get_template_directory_uri() ."/js/slick.min.js", array(), "", true);
+		wp_enqueue_style("slick-theme-css",get_template_directory_uri() ."/css/slick-theme.css");
+		wp_enqueue_style("slick-css",get_template_directory_uri() ."/css/slick.css");
+		wp_enqueue_style("lightbox-css",get_template_directory_uri() ."/css/lightbox.min.css");
+		wp_enqueue_script("lightbox-js",get_template_directory_uri() ."/js/lightbox-plus-jquery.min.js");
+		wp_enqueue_script("materialize-js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js");
+		wp_enqueue_style("8","https://fonts.googleapis.com/icon?family=Material+Icons");
+		wp_enqueue_script("font-awesome", "https://kit.fontawesome.com/e3d5c31b7b.js");
+		wp_enqueue_script("eigen-js-navbar",get_template_directory_uri() . '/js/navbar.js');
+	}
 
 
 

@@ -321,6 +321,7 @@ select {
 
 .nav__hamburger {
   color: #023c48;
+  font-size: 5rem;
 }
 
 .nav__hamburger:hover {

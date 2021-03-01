@@ -1733,3 +1733,6 @@ i.material-icons.right {
   font-family: "omnium", "sans-serif" !important;
   padding-bottom: 2rem !important;
 }
+.side-nav {
+  color: green;
+}

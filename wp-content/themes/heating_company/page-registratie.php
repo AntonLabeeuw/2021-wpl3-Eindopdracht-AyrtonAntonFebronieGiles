@@ -43,7 +43,7 @@
                       <label class="c-form__label" for="naam"> Naam </label>
                       <span
                         class="helper-text"
-                        data-error="Dit is geen geldige naam"
+                        data-error="Dit is geen geldige familienaam"
                       ></span>
                     </div>
       
@@ -68,7 +68,7 @@
 
                     <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
                       <input
-                        type="tel"
+                        type="telefoon"
                         name="telefoon"
                         id="telefoon"
                         pattern="((^[+\s0-9]{2,6}[\s\./0-9]*$))"
@@ -81,7 +81,7 @@
                         required
                       />
                       <label class="c-form__label" for="telefoon"> Telefoonnummer </label>
-                      <span class="helper-text" data-error="Dit is geen geldige telefoonnummer"></span>
+                      <span class="helper-text" data-error="Dit is geen geldig telefoonnummer"></span>
                     </div>
       
                     <div
@@ -135,8 +135,6 @@
                         id="bus"
                         class="form-control c-form__input validate"
                         placeholder="bus"
-                        minlength="2"
-                        maxlength="2"
                       />
                       <label class="c-form__label" for="bus"> Bus </label>
                       <span

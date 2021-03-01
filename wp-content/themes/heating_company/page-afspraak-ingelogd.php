@@ -5,8 +5,8 @@ if (!defined('ABSPATH')) exit;
 <!-- mijn main -->
 <main>
   <div class="container">
-    <a class="o-button o-button-nav-active" href="">Onderhoud</a>
-    <a class="o-button o-button-nav" href="">Installatie</a>
+    <a class="o-button o-button-nav-active" href="#">Onderhoud</a>
+    <a class="o-button o-button-nav" href="http://localhost/ingelogd-installatie/">Installatie</a>
     <a class="o-button o-button-nav" href="">Mijn profiel</a>
     <h1><?php echo get_theme_mod('setting-afspraak-ingelogd-h1'); ?> <?php echo $_SESSION["voornaam"] . " " . $_SESSION["naam"]; ?></h1>
   </div>

@@ -23,7 +23,7 @@
               <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
                 <p>
                   Nog geen account?
-                  <a class="c-registeerlink-opmaak" href="registeer.html">
+                  <a class="c-registeerlink-opmaak" href="http://localhost/registratie/">
                     Registreer </a
                   >je dan nu!
                 </p>

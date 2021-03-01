@@ -309,7 +309,7 @@
                         <input type="checkbox" class="filled-in" required/>
                         <span class="c-form-span"
                           >Ik ga akkoord met het
-                          <a class="c-privacy-link" href="policy.html"
+                          <a class="c-privacy-link" href="https://wpl3.antonlabeeuw.be/privacy/"
                             >privacy statement</a
                           >
                         </span>

@@ -1,14 +1,13 @@
 <?php
 if (!defined('ABSPATH')) exit;
   get_header(); 
-  require_once dirname(__FILE__)."/src/helper/debug.php";
 ?>
 <!-- mijn main -->
 <main>
   <div class="container">
-    <a class="o-button o-button-nav-active" href="">Onderhoud</a>
-    <a class="o-button o-button-nav" href="">Installatie</a>
-    <a class="o-button o-button-nav" href="">Mijn profiel</a>
+    <a class="o-button o-button-nav-active" href="#">Onderhoud</a>
+    <a class="o-button o-button-nav" href="http://localhost/ingelogd-installatie/">Installatie</a>
+    <a class="o-button o-button-nav" href="http://localhost/ingelogd-profiel/">Mijn profiel</a>
     <h1><?php echo get_theme_mod('setting-afspraak-ingelogd-h1'); ?> <?php echo $_SESSION["voornaam"] . " " . $_SESSION["naam"]; ?></h1>
   </div>
   <div class="container-fluid c-banner-klok">
@@ -30,7 +29,6 @@ if (!defined('ABSPATH')) exit;
         echo '<a class="o-button effect effect-1" href="' . get_theme_mod('setting-afspraak-ingelogd-button-link') . '">' . get_theme_mod("setting-afspraak-ingelogd-button-txt") . '</a>';
       }else{
         echo '<p>' . get_theme_mod("setting-afspraak-ingelogd-p2") . '</p>';
-        // echo '<h3>' . get_theme_mod("setting-afspraak-ingelogd-h3") . '</h3>';
         $volgende_afspraak = $_SESSION["volgende_afspraak"];
         echo '<h3>' . $volgende_afspraak . '</h3>';
       }
@@ -46,7 +44,7 @@ if (!defined('ABSPATH')) exit;
             Laat ons weten wat je van The Heating Company verwacht
           </p>
         </div>
-        <div class="col s12 m6 l4">
+        <div class="col s12 m6 l4 c-banner-contact-btn">
           <a class="o-button effect effect-1 right" href="">Neem contact op</a>
         </div>
       </div>

@@ -9,47 +9,21 @@
         <div class="container">
           <form class="o-form" method="POST" action="<?php echo get_template_directory_uri() . "/verwerk-login.php" ?>">
             <div class="row">
-              <div
-                class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
-              >
-                <input
-                  type="text"
-                  name="gebruikersnaam"
-                  id="gebruikersnaam"
-                  class="form-control c-form__input validate"
-                  placeholder="gebruikersnaam"
-                  minlength="2"
-                  required
-                />
+              <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                <input type="text" name="gebruikersnaam" id="gebruikersnaam" class="form-control c-form__input validate" placeholder="gebruikersnaam" minlength="2" required />
                 <label class="c-form__label" for="gebruikersnaam"> Gebruikersnaam </label>
-                <span
-                  class="helper-text"
-                  data-error="Dit is geen geldig voornaam"
-                ></span>
+                <span class="helper-text" data-error="Dit is geen geldige voornaam" ></span>
               </div>
 
-              <div
-                class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
-              >
-                <input
-                  type="wachtwoord"
-                  name="wachtwoord"
-                  id="wachtwoord"
-                  class="form-control c-form__input validate"
-                  placeholder="wachtwoord"
-                  minlength="2"
-                  required
-                />
+              <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group">
+                <input type="password" name="wachtwoord" id="wachtwoord" class="form-control c-form__input validate" placeholder="wachtwoord" minlength="2" required/>
                 <label class="c-form__label" for="naam"> Wachtwoord </label>
-                <span
-                  class="helper-text"
-                  data-error="Dit is geen geldig wachtwoord"
-                ></span>
+                <span class="helper-text" data-error="Foutief wachtwoord" ></span>
               </div>
               <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
                 <p>
                   Nog geen account?
-                  <a class="c-registeerlink-opmaak" href="registeer.html">
+                  <a class="c-registeerlink-opmaak" href="http://localhost/registratie/">
                     Registreer </a
                   >je dan nu!
                 </p>

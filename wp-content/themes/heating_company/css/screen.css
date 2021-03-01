@@ -860,7 +860,8 @@ input[type="date"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime-local"]:not(.browser-default).invalid ~ .helper-text:after,
-input[type="datetime-local"]:not(.browser-default):focus.invalid ~ .helper-text:after,
+input[type="datetime-local"]:not(.browser-default):focus.invalid
+  ~ .helper-text:after,
 input[type="tel"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="tel"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="number"]:not(.browser-default).invalid ~ .helper-text:after,
@@ -938,7 +939,7 @@ textarea.materialize-textarea {
 }
 
 .c-banner-contact {
-  height: 8.5rem;
+  /* height: 8.5rem; */
   background-color: #023c48;
   margin-bottom: 5rem;
   margin-top: 2rem;
@@ -946,7 +947,17 @@ textarea.materialize-textarea {
 
 @media screen and (max-width: 600px) {
   .c-banner-contact {
-    height: 16rem;
+    height: 20rem;
+  }
+  .c-banner-contact-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .c-banner-contact-text {
+    text-align: center;
+  }
+  .o-button {
+    margin: 0;
   }
 }
 
@@ -958,9 +969,11 @@ textarea.materialize-textarea {
 
 .c-banner-contact-text {
   color: #edf3f4;
-  display: inline-block;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin: 0;
+  background-color: #023c48;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  min-height: 100%;
 }
 
 @media screen and (min-width: 500px) {
@@ -988,6 +1001,8 @@ textarea.materialize-textarea {
 
 .c-uspbanner__background {
   background-color: #023c48;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
 }
 
 .c-uspbanner__text {
@@ -1064,6 +1079,7 @@ textarea.materialize-textarea {
   width: 32%;
   margin-right: 8px;
   margin-left: 8px;
+  outline: none;
 }
 
 @media (max-width: 401px) {
@@ -1175,9 +1191,9 @@ textarea.materialize-textarea {
 
 .c-team__collega-img {
   border-radius: 1rem;
-  max-width: 28rem;
-  max-height: 20rem;
-  object-fit: cover;
+  width: 32.4rem;
+  height: 22rem;
+  max-width: 100%;
 }
 
 .c-team__collega > p {
@@ -1187,9 +1203,9 @@ textarea.materialize-textarea {
 
 @media screen and (min-width: 1200px) {
   .c-team__collega-img {
-    max-width: 32rem;
-    max-height: 20rem;
-    object-fit: cover;
+    max-width: 90%;
+    width: 32.4rem;
+    height: 22rem;
     border-radius: 1rem;
   }
 }
@@ -1215,7 +1231,7 @@ textarea.materialize-textarea {
     border-radius: 1rem;
     width: 32.4rem;
     height: 22rem;
-    max-width: 100%;
+    max-width: 90%;
     float: right;
   }
 }
@@ -1661,26 +1677,22 @@ i.material-icons.right {
   text-transform: capitalize;
 }
 
-li.active {
-  color: green;
-}
-
 @media screen and (min-width: 1128px) {
   i.material-icons.nav__hamburger {
     display: none !important;
   }
 }
-@media screen and (max-width: 1128px) {
+/* @media screen and (max-width: 1128px) {
   i.material-icons.right {
     padding-top: 2rem;
   }
   .side-nav {
     display: none !important;
   }
-}
+} */
 
 .hide-on-med-and-down li {
-  margin-bottom: 5rem !important;
+  margin-bottom: 1rem;
 }
 
 .c-ketels {

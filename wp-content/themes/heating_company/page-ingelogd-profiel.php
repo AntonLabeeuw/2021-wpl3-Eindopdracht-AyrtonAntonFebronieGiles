@@ -7,7 +7,7 @@
     </div>
     <section class="c-profielform">
       <div class="container">
-        <form class="o-form">
+        <form class="o-form" method="POST" action="<?php echo get_template_directory_uri() . "/update-profiel.php" ?>">
           <div class="row">
             <div
               class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
@@ -75,7 +75,7 @@
               <input
                 type="tel"
                 name="telefoon"
-                id="tel"
+                id="telefoon"
                 pattern="((^[+\s0-9]{2,6}[\s\./0-9]*$))"
                 class="form-control c-form__input validate"
                 placeholder="Telefoonnummer"

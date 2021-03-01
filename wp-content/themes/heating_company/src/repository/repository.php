@@ -19,6 +19,11 @@ class Repository{
         return $res;
     }
 
+    public static function updateGebruiker($parGebruiker){
+        $int = Database::execute("UPDATE gebruikers SET voornaam = ?, naam = ?, gebruikersnaam = ?, email = ?, telefoon = ?, straat= ?, nummer = ?, bus = ?, postcode = ?, gemeente = ?, soort_gebouw = ?, installatie = ?, datum_installatie = ?, laatste_onderhoud = ?, staat = ?, afspraak_gemaakt = ?, volgende_afspraak = ? WHERE gebruiker_id = ?", [$parGebruiker->voornaam, $parGebruiker->naam, $parGebruiker->gebruikersnaam, $parGebruiker->email, $parGebruiker->telefoon, $parGebruiker->straat, $parGebruiker->nummer, $parGebruiker->bus, $parGebruiker->postcode, $parGebruiker->gemeente, $parGebruiker->soort_gebouw, $parGebruiker->installatie, $parGebruiker->datum_installatie, $parGebruiker->laatste_onderhoud, $parGebruiker->staat, $parGebruiker->afspraak_gemaakt, $parGebruiker->volgende_afspraak, $parGebruiker->gebruiker_id]);
+        return $int;
+    }
+
 }
 
 ?>

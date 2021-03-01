@@ -119,7 +119,8 @@
 
             if (isset($_SESSION["gebruiker_id"])){
                 ?>
-                    <a  class="" href="http://localhost/logout/">Logout</a>
+                    <a href="http://localhost/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
+                    <a class="" href="http://localhost/logout/">Logout</a>
                 <?php
             }else{
                 ?>

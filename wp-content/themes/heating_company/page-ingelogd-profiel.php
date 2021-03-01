@@ -205,21 +205,41 @@
             ?>
             <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
               <select class="form-control browser-default" name="soort_gebouw" style="margin-bottom: 20px;">
-                <option value="" disabled selected>Soort gebouw</option>
-                <option value="woning" <?php ($value_soortGebouw == 'woning' ? "selected":"") ?>>Woning</option>
-                <option value="residentie" <?php ($value_soortGebouw == 'residentie' ? "selected":"") ?>>Residentie</option>
+                <option value="" disabled>Soort gebouw</option>
+                <?php
+                
+                  if($_SESSION["soort_gebouw"] == 'woning'){
+                    echo "<option value='woning' selected>Woning</option>
+                    <option value='residentie'>Residentie</option>";
+                  }elseif($_SESSION["installatie"] == 'waterpomp'){
+                    echo "<option value='woning'>Woning</option>
+                    <option value='residentie' selected>Residentie</option>";
+                  }
+                
+                ?>
               </select>
             </div>
 
-            <?php 
-              $value_installatie = $_SESSION["installatie"];
-            ?>
             <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
               <select class="form-control browser-default" name="installatie" style="margin-bottom: 20px;">
                 <option value="" disabled selected>Huidige installatie</option>
-                <option value="condensatieketel" <?php ($value_installatie == 'condensatieketel' ? "selected":"") ?>>Condensatieketel</option>
-                <option value="waterpomp" <?php ($value_installatie == 'waterpomp' ? "selected":"") ?>>Waterpomp</option>
-                <option value="zonneboiler" <?php ($value_installatie == 'zonneboiler' ? "selected":"") ?>>Zonneboiler</option>
+                <?php
+                
+                  if($_SESSION["installatie"] == 'condensatieketel'){
+                    echo "<option value='condensatieketel' selected>Condensatieketel</option>
+                    <option value='waterpomp'>Waterpomp</option>
+                    <option value='zonneboiler'>Zonneboiler</option>";
+                  }elseif($_SESSION["installatie"] == 'waterpomp'){
+                    echo "<option value='condensatieketel'>Condensatieketel</option>
+                    <option value='waterpomp' selected>Waterpomp</option>
+                    <option value='zonneboiler'>Zonneboiler</option>";
+                  }elseif($_SESSION["installatie"] == 'zonneboiler'){
+                    echo "<option value='condensatieketel'>Condensatieketel</option>
+                    <option value='waterpomp'>Waterpomp</option>
+                    <option value='zonneboiler' selected>Zonneboiler</option>";
+                  }
+                
+                ?>
               </select>
             </div>
 
@@ -297,7 +317,10 @@
                         class="form-control c-form__input validate"
                         placeholder="Wachtwoord"
                         minlength="2"
+                        maxlength="8"
+                        value="wachtwoord"
                         required
+                        disabled
                       />
                       <label class="c-form__label" for="naam"> Wachtwoord </label>
                       <span

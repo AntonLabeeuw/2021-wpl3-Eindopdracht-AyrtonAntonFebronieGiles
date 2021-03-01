@@ -15,6 +15,7 @@ if (isset($_POST["submit"])){
         $_SESSION["voornaam"] = $user->voornaam;
         $_SESSION["naam"] = $user->naam;
         $_SESSION["gebruikersnaam"] = $user->gebruikersnaam;
+        $_SESSION["wachtwoord"] = $user->wachtwoord;
         $_SESSION["email"] = $user->email;
         $_SESSION["telefoon"] = $user->telefoon;
         $_SESSION["straat"] = $user->straat;

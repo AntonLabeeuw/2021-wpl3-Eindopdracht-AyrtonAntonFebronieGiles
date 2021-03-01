@@ -4,7 +4,7 @@
     <div class="container">
         <a class="o-button o-button-nav" href="http://localhost/afspraak-ingelogd/">Onderhoud</a>
         <a class="o-button o-button-nav-active" href="#">Installatie</a>
-        <a class="o-button o-button-nav" href="">Mijn profiel</a>
+        <a class="o-button o-button-nav" href="http://localhost/ingelogd-profiel/">Mijn profiel</a>
     </div>
 
     <!-- verwarmingsoplossingen component-->

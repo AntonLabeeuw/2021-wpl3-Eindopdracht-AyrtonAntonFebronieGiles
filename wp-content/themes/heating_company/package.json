@@ -1,0 +1,33 @@
+{
+  "name": "heating_company",
+  "version": "1.0.0",
+  "description": "Dit is de repository voor het groepswerk van Fast Forward, groep 7",
+  "private": "true",
+  "dependencies": {},
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^5.0.0",
+    "postcss-cli": "^8.2.0",
+    "postcss-prefixer": "^2.1.2",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "compile": "node-sass --output-style=expanded --source-map=true /css/screen.scss screen.css",
+    "prefix": "postcss dist/screen.css -u postcss-prefixer -o dist/screen.css",
+    "minify": "cleancss --level=1 --source-map --source-map-inline-sources --output dist/effect.min.js css/effect.js",
+    "dev": "npm run compile -- --watch",
+    "build": "npm run clean && npm run compile && npm run prefix && npm run minify && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BouckaertDries/AdminAndDashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BouckaertDries/AdminAndDashboard/issues"
+  },
+  "homepage": "https://github.com/BouckaertDries/AdminAndDashboard#readme"
+}

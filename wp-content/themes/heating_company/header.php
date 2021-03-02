@@ -60,8 +60,8 @@
         </a>
             <nav>
                 <ul>
-                    <li><a href="<?php echo site_url('/over-ons'); ?>">Over ons</a></li>
-                    <li><a href="<?php echo site_url('/attesten'); ?>">Attesten</a></li>
+                    <li><a class="c-topnav__link" href="<?php echo site_url('/over-ons'); ?>">Over ons</a></li>
+                    <li><a class="c-topnav__link" href="<?php echo site_url('/attesten'); ?>">Attesten</a></li>
                 </ul>
             </nav>
             <div class="c-topnav__knoppen">
@@ -101,7 +101,6 @@
                       
                 ?>                
                        
-                   
                
             </div>
                     <!-- </div> -->

@@ -462,16 +462,16 @@ ul.dropdown-content .dropdown-content__item:hover {
     margin: 15px auto;
   }
 }
-
+/* 
 .c-topnav nav ul a {
   color: #023c48;
   font-size: 1.8rem;
-}
+} */
 
-.c-topnav nav ul a:hover {
+/* .c-topnav nav ul a:hover {
   text-decoration: underline;
   background: none;
-}
+} */
 
 .c-topnav__knoppen {
   margin-top: 27px;
@@ -1185,7 +1185,7 @@ textarea.materialize-textarea {
 }
 
 .c-team__collega-functie {
-  color: black;
+  color: #023c48;
   font-weight: 700;
 }
 
@@ -1194,11 +1194,6 @@ textarea.materialize-textarea {
   width: 32.4rem;
   height: 22rem;
   max-width: 100%;
-}
-
-.c-team__collega > p {
-  color: black;
-  font-size: 2rem;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1552,6 +1547,11 @@ textarea.materialize-textarea {
 
 .c-plaatsen__img {
   border-radius: 10px;
+}
+@media screen and (max-width: 600px) {
+  .c-plaatsen__img {
+    margin-top: 2rem;
+  }
 }
 
 .c-uitgelichte-reviews {

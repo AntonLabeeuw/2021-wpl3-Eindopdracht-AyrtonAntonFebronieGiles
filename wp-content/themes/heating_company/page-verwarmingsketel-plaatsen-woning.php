@@ -33,7 +33,7 @@
               <?php echo get_theme_mod('setting-txt-banner'); ?>
               </p>
             </div>
-            <div class="col s12 m6 l4">
+            <div class="col s12 m6 l4 c-banner-contact-btn">
               <a
                 class="o-button o-button-effect o-button-effect-1 right"
                 href="<?php echo get_theme_mod('setting-txt-btnlink'); ?>"

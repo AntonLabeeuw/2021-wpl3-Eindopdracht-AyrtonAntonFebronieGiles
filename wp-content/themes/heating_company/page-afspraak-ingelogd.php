@@ -26,7 +26,7 @@ if (!defined('ABSPATH')) exit;
       $afspraak_gemaakt = $_SESSION["afspraak_gemaakt"];
       if ($afspraak_gemaakt == 0){
         echo '<p>' . get_theme_mod('setting-afspraak-ingelogd-p1') . '</p>';
-        echo '<a class="o-button effect effect-1" href="' . get_theme_mod('setting-afspraak-ingelogd-button-link') . '">' . get_theme_mod("setting-afspraak-ingelogd-button-txt") . '</a>';
+        echo '<a class="o-button o-button-effect o-button-effect-1" href="' . get_theme_mod('setting-afspraak-ingelogd-button-link') . '">' . get_theme_mod("setting-afspraak-ingelogd-button-txt") . '</a>';
       }else{
         echo '<p>' . get_theme_mod("setting-afspraak-ingelogd-p2") . '</p>';
         $volgende_afspraak = $_SESSION["volgende_afspraak"];
@@ -45,7 +45,8 @@ if (!defined('ABSPATH')) exit;
           </p>
         </div>
         <div class="col s12 m6 l4 c-banner-contact-btn">
-          <a class="o-button effect effect-1 right" href="<?php echo get_theme_mod('setting-txt-btnlink'); ?>"><?php echo get_theme_mod('setting-txt-btn'); ?></a>
+          <a class="o-button o-button-effect o-button-effect-1 right" href="<?php echo get_theme_mod('setting-txt-btnlink'); ?>"><?php echo get_theme_mod('setting-txt-btn'); ?></a>
+
         </div>
       </div>
     </div>

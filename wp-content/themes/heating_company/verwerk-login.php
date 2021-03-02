@@ -37,7 +37,8 @@ if (isset($_POST["submit"])){
       header("location:http://localhost/login/");
     }
   }else{
-    echo "oei";
+    $_SESSION["login"] = "mislukt";
+    header("location:http://localhost/login/");
   }
 }
 else{

@@ -33,7 +33,8 @@ if (isset($_POST["submit"])){
 
         header("location:http://localhost/afspraak-ingelogd/");
     }else{
-        echo "niet overeen";
+      $_SESSION["login"] = "mislukt";
+      header("location:http://localhost/login/");
     }
   }else{
     echo "oei";

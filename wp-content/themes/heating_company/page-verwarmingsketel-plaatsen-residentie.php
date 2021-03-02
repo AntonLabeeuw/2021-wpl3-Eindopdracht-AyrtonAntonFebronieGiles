@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid c-banner-contact">
+        <div class="container-fluid c-banner-contact c-banner-contact-btn">
             <div class="container">
                 <div class="row">
                     <div class="col s12 m6 l8">

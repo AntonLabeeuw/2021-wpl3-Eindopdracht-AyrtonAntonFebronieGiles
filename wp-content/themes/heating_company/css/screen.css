@@ -1185,7 +1185,7 @@ textarea.materialize-textarea {
 }
 
 .c-team__collega-functie {
-  color: #023c48;
+  color: black;
   font-weight: 700;
 }
 
@@ -1194,6 +1194,11 @@ textarea.materialize-textarea {
   width: 32.4rem;
   height: 22rem;
   max-width: 100%;
+}
+
+.c-team__collega > p {
+  color: black;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 1200px) {

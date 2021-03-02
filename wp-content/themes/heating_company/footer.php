@@ -27,7 +27,7 @@
 
             <div class="c-footer__icons">
                 <!-- map -->
-                <a alt="map" rel="noopener" href="https://www.google.com/maps/place/Howest,+Campus+Kortrijk+Weide+-+Gebouw+A/@50.8240996,3.2479844,17z/data=!4m8!1m2!2m1!1skortrijk+campus+weide!3m4!1s0x47c33ae91da1e207:0xf60becfabc37b39c!8m2!3d50.8240996!4d3.2501731"
+                <a alt="map" aria-label="maps" href="https://www.google.com/maps/place/Howest,+Campus+Kortrijk+Weide+-+Gebouw+A/@50.8240996,3.2479844,17z/data=!4m8!1m2!2m1!1skortrijk+campus+weide!3m4!1s0x47c33ae91da1e207:0xf60becfabc37b39c!8m2!3d50.8240996!4d3.2501731"
                     target="_blank">
                     <svg id="mark_met_hover" data-name="mark met hover" xmlns="http://www.w3.org/2000/svg"
                         width="20.924" height="30" viewBox="0 0 20.924 30">
@@ -40,7 +40,7 @@
                             transform="translate(-245.538)" fill="#e84e1b" />
                     </svg></a>
                 <!-- phone -->
-                <a alt="telefoon nummer" href="tel:+32 56 56 56 16"><svg class="c-footer__icons--tel c-footer__icon" id="phone_met_hover"
+                <a alt="telefoon nummer" aria-label="phone" href="tel:+32 56 56 56 16"><svg class="c-footer__icons--tel c-footer__icon" id="phone_met_hover"
                         data-name="phone met hover" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
                         viewBox="0 0 30 30">
                         <g id="icon-phone-1" data-name=" Circle Grid">
@@ -65,7 +65,7 @@
                     </svg>
                 </a>
                 <!-- mail -->
-                <a alt="mail" href="mailto:theheatingcomany@gmail.com?subject=Contacteer mij&"><svg
+                <a alt="mail" aria-label="mail" href="mailto:theheatingcomany@gmail.com?subject=Contacteer mij&"><svg
                         class="c-footer__icons--mail c-footer__icon" id="email_met_hover" data-name="email met hover"
                         xmlns="http://www.w3.org/2000/svg" width="34.952" height="33.432" viewBox="0 0 34.952 33.432">
                         <path id="icon-mail-1" data-name="Path 20"

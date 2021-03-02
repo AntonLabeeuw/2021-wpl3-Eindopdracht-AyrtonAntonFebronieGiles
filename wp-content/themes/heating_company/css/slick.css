@@ -3,7 +3,7 @@
   position: relative;
   display: block;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -41,12 +41,14 @@
   position: relative;
   left: 0;
   top: 0;
+  height: 35rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.slick-track:before, .slick-track:after {
+.slick-track:before,
+.slick-track:after {
   content: "";
   display: table;
 }

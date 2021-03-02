@@ -7,7 +7,7 @@
     </div>
     <section class="c-profielform">
       <div class="container">
-        <form class="o-form" method="POST" action="<?php echo get_template_directory_uri() . "/update-profiel.php" ?>">
+        <form class="o-form" method="POST" action="/verwerk-profiel-update.php">
           <div class="row">
             <div
               class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
@@ -331,8 +331,7 @@
 
 
             <div class="col s12 m12 l3 xl3 offset-s0 offset-m4 offset-l4 offset-xl5 form-group c-form__group">
-              <!-- <input class="o-button o-button-effect o-button-effect-1 o-button-submit"  type="submit" value="Neem contact op"></input> -->
-              <input type="submit" name="submit">
+              <input class="o-button o-button-effect o-button-effect-1" type="submit" name="submit">
             </div>
           </div>
         </form>

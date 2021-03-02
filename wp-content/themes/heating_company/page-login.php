@@ -21,21 +21,21 @@
                 <span class="helper-text" data-error="Foutief wachtwoord" ></span>
               </div>
               <div class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3">
-                <p>
-                  Nog geen account?
-                  <a class="c-registeerlink-opmaak" href="http://localhost/registratie/">
-                    Registreer </a
-                  >je dan nu!
-                </p>
+                <p>Nog geen account?<a class="c-registeerlink-opmaak" href="http://localhost/registratie/"> Registreer </a>je dan nu!</p>
               </div>
-              <div
-              class="col s6 m3 l3 xl2 offset-s2 offset-m4 offset-l4 offset-xl5 form-group c-form__group"
-              >
-               <!-- <input class="o-button o-button-submit"  type="submit" value="Login"></input>  -->
-
+              <?php
+              
+              if ($_SESSION["login"] == "mislukt"){
+                echo "<div class='col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3'>
+                <p style='color: red;d'>Foutief wachtwoord of gebruikersnaam, probeer opnieuw!</p>
+              </div>";
+              }
+              
+              ?>
+              <div class="col s6 m3 l3 xl2 offset-s2 offset-m4 offset-l4 offset-xl5 form-group c-form__group">
+                  <input class="o-button o-button-effect o-button-effect-1" type="submit" name="submit">
               </div>
             </div>
-            <input type="submit" name="submit">
           </form>
         </div>
       </section>

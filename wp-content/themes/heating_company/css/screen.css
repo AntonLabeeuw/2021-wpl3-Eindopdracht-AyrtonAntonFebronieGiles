@@ -27,7 +27,7 @@ h2 {
   font-family: "omnium", "sans-serif";
   color: #f29100;
   font-weight: bold;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
@@ -41,7 +41,7 @@ h3 {
   font-size: 2rem;
   font-family: "omnium", "sans-serif";
   color: #f29100;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -1260,6 +1260,7 @@ textarea.materialize-textarea {
 .c-list {
   list-style: none;
   margin-left: 5rem;
+  margin-top: 0;
 }
 
 .c-list-item {
@@ -1270,7 +1271,7 @@ textarea.materialize-textarea {
   background-repeat: no-repeat;
   background-position: left;
   font-size: 1.6rem;
-  line-height: 3rem;
+  line-height: 3.5rem;
 }
 
 .c-button-menu-title {
@@ -1777,11 +1778,18 @@ i.material-icons.right {
   color: #e84e1b;
 }
 
-.footer__link {
-  text-transform: uppercase !important;
-  color: hotpink;
+.c-footer__link {
+  color: #023c48;
 }
 
+.c-footer__link:hover {
+  color: #e84e1b;
+}
+
+.c-footer__link::first-letter{
+  text-transform: uppercase !important;
+  background-color: hotpink;
+}
 .container .row{
   margin: 0rem;
 }

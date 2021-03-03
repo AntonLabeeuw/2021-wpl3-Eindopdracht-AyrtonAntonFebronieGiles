@@ -40,22 +40,22 @@
                 foreach($menu_items as $item){
                     if ($item->menu_item_parent == 0){
                       //niv 1
-                      echo '- <a  class="c-footer__link" href="' . $item->url . '">' . $item->title . '</a>';
+                      echo ' - <a class="c-footer__link" href="' . $item->url . '">' . $item->title . '</a>';
                       
                     }
                 }
             ?>
 
             <?php
-            echo "-";
+            echo " - ";
             if (isset($_SESSION["gebruiker_id"])){
                 ?>
                     <a href="http://localhost/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
-                    <a class="" href="http://localhost/logout/">Logout</a>
+                    <a class="c-footer__link" href="http://localhost/logout/">Logout</a>
                 <?php
             }else{
                 ?>
-                    <a href="http://localhost/login/">Login</a>
+                    <a class="c-footer__link" href="http://localhost/login/">Login</a>
                 <?php
             }
             ?>

@@ -33,7 +33,7 @@
               
               ?>
               <div class="col s6 m3 l3 xl2 offset-s2 offset-m4 offset-l4 offset-xl5 form-group c-form__group">
-                  <input class="o-button o-button-effect o-button-effect-1" type="submit" name="submit">
+                  <input class="o-button" type="submit" name="submit">
               </div>
             </div>
           </form>

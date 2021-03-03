@@ -22,7 +22,44 @@
 
             </div>
             <div class="c-footer__copyright">
-                <p>© 2021 The Heating Company</p>
+                <p>© 2021 The Heating Company
+                <?php
+                $locations = get_nav_menu_locations();
+                if(array_key_exists('footer-menu', $locations)){
+                $idVanNavigatie = $locations['footer-menu'];
+                }else{
+                echo "navigatie niet ingesteld";
+                }
+                $idVanNavigatie = $locations['footer-menu'];
+                $menu_items = wp_get_nav_menu_items($idVanNavigatie);
+                // echo "<pre>";
+                // print_r($menu_items);
+                // echo "</pre>";
+                $teller = 0;
+                $aantal = count($menu_items);
+                foreach($menu_items as $item){
+                    if ($item->menu_item_parent == 0){
+                      //niv 1
+                      echo '- <a  class="c-footer__link" href="' . $item->url . '">' . $item->title . '</a>';
+                      
+                    }
+                }
+            ?>
+
+            <?php
+            echo "-";
+            if (isset($_SESSION["gebruiker_id"])){
+                ?>
+                    <a href="http://localhost/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
+                    <a class="" href="http://localhost/logout/">Logout</a>
+                <?php
+            }else{
+                ?>
+                    <a href="http://localhost/login/">Login</a>
+                <?php
+            }
+            ?>
+            </p>
             </div>
 
             <div class="c-footer__icons">
@@ -90,46 +127,6 @@
             </div>
         </div>
       
-        <!-- onder de footer -->
-        <div class="container c-footer-bottom">
-        <?php
-                $locations = get_nav_menu_locations();
-                if(array_key_exists('footer-menu', $locations)){
-                $idVanNavigatie = $locations['footer-menu'];
-                }else{
-                echo "navigatie niet ingesteld";
-                }
-                $idVanNavigatie = $locations['footer-menu'];
-                $menu_items = wp_get_nav_menu_items($idVanNavigatie);
-                // echo "<pre>";
-                // print_r($menu_items);
-                // echo "</pre>";
-                $teller = 0;
-                $aantal = count($menu_items);
-                foreach($menu_items as $item){
-                    if ($item->menu_item_parent == 0){
-                      //niv 1
-                      echo '<a  class="" href="' . $item->url . '">' . $item->title . '</a>';
-                      
-                    }
-                }
-            ?>
-
-            <?php
-
-            if (isset($_SESSION["gebruiker_id"])){
-                ?>
-                    <a href="http://localhost/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
-                    <a class="" href="http://localhost/logout/">Logout</a>
-                <?php
-            }else{
-                ?>
-                    <a href="http://localhost/login/">Login</a>
-                <?php
-            }
-            ?>
-
-        </div>
        
         
     </footer>

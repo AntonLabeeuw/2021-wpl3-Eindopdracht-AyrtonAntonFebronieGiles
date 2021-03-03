@@ -26,17 +26,19 @@
                 />'; 
         ?>
         </a>
-            <nav>
-                <ul>
-                    <li><a class="c-topnav__link" href="<?php echo site_url('/over-ons'); ?>">Over ons</a></li>
-                    <li><a class="c-topnav__link" href="<?php echo site_url('/attesten'); ?>">Attesten</a></li>
-                </ul>
-            </nav>
-            <div class="c-topnav__knoppen">
-                <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte"
+            <div class="c-topnav__display">
+                <nav>
+                    <ul>
+                        <li><a class="c-topnav__link" href="<?php echo site_url ('/over-ons'); ?>">Over ons</a></li>
+                        <li><a class="c-topnav__link" href="<?php echo site_url ('/attesten'); ?>">Attesten</a></li>
+                    </ul>
+                </nav>
+                <div class="c-topnav__knoppen">
+                    <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte"
                     href="<?php echo site_url('/offerte'); ?>">Offerte</a>
-                <a class="o-button o-button--noodnummer c-topnav__knop"
-                    href="tel:+32 56 56 56 16"><span>Noodnummer</span></a>
+                    <a class="o-button o-button--noodnummer c-topnav__knop"
+                        href="tel:+32 56 56 56 16"><span>Noodnummer</span></a>
+                </div>
             </div>
         </div>
         

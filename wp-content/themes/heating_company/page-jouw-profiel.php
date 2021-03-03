@@ -219,7 +219,7 @@
               <div
               class="col s12 m12 l6 xl4 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
               >
-              <a type="submit" class="o-button col-2 offset-5">Verrander</a>
+              <a type="submit" class="o-button col-2 offset-5">Verander</a>
               </div>
             </div>
           </form>

@@ -138,6 +138,13 @@ select {
   display: inline-block;
   border: 1px solid #f29100;
 }
+.o-button-form {
+  transition: 0.5s;
+}
+.o-button-form:hover {
+  background-color: #023c48;
+  border: 1px solid #023c48;
+}
 
 @media screen and (max-width: 500px) {
   .o-button {
@@ -1754,10 +1761,10 @@ i.material-icons.right {
   padding-bottom: 2rem !important;
 }
 
-.c-topnav__display{
+.c-topnav__display {
   display: flex;
 }
-.c-topnav__link{
+.c-topnav__link {
   margin-top: 4.1rem;
   margin-right: 1.5rem;
   font-size: 1.5rem;
@@ -1765,12 +1772,12 @@ i.material-icons.right {
   color: #023c48;
   background-color: none;
 }
-.c-topnav__link:hover{
+.c-topnav__link:hover {
   text-decoration: none;
   color: #e84e1b;
 }
 
-.footer__link{
-  text-transform:uppercase !important;
+.footer__link {
+  text-transform: uppercase !important;
   color: hotpink;
 }

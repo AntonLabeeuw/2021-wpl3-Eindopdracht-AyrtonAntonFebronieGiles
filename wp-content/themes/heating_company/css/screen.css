@@ -138,6 +138,13 @@ select {
   display: inline-block;
   border: 1px solid #f29100;
 }
+.o-button-form {
+  transition: 0.5s;
+}
+.o-button-form:hover {
+  background-color: #023c48;
+  border: 1px solid #023c48;
+}
 
 @media screen and (max-width: 500px) {
   .o-button {
@@ -860,8 +867,7 @@ input[type="date"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="datetime"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="datetime-local"]:not(.browser-default).invalid ~ .helper-text:after,
-input[type="datetime-local"]:not(.browser-default):focus.invalid
-  ~ .helper-text:after,
+input[type="datetime-local"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="tel"]:not(.browser-default).invalid ~ .helper-text:after,
 input[type="tel"]:not(.browser-default):focus.invalid ~ .helper-text:after,
 input[type="number"]:not(.browser-default).invalid ~ .helper-text:after,
@@ -1753,4 +1759,3 @@ i.material-icons.right {
   font-family: "omnium", "sans-serif" !important;
   padding-bottom: 2rem !important;
 }
-

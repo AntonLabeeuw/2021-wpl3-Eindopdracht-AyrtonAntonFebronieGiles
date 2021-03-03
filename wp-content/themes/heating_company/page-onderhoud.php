@@ -8,7 +8,7 @@
         <p class="col-lg-12 col-xl-12 col-xxl-12">
         <?php echo get_theme_mod('setting-onderhoud-p1'); ?>
         </p>
-        <a class="o-button o-button-effect o-button-effect-1" href="<?php echo get_theme_mod('setting-onderhoud-button_link'); ?>"> <?php echo get_theme_mod('setting-onderhoud-button_txt'); ?></a>
+        <a class="o-button o-button-effect o-button-effect-1 right" href="<?php echo get_theme_mod('setting-onderhoud-button_link'); ?>"> <?php echo get_theme_mod('setting-onderhoud-button_txt'); ?></a>
       </div>
 
       <!-- banner -->

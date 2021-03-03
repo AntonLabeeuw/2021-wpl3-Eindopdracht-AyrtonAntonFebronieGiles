@@ -20,7 +20,7 @@
         <?php
         echo '
                 <img
-                class=""
+                class="c-logo"
                 src= "'. get_template_directory_uri() .'/icons/logo-groot.svg"
                 alt="The Heating Company logo"
                 />'; 
@@ -28,10 +28,8 @@
         </a>
             <div class="c-topnav__display">
                 <nav>
-                    <ul>
-                        <li><a class="c-topnav__link" href="<?php echo site_url ('/over-ons'); ?>">Over ons</a></li>
-                        <li><a class="c-topnav__link" href="<?php echo site_url ('/attesten'); ?>">Attesten</a></li>
-                    </ul>
+                        <a class="c-topnav__link" href="<?php echo site_url ('/over-ons'); ?>">Over ons</a>
+                        <a class="c-topnav__link" href="<?php echo site_url ('/attesten'); ?>">Attesten</a>
                 </nav>
                 <div class="c-topnav__knoppen">
                     <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte"

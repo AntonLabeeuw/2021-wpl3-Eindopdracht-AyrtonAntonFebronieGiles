@@ -1817,7 +1817,7 @@ nav ul li a:hover{
   }
 }
 @media only screen and (max-width: 1000px){
-  .container{
+  .c-hamburger__center{
     text-align: center;
   }
   .hide-on-med-and-down{

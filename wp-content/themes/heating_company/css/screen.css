@@ -432,7 +432,7 @@ ul.dropdown-content .dropdown-content__item:hover {
 }
 
 .c-topnav__logo {
-  width: 100%;
+  width: 27.3rem;
   margin: 15px 0;
 }
 
@@ -448,8 +448,9 @@ ul.dropdown-content .dropdown-content__item:hover {
   }
 }
 
-@media (min-width: 360px) {
+@media (min-width: 360px) and (max-width: 1100px) {
   .c-topnav__logo {
+    width: 100%;
     text-align: center;
   }
 }

@@ -1781,3 +1781,7 @@ i.material-icons.right {
   text-transform: uppercase !important;
   color: hotpink;
 }
+
+.container .row{
+  margin: 0rem;
+}

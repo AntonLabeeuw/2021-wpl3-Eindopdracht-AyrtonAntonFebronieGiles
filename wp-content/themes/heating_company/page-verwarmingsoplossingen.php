@@ -1,6 +1,7 @@
 <?php get_header(); ?>
         <main>
             <div class="container">
+                <div class="row">
                 <h1><?php echo get_theme_mod('setting-txt-oplossing-h1'); ?></h1>
                 <p><?php echo get_theme_mod('setting-txt-oplossing-p.1'); ?></p>
                 <section>   
@@ -29,7 +30,7 @@
                 <section>
                     <h2><?php echo get_theme_mod('setting-txt-oplossing-h2.2'); ?></h2>
                     <p><?php echo get_theme_mod('setting-txt-oplossing-p.2'); ?></p>
-                    <div class="c-logo__cards row">
+                    <div class="c-logo__cards">
                         <?php
 
                             $arg = array(
@@ -52,6 +53,7 @@
                         ?>
                     </div>
                 </section>
+                </div>
             </div>
             <div class="container-fluid c-banner-contact">
                 <div class="container">

@@ -54,13 +54,9 @@ function wpf_dev_display_field_before( $field, $form_data ) {
 		wp_enqueue_script("lightbox-js",get_template_directory_uri() ."/js/lightbox-plus-jquery.min.js");
 		wp_enqueue_style("materialize-css","https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
 		wp_enqueue_script("materialize-js", "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js");
-		// wp_enqueue_style('AOS_animate', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css', false, null);
 		wp_enqueue_script("4", "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js");
-		// wp_enqueue_script("11", "https://cdnjs.cloudflare.com/ajax/libs/aos/2.2.0/aos.js");
-		// wp_enqueue_script('AOS', 'https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js');
 		wp_enqueue_style("8","https://fonts.googleapis.com/icon?family=Material+Icons");
 		wp_enqueue_script("font-awesome", "https://kit.fontawesome.com/e3d5c31b7b.js");
-		// wp_enqueue_script("eigen-js-effect",get_template_directory_uri() . '/js/effect.js');
 		wp_enqueue_script("eigen-js-navbar",get_template_directory_uri() . '/js/navbar.js');
 	}
 
@@ -77,7 +73,7 @@ add_action( 'wp_footer', 'add_aos_animation' );
 
     function cg_add_theme_scripts() {
 		$pathTheme = get_template_directory_uri();
-		wp_enqueue_style("materialize",$pathTheme . '/css/materialize.css');
+		wp_enqueue_style("materialize",$pathTheme . '/css/materialize.min.css');
 		wp_enqueue_style('screen',$pathTheme . '/css/screen.css', ['materialize']);
 		
 		

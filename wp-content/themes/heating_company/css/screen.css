@@ -464,6 +464,7 @@ ul.dropdown-content .dropdown-content__item:hover {
 @media (max-width: 816px) {
   .c-topnav nav {
     margin: 15px auto;
+    text-align: center;
   }
 }
 /* 
@@ -1866,3 +1867,5 @@ nav ul li a:hover{
 .c-logo {
   width: auto;
 }
+
+

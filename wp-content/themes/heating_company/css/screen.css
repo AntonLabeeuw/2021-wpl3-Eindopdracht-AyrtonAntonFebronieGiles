@@ -434,7 +434,7 @@ ul.dropdown-content .dropdown-content__item:hover {
     margin-top: 0rem;
   }
   
-  .nav__item{
+  .c-topnav__display{
     margin: 0;
   }
 }
@@ -443,7 +443,7 @@ ul.dropdown-content .dropdown-content__item:hover {
   .c-topnav__knoppen {
     margin-top: 2.7rem;
   }
-  .nav__item{
+  .c-topnav__display{
     margin: 15px 0;
   }
   
@@ -1787,7 +1787,7 @@ i.material-icons.right {
   padding-bottom: 2rem !important;
 }
 
-.nav__item {
+.c-topnav__display {
   display: flex;
   justify-content: inherit;
 }
@@ -1873,7 +1873,7 @@ nav ul li a:hover{
 }
 
 @media (max-width: 659px){
-  .nav__item{
+  .c-topnav__display{
     display: block;
     justify-content: center;
   }

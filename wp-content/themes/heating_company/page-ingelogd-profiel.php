@@ -3,6 +3,7 @@
       <a class="o-button o-button-nav" href="http://localhost/afspraak-ingelogd">Onderhoud</a>
       <a class="o-button o-button-nav" href="http://localhost/ingelogd-installatie">Installatie</a>
       <a class="o-button o-button-nav-active" href="">Mijn profiel</a>
+      <a class="o-button o-button-nav" href="http://localhost/wachtwoord-wijzigen">Wachtwoord wijzigen</a>
       <h1 class="c-login-titel">Jouw profiel</h1>
     </div>
     <section class="c-profielform">

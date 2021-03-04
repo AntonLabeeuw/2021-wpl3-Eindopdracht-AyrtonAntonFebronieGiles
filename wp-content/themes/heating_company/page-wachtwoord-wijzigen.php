@@ -3,7 +3,8 @@
     <!-- login form -->
     <main>
       <div class="container">
-        <h1>Login</h1>
+        <h1>Nieuw wachtwoord instellen
+        </h1>
       </div>
       <section class="c-profielform">
         <div class="container">
@@ -70,7 +71,7 @@
               class="col s6 m3 l3 xl2 offset-s2 offset-m4 offset-l4 offset-xl5 form-group c-form__group"
               >
               <!-- <input class="o-button o-button-submit"  type="submit" value="Login"></input> -->
-              <input type="submit" name="submit"/>
+              <input class="o-button o-button-form" type="submit" name="submit">
               </div>
             </div>
           </form>

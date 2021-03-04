@@ -50,12 +50,12 @@
             echo " - ";
             if (isset($_SESSION["gebruiker_id"])){
                 ?>
-                    <a class="c-footer__link" href="https://localhost/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
-                    <a class="c-footer__link" href="https://localhost/logout/">Logout</a>
+                    <a class="c-footer__link" href="https://wpl3.antonlabeeuw.be/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
+                    <a class="c-footer__link" href="https://wpl3.antonlabeeuw.be/logout/">Logout</a>
                 <?php
             }else{
                 ?>
-                    <a class="c-footer__link" href="https://localhost/login/">Login</a>
+                    <a class="c-footer__link" href="https://wpl3.antonlabeeuw.be/login/">Login</a>
                 <?php
             }
             ?>
@@ -169,7 +169,7 @@
                         breakpoint: 660,
                         settings: {
                             slidesToShow: 1,
-                            dots: true,
+                            dots: false,
                             arrows: false,
                             draggable: true
                         }

@@ -5,9 +5,17 @@ if (!defined('ABSPATH')) exit;
 <!-- mijn main -->
 <main>
   <div class="container">
+    <?php
+  
+      if($_SESSION["login"] == "wachtwoordGewijzigd"){
+        echo "<p style='color:green;'>Uw wachtwoord is succesvol gewijzigd</p>";
+      }
+
+    ?>
     <a class="o-button o-button-nav-active" href="#">Onderhoud</a>
     <a class="o-button o-button-nav" href="http://localhost/ingelogd-installatie/">Installatie</a>
     <a class="o-button o-button-nav" href="http://localhost/ingelogd-profiel/">Mijn profiel</a>
+    <a class="o-button o-button-nav" href="http://localhost/wachtwoord-wijzigen">Wachtwoord wijzigen</a>
     <h1><?php echo get_theme_mod('setting-afspraak-ingelogd-h1'); ?> <?php echo $_SESSION["voornaam"] . " " . $_SESSION["naam"]; ?></h1>
   </div>
   <div class="container-fluid c-banner-klok">

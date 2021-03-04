@@ -55,7 +55,12 @@
                 <?php
             }else{
                 ?>
-                    <a class="c-footer__link" href="https://wpl3.antonlabeeuw.be/login/">Login</a>
+                    <a class="c-footer__link" href="http://localhost/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
+                    <a class="c-footer__link" href="http://localhost/logout/">Logout</a>
+                <?php
+            }else{
+                ?>
+                    <a class="c-footer__link" href="http://localhost/login/">Login</a>
                 <?php
             }
             ?>

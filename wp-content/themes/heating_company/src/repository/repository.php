@@ -24,6 +24,11 @@ class Repository{
         return $int;
     }
 
+    public static function UpdateLogin($nieuwWachtwoord, $gebruikers_Id){
+        $int = Database::execute("UPDATE gebruikers SET wachtwoord = ? WHERE gebruiker_id = ?", [$nieuwWachtwoord, $gebruikers_Id]);
+        return $int;
+    }
+
 }
 
 ?>

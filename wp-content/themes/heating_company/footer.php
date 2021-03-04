@@ -50,12 +50,12 @@
             echo " - ";
             if (isset($_SESSION["gebruiker_id"])){
                 ?>
-                    <a class="c-footer__link" href="https://wpl3.antonlabeeuw.be/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
-                    <a class="c-footer__link" href="https://wpl3.antonlabeeuw.be/logout/">Logout</a>
+                    <a class="c-footer__link" href="https://localhost/afspraak-ingelogd"><?php echo $_SESSION["gebruikersnaam"] ?></a> 
+                    <a class="c-footer__link" href="https://localhost/logout/">Logout</a>
                 <?php
             }else{
                 ?>
-                    <a class="c-footer__link" href="https://wpl3.antonlabeeuw.be/login/">Login</a>
+                    <a class="c-footer__link" href="https://localhost/login/">Login</a>
                 <?php
             }
             ?>

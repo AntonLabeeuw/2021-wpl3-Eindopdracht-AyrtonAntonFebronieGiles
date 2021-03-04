@@ -30,6 +30,12 @@
                 <p style='color: red;d'>Foutief wachtwoord of gebruikersnaam, probeer opnieuw!</p>
               </div>";
               }
+
+              if ($_SESSION["login"] == "registratieGelukt"){
+                echo "<div class='col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3'>
+                <p style='color: green;d'>U bent geregistreerd, log in om uw profiel te bekijken!</p>
+              </div>";
+              }
               
               ?>
               <div class="col s6 m3 l3 xl2 offset-s2 offset-m4 offset-l4 offset-xl5 form-group c-form__group">

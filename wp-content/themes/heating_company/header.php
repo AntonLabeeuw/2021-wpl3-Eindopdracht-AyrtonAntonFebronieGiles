@@ -28,9 +28,19 @@
         </a>
             <div class="c-topnav__display">
                 <nav>
-                        <a class="c-topnav__link" href="<?php echo site_url ('/over-ons'); ?>">Over ons</a>
-                        <a class="c-topnav__link" href="<?php echo site_url ('/attesten'); ?>">Attesten</a>
+                        <?php
+                            wp_nav_menu( array(
+                                'menu' => 'topnav',
+                                'menu_id' => 'topnav ',
+                                'theme_location'=>'topnav',
+                                'menu_class' => 'top-nav',
+                                'container' => '',
+                                'walker' => new Materialize_Walker_Nav_Menu()
+                            ));
+                        ?>
                 </nav>
+                
+               
                 <div class="c-topnav__knoppen">
                     <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte"
                     href="<?php echo site_url('/offerte'); ?>">Offerte</a>
@@ -67,8 +77,7 @@
                             'walker' => new Materialize_Walker_Nav_Menu()
                         ));
                       
-                ?>                
-                       
+                ?>                 
                
             </div>
                     <!-- </div> -->

@@ -422,6 +422,16 @@ ul.dropdown-content .dropdown-content__item:hover {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  .hide-on-med-and-down{
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+  .c-topnav__knoppen {
+    margin-top: 1.0rem;
+  }
+  .c-topnav nav{
+    margin-top: 0rem;
+  }
 }
 
 @media (max-width: 401px) {
@@ -1847,9 +1857,6 @@ nav ul li a:hover{
     font-size: 1.5rem;
     line-height: normal;
     color: #023c48;
-  }
-  .c-topnav__knoppen{
-    margin-top: 2.5rem;
   }
 }
 

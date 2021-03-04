@@ -1889,7 +1889,7 @@ nav ul li a:hover{
 
 @media (max-width: 697px){
   .c-topnav__display{
-    display: inherit;
+    display: block;
   }
   .c-topnav__knop--offerte{
     margin-right: 0.5rem;

@@ -83,7 +83,7 @@ add_action( 'wp_footer', 'add_aos_animation' );
         register_nav_menus(
             array(
 				'main-menu' =>  __( 'main-menu' ) ,
-				'topmnav' => __('topnav'),
+				'topnav' => __('topnav'),
 				'footer-menu' => __('footer-menu'),
             )
         );

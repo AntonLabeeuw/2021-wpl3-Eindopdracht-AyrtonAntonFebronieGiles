@@ -31,7 +31,7 @@
                         <?php
                             wp_nav_menu( array(
                                 'menu' => 'topnav',
-                                'menu_id' => 'topnav ',
+                                'menu_id' => 'topnav',
                                 'theme_location'=>'topnav',
                                 'menu_class' => 'top-nav',
                                 'container' => '',

@@ -1876,12 +1876,27 @@ nav ul li a:hover{
   .c-topnav__display{
     display: block;
     justify-content: center;
+    
   }
   .c-topnav nav{
     margin: 0px;
+    margin-left: 17rem;
   }
   .c-topnav__knoppen{
     margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 697px){
+  .c-topnav__display{
+    display: inherit;
+  }
+  .c-topnav__knop--offerte{
+    margin-right: 0.5rem;
+  }
+  .c-topnav nav{
+    margin: 0px;
+    margin-left: 7.5rem;
   }
 }
 
@@ -1889,7 +1904,24 @@ nav ul li a:hover{
   .c-topnav__knop--offerte{
     margin-right: 0.5rem;
   }
+  .c-topnav nav{
+    margin: 0px;
+    margin-left: 7.5rem;
+  }
 }
+
+@media (max-width: 400px){
+  .c-topnav__knop--offerte{
+    margin-right: 0.5rem;
+  }
+  .c-topnav nav{
+    margin: 0px;
+    margin-left: 2.5rem;
+  }
+}
+
+
+
 
 .c-logo {
   width: auto;

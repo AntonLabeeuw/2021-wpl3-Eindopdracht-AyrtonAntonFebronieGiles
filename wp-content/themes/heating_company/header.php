@@ -6,7 +6,17 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><?php echo $pagename ;?></title>
+    <?php
+    
+        if($pagename){
+            echo "<title>". $pagename ."</title>";
+        }
+        else{
+            echo "<title>The Heating Company</title>";
+        }
+
+    ?>
+    <title><?php echo $pagename;?></title>
     <meta name="google-site-verification" content="5kcMQE4up5EbZLW-8IN7PsTUiTyOhahNvVeVVDUCRWk" />
     
     <?php wp_head(  )?>

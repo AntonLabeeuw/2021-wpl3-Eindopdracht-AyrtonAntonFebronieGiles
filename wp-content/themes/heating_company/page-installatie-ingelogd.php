@@ -5,6 +5,7 @@
         <a class="o-button o-button-nav" href="">Onderhoud</a>
         <a class="o-button o-button-nav-active" href="">Installatie</a>
         <a class="o-button o-button-nav" href="">Mijn profiel</a>
+        <a class="o-button o-button-nav" href="http://localhost/wachtwoord-wijzigen">Wachtwoord wijzigen</a>
     </div>
 
     <!-- verwarmingsoplossingen component-->

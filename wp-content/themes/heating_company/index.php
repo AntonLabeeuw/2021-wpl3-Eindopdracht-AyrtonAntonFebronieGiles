@@ -22,14 +22,6 @@
                 wp_reset_query();
 
             ?>         
-
-
-            <!-- <a href="images/carousel1-groot.jpg" data-lightbox="mygallery"><img src="images/carousel1.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
-            <a href="images/carousel2-groot.jpg" data-lightbox="mygallery"><img src="images/carousel2.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
-            <a href="images/carousel3-groot.jpg" data-lightbox="mygallery"><img src="images/carousel3.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
-            <a href="images/carousel4-groot.jpg" data-lightbox="mygallery"><img src="images/carousel4.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
-            <a href="images/carousel5-groot.jpg" data-lightbox="mygallery"><img src="images/carousel5.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a>
-            <a href="images/carousel6-groot.jpg" data-lightbox="mygallery"><img src="images/carousel6.png" alt="Installatie van The Heating Company" title="Installatie van The Heating Company"></a> -->
         </section>
         <div class="container">
             <h1><?php echo get_theme_mod('setting-home-h1'); ?></h1>

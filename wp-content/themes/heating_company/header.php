@@ -52,7 +52,7 @@
                 
                
                 <div class="c-topnav__knoppen">
-                    <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte"
+                    <a class="o-button o-button-nav o-button--offerte c-topnav__knop c-topnav__knop--offerte" onclick="ga('send', 'event', 'click_offerte', 'click_offerte');"
                     href="<?php echo site_url('/offerte'); ?>">Offerte</a>
                     <a class="o-button o-button--noodnummer c-topnav__knop"
                         href="tel:+32 56 56 56 16"><span>Noodnummer</span></a>

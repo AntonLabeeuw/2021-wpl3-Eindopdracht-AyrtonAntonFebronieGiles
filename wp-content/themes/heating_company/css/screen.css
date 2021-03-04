@@ -1892,21 +1892,21 @@ nav ul li a:hover{
     display: block;
   }
   .c-topnav__knop--offerte{
-    margin-right: 0.5rem;
+    margin-right: 2rem;
   }
   .c-topnav nav{
     margin: 0px;
-    margin-left: 7.5rem;
+    margin-left: 15rem;
   }
 }
 
 @media (max-width: 600px){
   .c-topnav__knop--offerte{
-    margin-right: 0.5rem;
+    margin-right: 2rem;
   }
   .c-topnav nav{
     margin: 0px;
-    margin-left: 7.5rem;
+    margin-left: 14rem;
   }
 }
 
@@ -1916,7 +1916,7 @@ nav ul li a:hover{
   }
   .c-topnav nav{
     margin: 0px;
-    margin-left: 2.5rem;
+    margin-left: 7.5rem;
   }
 }
 

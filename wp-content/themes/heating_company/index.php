@@ -48,7 +48,7 @@
                 <article class="col l4 m12 s12 c-button-menu-item">
                     <h2 class="c-button-menu-title"><?php echo get_theme_mod('setting-home-button3_h2'); ?></h2>
                     <p class="c-button-menu-text"><?php echo get_theme_mod('setting-home-button2_p'); ?></p>
-                    <a class="o-button o-button-effect o-button-effect-1" href="<?php echo get_theme_mod('setting-home-button1_link'); ?>"><?php echo get_theme_mod('setting-home-button3_txt'); ?></a>
+                    <a class="o-button o-button-effect o-button-effect-1" href="<?php echo get_theme_mod('setting-home-button3_link'); ?>"><?php echo get_theme_mod('setting-home-button3_txt'); ?></a>
                 </article>
             </section>
         </div>

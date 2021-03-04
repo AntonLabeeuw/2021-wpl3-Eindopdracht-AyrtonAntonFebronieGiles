@@ -24,10 +24,12 @@ if (isset($_POST["submit"])){
             }  
         }
         else{
-            echo "de nieuwe wachtwoorden komen niet overeen";
+            $_SESSION["login"] = "foutBevestiging";
+            header("location:http://localhost/wachtwoord-wijzigen/");
         }
     }else{
-        echo "Het oude wachtwoord is fout";
+        $_SESSION["login"] = "foutOudWachtwoord";
+        header("location:http://localhost/wachtwoord-wijzigen/");
     }
 }
 else{

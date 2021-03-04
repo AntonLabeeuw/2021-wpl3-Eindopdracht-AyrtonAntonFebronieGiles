@@ -27,7 +27,15 @@
                   class="helper-text"
                   data-error="Dit is geen geldig voornaam"
                 ></span>
+                <?php
+                
+                if($_SESSION["login"] == "foutOudWachtwoord"){
+                  echo "<p style='color:red;'>Geef het correcte wachtwoord op</p>";
+                }
+
+              ?>
               </div>
+
 
               <div
                 class="col s12 m12 l6 xl6 offset-s0 offset-m0 offset-l3 offset-xl3 form-group c-form__group"
@@ -65,7 +73,15 @@
                   class="helper-text"
                   data-error="Dit is geen geldig password"
                 ></span>
+                <?php
+                
+                if($_SESSION["login"] == "foutBevestiging"){
+                  echo "<p style='color:red;'>Wachtwoorden komen niet overeen</p>";
+                }
+
+              ?>
               </div>
+
 
               <div
               class="col s6 m3 l3 xl2 offset-s2 offset-m4 offset-l4 offset-xl5 form-group c-form__group"
